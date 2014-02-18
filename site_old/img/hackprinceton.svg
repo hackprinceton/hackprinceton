@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="792.197px" height="295.091px" viewBox="0 0 792.197 295.091" enable-background="new 0 0 792.197 295.091"
+	 xml:space="preserve">
+<path fill="#FFFFFF" stroke="#EC008C" stroke-miterlimit="10" d="M246.333,175.289"/>
+<path fill="#BCBEC0" d="M32.982,60.453"/>
+<path fill="#BCBEC0" d="M32.982,107.622"/>
+<g>
+	<g>
+		<path fill="#F36F21" d="M0,0h38.344v86.96h76.688V0h38.344v215.244h-38.344v-94.362H38.344v94.362H0V0z"/>
+	</g>
+</g>
+<g>
+	<rect x="160.562" y="63.383" fill="none" width="294.495" height="142.875"/>
+	<text transform="matrix(1 0 0 1 160.5615 165.4409)" fill="#F36F21" font-family="'EurostileLTStd-Demi'" font-size="136.077">ACK</text>
+</g>
+<rect x="136.933" y="169.343" fill="#2E2E2E" width="655.264" height="126.748"/>
+<rect x="155.103" y="194.887" fill="none" width="625.536" height="97.86"/>
+<text transform="matrix(1 0 0 1 155.1025 273.6177)" fill="#FDFDFE" font-family="'EurostileLTStd-Demi'" font-size="104.9737">PRINCETON</text>
+</svg>

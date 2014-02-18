@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A layout example that shows off a responsive product landing page.">
+    <title>Landing Page &ndash; Layout Examples &ndash; Pure</title>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+  
+<link rel="stylesheet" href="css/style.css">
+
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="css/layouts/marketing-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="css/layouts/marketing.css">
+    <!--<![endif]-->
+  
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+</head>
+<body>
+      <script src="js/jquery-2.0.3.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $(".logolink").click(function()
+        {
+            blurb_toggle("#" + $(this).attr('id')); 
+        }); 
+    });
+    function blurb_toggle(param)
+    {
+        //alert($(param).parent()); 
+
+        $(param).parent().children(".sponsors-box-wrapper").toggle({
+            duration:400,
+        }); 
+    }
+
+  </script>
+
+<div class="header slide1" >
+    <div class="outer-title">
+        <div class="inner-title">
+
+        <div class="container-center slide1">
+                        <img class="title" src="img/title-text.png"></img>
+
+            <img class="bgtop" src="img/hackpton_spring.png"></img>
+            <h1 class="white-text"> YOU AND YOUR IDEAS. <br> MARCH 28 - 30th </h1> 
+        </div>
+        </div>
+    </div>
+
+
+ </div>
+
+
+
+<div class="content-wrapper">
+    <div class="content">
+        <h2 class="content-head is-center">36+ HOURS. 500+ HACKERS. 60+ UNIVERSITIES</h2>
+    
+    
+
+
+    </div>
+
+    <div class="ribbon l-box-lrg slide2 is-center">            
+            <h2 class="content-head content-head-ribbon">REGISTER NOW? </h2>
+    </div>
+
+    <div class="content">
+        <h2 class="content-head is-center">FAQ</h2>
+    <div class="unit unit-shaded">
+
+      <div class="container-inner pure-g-r">
+
+        <div class="separator"></div>
+        <div class="unit-content pure-u-1-2">
+          <p class="q">What is HackPrinceton?</p>
+          <p class="a">Princeton University's Fall Hackathon provides a time and place for anyone, <em>anyone</em>, to create a project and try something new. HackPrinceton is a prime time to develop for something new, explore that itch in your head, or simply just work on something you don't normally work on. Where else will you have people and mentors to support you as you try something new?
+            We also have separate Software and Hardware tracks for hackers, depending on your interest. We'll provide the location, nourishment, and excitement--all you have to do is show up and hack!</p>
+
+            <p class="q">Do I need a team or idea to sign up?</p>
+            <p class="a">Nope! We will have sessions to help people find team members and/or form teams, as well as an idea generation workshop to help people think of ideas to work on for the hackathon. So you should sign up regardless! </p>
+
+            <p class="q">How do I get to Princeton?</p>
+            <p class="a">We offer travel reimbursements of up to $150 to visiting hackers as needed. Reimbursements will only be granted if a project is completed and submitted. If you specify when you sign up, we'll follow up in a few weeks. If there are enough participants from your school and local area, email <a href="mailto:hackprinceton@princetoneclub.com">us</a> and we can discuss sending a bus for you guys.</p>
+
+            <p class="q">Will there be food?</p>
+            <p class="a">Yes. We'll provide all meals, with vegetarian options. We aim to make the experience as seamless as possible, so all you have to worry about is hacking! </p>
+</div>
+        <div class="pure-u-1-2" style="padding-left:20px;">
+            <p class="q">Do I need prior experience?</p>
+            <p class="a">HackPrinceton is open to students with any level of technical ability. We've had students currently taking COS 126--our intro course--win top prizes. During the hackathon, we'll have mentors who will be happy to assist your hack and to give you advice on both what type of project to work on and how to make it work. However, we do encourage those with less experience to work in a team with others, as that&apos;s one of the best and fastest ways to learn. </p>
+
+            <p class="q">Who can participate?</p>
+            <p class="a">HackPrinceton is open to all students currently enrolled in a college or university. It doesn't matter if you have never been to a hackathon before--there&apos;s a first time for everything! The event is open to students of all majors and minors; no Computer Science degree needed! Not in college? Email <a href="mailto:hackprinceton@princetoneclub.com">us</a>, and we'll let you know! </p>
+
+            <p class="q">What should I bring?</p>
+            <p class="a">Laptop, cellphone, chargers. Non-Princeton students should also bring a sleeping bag, towel, a change of clothes, and toiletries. There are many comfy couches around, but space may be limited. We'll also have a shower you can use! And bring your friends and teammates!</p>
+
+            <p class="q">Where will I be hacking?</p>
+            <p class="a">You'll be at Sherrerd Hall, a beautiful glass building with lots of comfy chairs, hacking spaces, classrooms and couches. If you are a Princeton student, we ask that you come to Sherrerd for your hacking to meet others, learn new ideas, and get the complete hackathon experience.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+<!-- sponsors start --> 
+
+<div class="unit unit-content-sponsors">
+        <div class="unit-content container-inner">
+          <h1>Sponsors</h1>
+          <h3>Do you want to sponsor HackPrinceton? Contact <a href="mailto:hackprinceton@princetoneclub.com">us</a>!</h3>
+          <div class="separator"></div>
+
+          <!-- For IPO sponsors -->
+          <div class="sponsors-full">
+            <div class="sponsors-box-full">
+                <a id="venmo" class="logolink-off" href="http://www.venmo.com"><img src="img/logos/venmo.png"></a>
+                <div class="sponsors-box-wrapper">
+                    <div class="sponsors-box-arrow"></div>
+                    <div class="sponsors-box-blurb">
+                        
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="separator"></div>
+
+          <!-- For Series B Sponsors -->
+          <div class="sponsors-large">
+            <div class="sponsors-box-large">
+                <a id="sailthru" class="logolink"><img src="img/logos/sailthru.jpg"></a>
+                <div class="sponsors-box-wrapper">
+                    <div class="sponsors-box-arrow"></div>
+                    <div class="sponsors-box-blurb">
+                        Sailthru is a technology company that specializes in personalization, automation, and communication across onsite, email, and mobile. Its Smart Data solution is leading a major shift in how companies engage with their customers through the automatic analysis of big data to generate informed, personalized communications across all digital channels. Sailthru is the only "Business to Business" startup in New York with consumer scale, storing over 400 million end users and processing over 5 billion real-time events and API calls each month. Sailthru's technology sends over 90 million personalized messages for over 300 companies including Fab.com, Thrillist, Jack Threads, Everlane, Huffington Post, and Business Insider.
+                    </div>
+                </div>
+            </div>
+          </div>
+<!-- sponsors close --> 
+
+    </div>
+<!-- content wrapper close-->
+
+</div>
+<script src="http://yui.yahooapis.com/3.14.1/build/yui/yui.js"></script>
+<script>
+YUI().use('node-base', 'node-event-delegate', function (Y) {
+    // This just makes sure that the href="#" attached to the <a> elements
+    // don't scroll you back up the page.
+    Y.one('body').delegate('click', function (e) {
+        e.preventDefault();
+    }, 'a[href="#"]');
+});
+</script>
+</body>
+</html>
