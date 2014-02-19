@@ -72,10 +72,27 @@ hr {
   background-position: center;
   background-size: cover;
   text-align: center;
-  height: 100vh;
+  /*height: 100vh;*/
   min-height: 600px;
-  max-height: 1080px;
+  /*max-height: 1080px;*/
+
+  height: 100%;
+  overflow: scroll;
+  -webkit-overflow-scrolling:touch;
 }
+
+/*html {
+background: url(http://placebear.com/1200/800) no-repeat center center fixed;
+background-size: cover;
+height: 100%;
+overflow: hidden;
+}
+body
+{
+height:100%;
+overflow: scroll;
+-webkit-overflow-scrolling: touch;
+}*/
 
 .wrapper {
   background: rgba(50, 29, 97, 0.15);
