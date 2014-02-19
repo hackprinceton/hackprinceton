@@ -70,7 +70,7 @@ hr {
   position: relative;
   background: url('../img/hackpton.png');
   background-position: center;
-  background-size: 100%;
+  background-size: cover;
   text-align: center;
   height: 100vh;
   min-height: 600px;
