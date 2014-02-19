@@ -68,13 +68,14 @@ hr {
 
 .header {
   position: relative;
-  background: url('../img/hackpton.png');
+  background: url('../img/bg1.jpg') no-repeat center center fixed;
   background-position: center;
   background-size: cover;
+  -webkit-background-size: cover;
   text-align: center;
   height: 100vh;
   min-height: 600px;
-  max-height: 1520px;
+  /*max-height: 1500px;*/
 }
 
 .wrapper {
