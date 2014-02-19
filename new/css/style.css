@@ -1,4 +1,4 @@
-html, button, input, select, textarea,
+html, button, input, select, textarea, a,
 .pure-g [class *= "pure-u"],
 .pure-g-r [class *= "pure-u"] {
   font-family: "Oxygen", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
@@ -130,6 +130,24 @@ hr {
   background-color: #e0e0e0;
   text-align: center;
 }
+
+#hire {
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+#hire p {
+  text-align: left;
+}
+
+/*
+#hire a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.25em;
+  color: #000000;
+}
+*/
 
 #schedule {
   background-color: #f0f0f0;

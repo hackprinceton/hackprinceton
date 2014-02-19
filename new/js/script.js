@@ -10,6 +10,11 @@ $(".schedule").click(function () {
     }, 'slow');
 });
 
+$(".hire").click(function () {
+    $('html, body').animate({
+        scrollTop: $('#hire').offset().top
+    }, 'slow');
+});
 
 $(".faq").click(function () {
     $('html, body').animate({
