@@ -31,7 +31,7 @@ $(".sponsor").click(function () {
 $(document).ready(function () {
     $('.header').css({
         'position': 'relative',
-        'background': 'url(img/bg' + Math.floor(Math.random() * 8) + '.jpg) no-repeat center center fixed',
+        'background': 'url(img/bg' + Math.floor(Math.random() * 8) + '.png) no-repeat center center fixed',
         'background-position': 'center',
         'background-size': 'cover',
         '-webkit-background-size': 'cover',
