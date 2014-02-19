@@ -34,7 +34,7 @@ $(document).ready(function () {
         'background': 'url(img/bg' + Math.floor(Math.random() * 8) + '.jpg) no-repeat center center fixed',
         'background-position': 'center',
         'background-size': 'cover',
-        '-webkit-background-size': '100% auto',
+        '-webkit-background-size': 'cover',
         '-moz-background-size': 'cover',
         '-o-background-size': 'cover',
         'text-align': 'center',
