@@ -70,7 +70,7 @@ hr {
   position: relative;
   background: url('../img/hackpton.png');
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   text-align: center;
   height: 100vh;
   min-height: 600px;
@@ -148,7 +148,7 @@ hr {
 #faq dl, dd, dt {
   text-align: left;
   margin: 10px 0 10px 0;
-  font-size: 14px;
+  font-size: 1em;
 
 }
 
@@ -159,7 +159,7 @@ hr {
 
 #faq dt {
   padding-bottom: 5px;
-  font-size: 16px;
+  font-size: 1.125em;
   font-weight: 700;
 }
 
