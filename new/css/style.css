@@ -74,24 +74,8 @@ hr {
   text-align: center;
   height: 100vh;
   min-height: 600px;
-  /*max-height: 1080px;*/
-
-  overflow: hidden;
-  -webkit-overflow-scrolling:touch;
+  max-height: 1080px;
 }
-
-/*html {
-background: url(http://placebear.com/1200/800) no-repeat center center fixed;
-background-size: cover;
-height: 100%;
-overflow: hidden;
-}
-body
-{
-height:100%;
-overflow: scroll;
--webkit-overflow-scrolling: touch;
-}*/
 
 .wrapper {
   background: rgba(50, 29, 97, 0.15);
