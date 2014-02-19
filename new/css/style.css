@@ -76,7 +76,7 @@ hr {
   min-height: 600px;
   /*max-height: 1080px;*/
 
-  overflow: scroll;
+  overflow: hidden;
   -webkit-overflow-scrolling:touch;
 }
 
