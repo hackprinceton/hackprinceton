@@ -21,6 +21,10 @@ hr {
   z-index: 1;
 }
 
+.hide {
+  display: none;
+}
+
 .mobile-favicons-banner a {
   text-decoration: none;
 }
