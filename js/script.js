@@ -16,6 +16,12 @@ $(".hire").click(function () {
     }, 'slow');
 });
 
+$(".about").click(function () {
+    $('html, body').animate({
+        scrollTop: $('#about').offset().top
+    }, 'slow');
+});
+
 $(".faq").click(function () {
     $('html, body').animate({
         scrollTop: $('#faq').offset().top
