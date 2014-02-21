@@ -129,32 +129,6 @@ hr {
   padding: 1.25em;
 }
 
-.form-label{
-  width:150px !important;
-}
-.form-label-left{
-  width:150px !important;
-  font-family: "Oxygen", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 18px;
-}
-.form-line{
-  padding-top:12px;
-  padding-bottom:12px;
-}
-.form-label-right{
-  width:150px !important;
-  font-family: "Oxygen", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 18px;
-}
-.form-all{
-  width: 100%;
-  background:#0DA39F;
-  color:#000000;
-  font-family: "Oxygen", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size:18px;
-  margin: 0 auto;
-}
-
 .form-radio-item label, .form-checkbox-item label, .form-grading-label, .form-header{
   color:#555555;
 }
