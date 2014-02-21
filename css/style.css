@@ -143,6 +143,8 @@ hr {
 }
 .form-label-right{
   width:150px !important;
+  font-family: "Oxygen", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 18px;
 }
 .form-all{
   width: 100%;
