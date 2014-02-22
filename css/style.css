@@ -258,6 +258,7 @@ hr {
   .sponsors-small img,
   .sponsors-tiny img {
     -webkit-filter: grayscale(100%);
+    opacity: 0.6;
   }
 
   .sponsors-full img:hover,
@@ -267,6 +268,7 @@ hr {
   .sponsors-tiny img:hover {
     filter: gray; /* IE6-9 */
     -webkit-filter: grayscale(0%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+    opacity: 1;
   }
 
   .sponsors-full img {
@@ -280,7 +282,8 @@ hr {
     margin-left: auto;
     margin-right: auto;
   }
-  .sponsors-medium img {
+  
+.sponsors-medium img {
     display:block;
     width: 75%;
     height: auto;
