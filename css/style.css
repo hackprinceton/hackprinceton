@@ -372,3 +372,9 @@ hr {
   background-color:#444;
   margin: 20px 0;
 }
+
+#ps_title {
+	text-align:center;
+	font-size:24px;
+	margin-bottom:20px;
+}
