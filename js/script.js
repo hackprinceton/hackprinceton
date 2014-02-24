@@ -1,32 +1,16 @@
-$(".signup").click(function () {
+function scrollTo(button, destination) {
+  $(button).click(function() {
     $('html, body').animate({
-        scrollTop: $('#signup').offset().top
+      scrollTop: $(destination).offset().top
     }, 'slow');
-});
+  });
+}
 
-$(".schedule").click(function () {
-    $('html, body').animate({
-        scrollTop: $('#schedule').offset().top
-    }, 'slow');
-});
-
-$(".hire").click(function () {
-    $('html, body').animate({
-        scrollTop: $('#hire').offset().top
-    }, 'slow');
-});
-
-$(".faq").click(function () {
-    $('html, body').animate({
-        scrollTop: $('#faq').offset().top
-    }, 'slow');
-});
-
-$(".sponsor").click(function () {
-    $('html, body').animate({
-        scrollTop: $('#sponsor').offset().top
-    }, 'slow');
-});
+scrollTo(".signup", "#signup");
+scrollTo(".sponsor", "#sponsor");
+scrollTo(".schedule", "#schedule");
+scrollTo(".hire", "#hire");
+scrollTo(".faq", "#faq");
 
 $(document).ready(function () {
     $('.header').css({
@@ -42,7 +26,7 @@ $(document).ready(function () {
         'min-height': '600px',
         'max-height': '1500px'
     });
-  
+
   $('#student').change(function () {
     if ($(this).val() == "mentor") {
       $('#mentor').slideDown('fast');
@@ -56,7 +40,7 @@ $(document).ready(function () {
       $('#other').slideDown('fast');
       $('#mentor').slideUp('fast');
       $('#prince').slideUp('fast');
-    } 
+    }
     else {
       $('#mentor').slideUp('fast');
       $('#other').slideUp('fast');
