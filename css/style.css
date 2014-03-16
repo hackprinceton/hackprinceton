@@ -162,8 +162,9 @@ hr {
 */
 
 #schedule {
-  background-color: #e3c4c4;
+  background-color: #333333;
   text-align: center;
+  color:#eee;
 }
 
 #schedule p {
