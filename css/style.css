@@ -1,7 +1,7 @@
 html, button, input, select, textarea, a,
 .pure-g [class *= "pure-u"],
 .pure-g-r [class *= "pure-u"] {
-  font-family: "Oxygen", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-family: "Oxygen", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -247,10 +247,10 @@ hr {
     display:inline-block;
     width:48%;
   }
-  
+
   .sponsors-medium {
   margin-left:auto;
-  margin-right:auto;  
+  margin-right:auto;
   }
 
   .sponsors-full img,
@@ -283,10 +283,10 @@ hr {
     margin-left: auto;
     margin-right: auto;
   }
-  
+
 .sponsors-medium img {
     display:block;
-    width: 75%;
+    width: 70%;
     height: auto;
     margin-left: auto;
     margin-right: auto;
@@ -307,15 +307,15 @@ hr {
     margin-left: auto;
     margin-right: auto;
   }
-  
+
   a.sponsor-link:link {
-    
+
   }
-  
+
   a.sponsor-link:visited {
-  
+
   }
-  
+
   .sponsors-box-full,
   .sponsors-box-large,
   .sponsors-box-medium,
@@ -326,36 +326,39 @@ hr {
   width:48%;
   vertical-align:top;
   }
-  
+
   .sponsors-box-small {
-  margin-bottom:10px;  
+  margin-bottom:10px;
   }
   .sponsors-box-tiny {
-  margin-bottom:5px;  
+  margin-bottom:5px;
   }
-  
-  .sponsors-box-full,
+
   .sponsors-box-large {
-  display:block;
-  width:100%;  
+  width:70%;
   }
-  
+
+  .sponsors-box-full {
+  display:block;
+  width:100%;
+  }
+
   .sponsors-box-wrapper {
     display:none;
   }
-  
+
   .sponsors-box-arrow {
-    width: 0; 
-  height: 0; 
+    width: 0;
+  height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  
+
   border-bottom: 20px solid #e5e5e5;
-  margin: 0 auto; 
+  margin: 0 auto;
   margin-bottom:-5px;
   margin-top:-10px;
   }
-  
+
   .sponsors-box-blurb {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -375,7 +378,7 @@ hr {
 }
 
 #ps_title {
-	text-align:center;
-	font-size:24px;
-	margin-bottom:20px;
+  text-align:center;
+  font-size:24px;
+  margin-bottom:20px;
 }
