@@ -22,19 +22,19 @@ scrollTo(".hire", "#hire");
 scrollTo(".faq", "#faq");
 
 $(document).ready(function () {
-    $('.header').css({
-        'position': 'relative',
-        'background': 'url(img/bg/bg' + Math.floor(Math.random() * 8) + '.jpg) no-repeat center center fixed',
-        'background-position': 'center',
-        'background-size': 'cover',
-        '-webkit-background-size': 'cover',
-        '-moz-background-size': 'cover',
-        '-o-background-size': 'cover',
-        'text-align': 'center',
-        'height': '100vh',
-        'min-height': '600px',
-        'max-height': '1500px'
-    });
+//    $('.header').css({
+//        'position': 'relative',
+//        'background': 'url(img/bg/bg' + Math.floor(Math.random() * 8) + '.jpg) no-repeat center center fixed',
+//        'background-position': 'center',
+//        'background-size': 'cover',
+//        '-webkit-background-size': 'cover',
+//        '-moz-background-size': 'cover',
+//        '-o-background-size': 'cover',
+//        'text-align': 'center',
+//        'height': '100vh',
+//        'min-height': '600px',
+//        'max-height': '1500px'
+//    });
 
   $('#student').change(function () {
     if ($(this).val() == "mentor") {
