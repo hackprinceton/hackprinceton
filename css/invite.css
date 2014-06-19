@@ -1,0 +1,128 @@
+/* Other stuff */
+body {
+  font-family:'Fira Sans', sans-serif;
+/*  background: #fafaf7;*/
+  background: #f5f0f0;
+  min-width: 625px;
+  text-align: center;
+}
+
+.container {
+  width: 625px;
+  margin: 80px auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+#header {
+  font-size: 6em;
+  font-weight: 200;
+  color: orange;
+  margin: -25px auto;
+}
+
+#hack {
+  color: black;
+}
+
+h3 {
+  font-size: 1.4em;
+  font-weight: 200;
+  font-style: italic;
+  text-align: center;
+}
+
+#people {
+  text-align: center;
+}
+
+.hl {
+  height:0;
+  border: 1px rgb(180,180,180) solid;
+  margin: 10px auto;
+}
+
+#invite {
+}
+
+h2 {
+  font-size: 1.4em;
+  font-weight: 200;
+  width: 580px;
+  margin: 0 auto;
+}
+
+#date, #location {
+  font-weight: 400;
+}
+
+.footer {
+  position: relative;
+  bottom: 20px;
+  text-align: center;
+  color: rgb(180,180,180);
+  font-size: 0.9em;
+  font-weight: 200;
+}
+
+p {
+  font-size: 0.9em;
+  font-weight: 200;
+}
+
+.contact {
+  margin: 1px;
+}
+
+a {
+  color: rgb(180,180,180);
+}
+
+.social {
+  text-decoration: none;
+}
+
+input {
+  width: 300px;
+}
+
+input, textarea, select {
+  background: none;
+  outline: none;
+  font-family: inherit;
+
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: 300;
+}
+
+input[type=email] {
+  border: none;
+  border-bottom: 1px solid rgb(180,180,180);
+  margin-bottom: 5px;
+}
+
+input[type=submit] {
+  border-radius: 3px;
+  border: 2px solid rgb(180,180,180);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#ss-submit:focus {
+  border: 0;
+  background: orange;
+  color: #fff;
+}
+
+#thankyou {
+  display: none;
+  margin-top: -80px;
+  margin-bottom: 50px;
+}
+
