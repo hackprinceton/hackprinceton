@@ -1,4 +1,4 @@
-HackPrincetonS2014
+HackPrinceton A2014
 ==================
 
 Hack Princeton's website for Autumn 2014.
