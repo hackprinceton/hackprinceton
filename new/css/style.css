@@ -1,0 +1,77 @@
+body {
+  font-family: 'Open Sans', sans-serif
+}
+
+img {
+  max-width:100%;
+  height: auto;
+}
+
+/* Sidebar magic*/
+#sidebar {
+  margin: 0 2%;
+  width: 14%;
+  height: 100%;
+  position: fixed;
+
+  background-color: white;
+  opacity: 0.9;
+
+  min-width: 100px;
+}
+
+.nav {
+  height: 7%;
+  font-size: 1em;
+}
+
+/* Header magic */
+#header {
+  height: 12%;
+}
+
+#title {
+  position: fixed;
+  margin-left: 18%;
+}
+
+/* Card styling */
+.row {
+  height: 70%;
+}
+
+.card {
+  height: 100%;
+  margin: auto 1%;
+  float: left;
+  min-width: 300px;
+}
+
+/* Styling for image cards */
+.pic {
+  width: 30%;
+}
+
+#logo {
+  margin-left: 18%; /* for the first card, should probably use sidebar instead */
+}
+
+/* Styling for info cards */
+.text {
+  background-color: grey; /* find a prettier color */
+  width: 45%;
+  padding: 1%;
+}
+
+.label {
+  text-align: center;
+}
+
+/* Footer Styling */
+#footer {
+
+}
+
+.sponsor-large {
+
+}
