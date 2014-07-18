@@ -1,0 +1,53 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: fixed;
+  width: 430%;
+  left: 0%;
+
+  transition: left 1s ease-in-out;
+}
+
+#menu {
+    position: fixed;
+
+    width: 15%;
+    height: 100vh;
+    left: 5%;
+    background: #888;
+    color: #fff;
+}
+
+#box1 {
+  display: inline-block;
+  width: 100vw;
+  height: 100vh;
+  margin-right: 2.325%;
+  background: #ee7f2d;
+}
+
+#box2 {
+  display: inline-block;
+  width: 100vw;
+  height: 100vh;
+  margin-right: 2.325%;
+  background: #ee9f2d;
+}
+
+#box3 {
+  display: inline-block;
+  width: 100vw;
+  height: 100vh;
+  margin-right: 2.325%;
+  background: #ee5f2d;
+}
+
+#box4 {
+  display: inline-block;
+  width: 100vw;
+  height: 100vh;
+  background: #999;
+}
