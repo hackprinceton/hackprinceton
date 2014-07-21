@@ -34,7 +34,7 @@ body {
 }
 
 #topbar > h1 {
-  margin-left: 21%;
+  margin-left: 18%;
   font-family: 'Montserrat', 'Helvetica', 'sans-serif';
   font-weight: 300;
 }
@@ -47,12 +47,18 @@ body {
     width: 15%;
     min-width: 200px;
     height: 100vh;
-    left: 5%;
+    left: 3%;
     color: #000;
     background: #fff;
     margin-top: 70px;
     z-index: 1;
 }
+
+ul > li {
+  padding-bottom: 15%;
+  font-size: 1em;
+}
+
 
 /*----------------------------------------------------------------------------*/
 /* View boxes (separate logical screens)                                      */
@@ -62,18 +68,43 @@ body {
   vertical-align: top;
   width: 100vw;
   height: 100vh;
-  background: #bbb;
+  background: #fff; /* #bbb; */
   overflow: scroll;
 }
 
 .box > div {
   margin: 70px 0;
-  margin-left: 20%;
+  margin-left: 18%;
 }
 
 .space_right {
   margin-right: 2.325%;
 }
+
+.card {
+  height: 100vh;
+  margin: auto 1%;
+  float: left;
+  min-width: 300px;
+  background-color: rgb(210,210,210); /* find a prettier color */
+}
+
+.pic {
+  width: 40%;
+}
+
+.text {
+  width: 50%;
+  padding: 1%;
+}
+
+.label {
+  text-align: center;
+  font-weight: 300;
+  font-size: 2em;
+  margin-top: 0;
+}
+
 
 /*----------------------------------------------------------------------------*/
 /* Bottom bar & sponsors                                                      */
@@ -82,7 +113,7 @@ body {
     position: fixed;
     bottom: 0px;
     left: 0px;
-    height: 70px;
+    height: 100px;
     width: 100%;
     background: #fff;
     z-index: 1;
