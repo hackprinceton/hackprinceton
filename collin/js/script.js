@@ -16,7 +16,7 @@ $(window).scroll(function() {
 
     var currPos = $(document).scrollLeft();
 
-    if (lastPos < currPos && index < 4) {
+    if (lastPos < currPos && index < 5) {
       index++;
       var offset = -(index * 110) + '%';
       body.css({ 'left': offset });
