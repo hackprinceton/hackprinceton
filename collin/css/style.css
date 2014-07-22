@@ -54,7 +54,7 @@ body {
     z-index: 1;
 }
 
-ul > li {
+#menu > ul > li {
   padding-bottom: 15%;
   font-size: 1em;
 }
@@ -82,7 +82,7 @@ ul > li {
 }
 
 .card {
-  height: 100vh;
+  min-height: 100vh;
   margin: auto 1%;
   float: left;
   min-width: 300px;
@@ -90,12 +90,15 @@ ul > li {
 }
 
 .pic {
+  height: 100vh;
   width: 40%;
+  margin-left: 0;
 }
 
 .text {
   width: 50%;
   padding: 1%;
+  margin-right: 0;
 }
 
 .label {
