@@ -6,9 +6,16 @@ html, body {
   padding: 0;
 }
 
+img {
+  display: block;
+}
+
 ul {
   list-style-type: none;
 }
+
+
+/* Separator here */
 
 body {
   position: fixed;
@@ -74,7 +81,8 @@ body {
 
 .box > div {
   margin: 70px 0;
-  margin-left: 18%;
+  margin-left: 20%;
+  width: calc(80% + 2px);
 }
 
 .space_right {
@@ -84,7 +92,7 @@ body {
 .card {
   min-height: 100vh;
   margin: auto 1%;
-  float: left;
+  /* float: left; */
   min-width: 300px;
   background-color: rgb(210,210,210); /* find a prettier color */
 }

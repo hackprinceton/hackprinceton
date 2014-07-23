@@ -8,18 +8,23 @@ $('#menu li').click(function() {
   body.css({ 'left': offset });
 });
 
-var lastPos = 0;
+$('.box').scrollLeft(1);
+
+var lastPos = 1;
 var triggered = false;
-$(window).scroll(function() {
+$('.box').scroll(function(e) {
+  e.stopPropagation();
   if (!triggered) {
     triggered = true;
 
-    var currPos = $(document).scrollLeft();
-
-    if (lastPos < currPos && index < 5) {
+    var currPos = $(this).scrollLeft();
+    console.log(currPos);
+    
+    if (lastPos < currPos && index < 3) {
       index++;
       var offset = -(index * 110) + '%';
       body.css({ 'left': offset });
+      $('.box').scrollLeft(1);
       setTimeout(function() {
         triggered = false;
       }, 1000);
@@ -29,6 +34,7 @@ $(window).scroll(function() {
       index--;
       var offset = -(index * 110) + '%';
       body.css({ 'left': offset });
+      $('.box').scrollLeft(1);
       setTimeout(function() {
         triggered = false;
       }, 1000);
