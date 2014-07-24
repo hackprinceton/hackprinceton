@@ -8,6 +8,7 @@ html, body {
 
 img {
   display: block;
+  width: 100%;
 }
 
 ul {
@@ -92,7 +93,7 @@ body {
 .card {
   min-height: 100vh;
   margin: auto 1%;
-  /* float: left; */
+  float: left;
   min-width: 300px;
   background-color: rgb(210,210,210); /* find a prettier color */
 }
@@ -106,7 +107,7 @@ body {
 .text {
   width: 50%;
   padding: 1%;
-  margin-right: 0;
+/*  margin-right: 0;*/
 }
 
 .label {
