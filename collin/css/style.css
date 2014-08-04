@@ -8,6 +8,7 @@ html, body {
 
 img {
   display: block;
+  height: 100%;
 }
 
 ul {
@@ -41,7 +42,7 @@ body {
 }
 
 #topbar > h1 {
-  margin-left: 18%;
+  margin-left: 16%;
   font-family: 'Montserrat', 'Helvetica', 'sans-serif';
   font-weight: 300;
 }
@@ -51,10 +52,10 @@ body {
 /*----------------------------------------------------------------------------*/
 #menu {
     position: fixed;
-    width: 15%;
-    min-width: 200px;
+    width: 14%;
+    min-width: 150px;
     height: 100vh;
-    left: 3%;
+    left: 2%;
     color: #000;
     background: #fff;
     margin-top: 70px;
@@ -74,15 +75,15 @@ body {
   display: inline-block;
   vertical-align: top;
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   background: #fff; /* #bbb; */
   overflow: scroll;
 }
 
 .box > div {
   margin: 70px 0;
-  margin-left: 20%;
-  width: calc(80% + 2px);
+  margin-left: 16%;
+  width: calc(84% + 2px);
 }
 
 .space_right {
@@ -90,23 +91,23 @@ body {
 }
 
 .card {
-  min-height: 100vh;
   margin: auto 1%;
-  /* float: left; */
+  float: left;
   min-width: 300px;
   background-color: rgb(210,210,210); /* find a prettier color */
 }
 
 .pic {
-  height: 100vh;
-  width: 40%;
+  height: 100%;
+  width: 38%;
   margin-left: 0;
+  overflow: hidden;
 }
 
 .text {
-  width: 50%;
+  font-size: 0.9em;
+  width: 56%;
   padding: 1%;
-  margin-right: 0;
 }
 
 .label {
