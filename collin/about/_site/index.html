@@ -1,0 +1,51 @@
+<div id='home'>
+  <h1>ABOUT ME</h1>
+  <p>
+    I am a computer science student at Princeton University.
+  </p>
+  <h1>CONTACT</h1>
+  <p>Hover over the code below to see my email:</p>
+  <code id='email_randomized' onClick='selectText("email_randomized");' onmouseover='reveal()' onmouseout='randomize()'>......................</code>
+  <p>Gotta protect against web scrapers :)</p>
+</div>
+<script>
+  var alpha = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789' +
+              '.!@#$%^&*()';
+  var e = ['c', 's', 't', 'e', 'd', 'm', 'a', 'n', '@', 'p', 'r', 'i', 'n',
+           'c', 'e', 't', 'o', 'n', '.', 'e', 'd', 'u'];
+  var f = [];
+  var end = setInterval(function() {
+    f = [];
+    for (var i = 0; i < e.length; i++) {
+      f.push(alpha.charAt(Math.floor(Math.random() * alpha.length)));
+    }
+    document.getElementById('email_randomized').innerHTML = f.join('');
+  }, 500);
+
+  function reveal () {
+    clearInterval(end);
+    document.getElementById('email_randomized').innerHTML = e.join('');
+  }
+
+  function randomize() {
+    end = setInterval(function() {
+      f = [];
+      for (var i = 0; i < e.length; i++) {
+        f.push(alpha.charAt(Math.floor(Math.random() * alpha.length)));
+      }
+      document.getElementById('email_randomized').innerHTML = f.join('');
+    }, 500);
+  }
+
+  function selectText(containerid) {
+    if (document.selection) {
+      var range = document.body.createTextRange();
+      range.moveToElementText(document.getElementById(containerid));
+      range.select();
+    } else if (window.getSelection) {
+      var range = document.createRange();
+      range.selectNode(document.getElementById(containerid));
+      window.getSelection().addRange(range);
+    }
+  }
+</script>

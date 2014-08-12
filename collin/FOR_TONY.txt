@@ -1,0 +1,5 @@
+This website is really a Jekyll blog, which is convenient because Github can host Jekyll blogs natively. 
+We don't have to use any of the blog functionality, of course, so we can probably scrap all of that.
+That means a little bit of cleanup (well, that's a given because there are a lot of unnecessary files here),
+but I can take care of that tonight or tomorrow. I just finished the responsive layout this morning, so we
+should be all ready to go and add content!

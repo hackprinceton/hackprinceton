@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <title>{{ page.title }}</title>
+    <meta name='viewport' content='width=device-width'>
+
+    <!-- Pure CSS -->
+    <link rel='stylesheet' href='/css/pure-min.css'>
+
+    <!-- syntax highlighting CSS -->
+    <link rel='stylesheet' href='/css/syntax.css'>
+
+    <!-- Page CSS -->
+    <link rel='stylesheet' href='/css/main.css'>
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+
+    <!-- Icons -->
+    <link rel='stylesheet' href='/css/fontello.css'>
+
+    <!-- Favicon -->
+    <link rel='icon' type='image/x-icon' href='/favicon.ico'>
+  </head>
+  <body>
+    <div id='layout'>
+
+      <!-- Button for the menu on small screens -->
+      <a id='menu-link'>
+        <span></span>
+      </a>
+
+      <!-- Menu -->
+      <div id='menu'>
+
+        <!-- Social icons -->
+        <div class='social'>
+          <hr class='left'/>
+          <hr class='right'/>
+          <a href='https://github.com/kronion'>
+            <span class='icon-github-circled'></span>
+          </a>
+          <a href='https://twitter.com/CS_Princeton'>
+            <span class='icon-twitter-circled'></span>
+          </a>
+          <a href='https://www.linkedin.com/in/cstedman'>
+            <span class='icon-linkedin-circled'></span>
+          </a>
+        </div>
+
+        <!-- Post menu -->
+        <div class='pure-menu pure-menu-open'>
+          <div class='menu-container'>
+            {% for post in site.posts %}
+            <p>{{ post.url }}</p>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+      <div id='lightbox'>
+      </div>
+
+      <!-- Main content -->
+      <div class='content'>
+        <!-- SVG and text -->
+        <div class='logo'>
+          <a href='/'>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="106" height="118" viewBox="0 0 212 236" enable-background="new 0 0 212 236" xml:space="preserve">
+              <circle fill="#ee7f2d" cx="106.5" cy="213.5" r="22.5"/>
+              <path fill="none" stroke="#ee7f2d" stroke-width="10" stroke-miterlimit="10" d="M106 154v63V154z"/>
+              <circle fill="#ee7f2d" cx="105.5" cy="22.5" r="22.5"/>
+              <path fill="none" stroke="#ee7f2d" stroke-width="10" stroke-miterlimit="10" d="M106 82V19 82z"/>
+              <circle fill="#ee7f2d" cx="22.6" cy="70.2" r="22.5"/>
+              <path fill="none" stroke="#ee7f2d" stroke-width="10" stroke-miterlimit="10" d="M74.3 99.5L19.8 68 74.3 99.5z"/>
+              <circle fill="#ee7f2d" cx="188.9" cy="69.3" r="22.5"/>
+              <path fill="none" stroke="#ee7f2d" stroke-width="10" stroke-miterlimit="10" d="M137.7 99.5l54.6-31.5L137.7 99.5z"/>
+              <circle fill="#ee7f2d" cx="189.7" cy="165.3" r="22.5"/>
+              <path fill="none" stroke="#ee7f2d" stroke-width="10" stroke-miterlimit="10" d="M137.9 136l54.6 31.5L137.9 136z"/>
+              <circle fill="#FFFFFF" stroke="#ee7f2d" stroke-width="7" stroke-miterlimit="10" cx="105.4" cy="118.3" r="36"/>
+              <circle id="center-circle" fill="#ee7f2d" cx="105.4" cy="118.3" r="27"/>
+              <circle fill="#ee7f2d" cx="23" cy="166.4" r="22.5"/>
+              <path fill="none" stroke="#ee7f2d" stroke-width="10" stroke-miterlimit="10" d="M74.3 136.3l-54.6 31.5L74.3 136.3z"/>
+              <line fill="none" x1="22" y1="166.4" x2="106" y2="22.5"/>
+              <line fill="none" stroke="#ee7f2d" stroke-width="7" stroke-miterlimit="10" x1="22" y1="166.4" x2="106" y2="22.5"/>
+              <line fill="none" stroke="#ee7f2d" stroke-width="7" stroke-miterlimit="10" x1="22" y1="166.5" x2="192" y2="166.5"/>
+              <line fill="none" stroke="#ee7f2d" stroke-width="7" stroke-miterlimit="10" x1="189.7" y1="165.3" x2="106" y2="22.5"/>
+              <line fill="none" stroke="#ee7f2d" stroke-width="7" stroke-miterlimit="10" x1="106" y1="22.5" x2="188.9" y2="69.3"/>
+              <line fill="none" stroke="#ee7f2d" stroke-width="7" stroke-miterlimit="10" x1="189.7" y1="165.3" x2="188.9" y2="69.3"/>
+              <line fill="none" stroke="#ee7f2d" stroke-width="7" stroke-miterlimit="10" x1="189.7" y1="165.3" x2="106.5" y2="213.5"/>
+              <line fill="none" stroke="#ee7f2d" stroke-width="7" stroke-miterlimit="10" x1="106.5" y1="213.5" x2="23" y2="166.4"/>
+              <line fill="none" stroke="#ee7f2d" stroke-width="7" stroke-miterlimit="10" x1="23" y1="166.4" x2="22.6" y2="70.2"/>
+              <line fill="none" stroke="#ee7f2d" stroke-width="7" stroke-miterlimit="10" x1="22.6" y1="70.2" x2="105.5" y2="22.5"/>
+            </svg>
+            <h1 class='title'>{{ site.name }}</h1>
+          </a>
+          <h3>A Blog by Collin Stedman</h3>
+          <div class='pages'>
+            <a class='home' href='/'>Home</a>
+            <a class'about' href='/about'>About</a>
+            <a class='projects' href='/projects.html'>Projects</a>
+          </div>
+        </div>
+
+        {{ content }}
+
+        <!-- Bottom bar -->
+        <div class='footer'>
+          <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+            <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" />
+          </a>
+          <br />
+          <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">NodeNexus</span> 
+          by 
+          <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.nodenexus.com" property="cc:attributionName" rel="cc:attributionURL">Collin Stedman</a> 
+          is licensed under a 
+          <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+        </div>
+      </div>
+    </div>
+    <script type='application/javascript' src='/js/hammer.min.js'></script>
+    <script type='application/javascript' src='/js/ui.js'></script>
+  </body>
+</html>
