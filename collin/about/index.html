@@ -1,0 +1,71 @@
+---
+layout: default
+title: Nodenexus
+---
+
+<div id='home'>
+  <h1>ABOUT ME</h1>
+  <p>
+    I am a rising senior majoring in computer science at Princeton University. Relevant coursework includes networking, HCI, computational and algorithmic reasoning, functional and object-oriented programming, and system design.
+  </p>
+  <p>
+    This summer I'm an intern for Microsoft's Bing team. I previously interned at TripAdvisor as a member of the product personalization team.
+  </p>
+  <p>
+    Studying computer science was a gut decision for me. I started my career at Princeton as an aerospace engineer and changed majors after having my mind blown by an introductory course in Java. I've never looked back.
+  </p>
+  <p>
+    My current area of focus is on technologies which do a better job of collecting or presenting data in context. These technologies include "smart things" and wearables, note-taking and personal efficiency applications, and content recommendation systems. I want computers to see me as more than a bag of words or properties. Success will yield a digital world which is more intuitive and accessible from our own.
+  </p>
+  <p>
+    I'm also interested in digital rights and the structure of the Internet Society. In particular, I wish to study how the interaction of technology and policy affects the expression of individuals and groups on the Internet. I want to design "socially conscientious technologies" which improve the nature of communication among digital neighbors.
+  </p>
+  <p>
+    In my free time I like to juggle, play poker, and Make Things. I'm also an avid hackathon attendee. I do much of my web development with a CERN stack (Cassandra, Express, React, Node.js). 
+  </p>
+  <h1>CONTACT</h1>
+  <p>Hover over the code below to see my email:</p>
+  <code id='email_randomized' onClick='selectText("email_randomized");' onmouseover='reveal()' onmouseout='randomize()'>......................</code>
+  <p>Gotta protect against web scrapers :)</p>
+</div>
+<script>
+  var alpha = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789' +
+              '.!@#$%^&*()';
+  var e = ['c', 's', 't', 'e', 'd', 'm', 'a', 'n', '@', 'p', 'r', 'i', 'n',
+           'c', 'e', 't', 'o', 'n', '.', 'e', 'd', 'u'];
+  var f = [];
+  var end = setInterval(function() {
+    f = [];
+    for (var i = 0; i < e.length; i++) {
+      f.push(alpha.charAt(Math.floor(Math.random() * alpha.length)));
+    }
+    document.getElementById('email_randomized').innerHTML = f.join('');
+  }, 500);
+
+  function reveal () {
+    clearInterval(end);
+    document.getElementById('email_randomized').innerHTML = e.join('');
+  }
+
+  function randomize() {
+    end = setInterval(function() {
+      f = [];
+      for (var i = 0; i < e.length; i++) {
+        f.push(alpha.charAt(Math.floor(Math.random() * alpha.length)));
+      }
+      document.getElementById('email_randomized').innerHTML = f.join('');
+    }, 500);
+  }
+
+  function selectText(containerid) {
+    if (document.selection) {
+      var range = document.body.createTextRange();
+      range.moveToElementText(document.getElementById(containerid));
+      range.select();
+    } else if (window.getSelection) {
+      var range = document.createRange();
+      range.selectNode(document.getElementById(containerid));
+      window.getSelection().addRange(range);
+    }
+  }
+</script>

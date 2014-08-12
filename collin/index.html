@@ -1,48 +1,14 @@
-<!doctype html>
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta http-equiv='viewport' content='width=device-width' />
+---
+layout: default
+title: Nodenexus
+---
 
-    <link rel='stylesheet' type='text/css' href='./css/pure-min.css' />
-    <link rel='stylesheet' type='text/css' href='./css/style.css' />
-
-    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-
-    <title>HackPrinceton</title>
-  </head>
-  <body> 
-    <div id='topbar'>
-      <h1>HACKPRINCETON</h1>
-    </div>
-    <div id='menu'>
-      <ul>
-        <li>One</li>
-        <li>Two</li>
-        <li>Three</li>
-        <li>Four</li>
-    </div>
-    <div class='box space_right'>
-      <div>
-        <img src='http://www.mccc.edu/~symonss/whatsnew/Brian%20Kernighan.jpg'/>
-      </div>
-    </div><div class='box space_right'>
-      <div>
-        test
-      </div>
-    </div><div class='box space_right'>
-      <div>
-        test
-      </div>
-    </div><div class='box'>
-      <div>
-        test
-      </div>
-    </div>
-    <div id='botbar'>
-      <p style='text-align: center'>All our fancy-pants sponsors go here!</p>
-    </div>
-    <script type="application/javascript" src='./js/jquery-1.10.2.min.js'></script>
-    <script type="application/javascript" src='./js/script.js'></script>
-  </body>
-</html>
+<div id="home">
+  <ul class="posts">
+    {% for post in site.posts %}
+      <a href='{{ post.url }}'><h1>{{ post.title }}</h1></a>
+        <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+        <li class='post'>{{ post.content | truncatewords:300 }}</li>
+    {% endfor %}
+  </ul>
+</div>
