@@ -272,10 +272,16 @@ li { list-style-type: none }
   }
     #layout.active #menu {
       left: 250px;
-      width: 250px;
     }
     #layout.active #menu-link {
       left: 249px;
+    }
+    #layout.active .content {
+      -webkit-filter: blur(0.7px);
+      -moz-filter: blur(0.7px);
+      -o-filter: blur(0.7px);
+      -ms-filter: blur(0.7px);
+      filter: blur(0.7px);
     }
 
 /*----------------------------------------------------------------------------*/
@@ -304,6 +310,7 @@ li { list-style-type: none }
   padding: 0 5em;
   max-width: 800px;
   line-height: 1.6em;
+  transition: all 0.5s ease-out;
 }
 
 .content-subhead {
