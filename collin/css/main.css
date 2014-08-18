@@ -16,12 +16,12 @@ body {
   width: 100vw;
   min-width: 320px;
   background-color: #fff;
-  font-size: small; 
+  font-size: small;
 }
 
 /* Pure grid font override */
 html, button, input, select, textarea {
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-family: 'Lato', 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -42,7 +42,7 @@ a { color: #ee7f2d; text-decoration: none; }
 a:hover   { text-decoration: underline; }
 a:visited { color: #eeaf2d; }
 
-ul { 
+ul {
   padding: 0;
   margin: 0;
 }
@@ -82,6 +82,7 @@ li { list-style-type: none }
     margin: 0.2em 0;
     font-size: 3em;
     color: #000;
+    font-family: 'Questrial', 'Open Sans';
   }
   .logo h3 {
     position: absolute;
@@ -330,7 +331,7 @@ appears on the left side of the page.
   top: 0;
   left: 0;
   bottom: 0;
-  z-index: 1000; 
+  z-index: 1000;
   background: #000;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;

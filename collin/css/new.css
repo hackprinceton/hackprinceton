@@ -1,0 +1,157 @@
+/*
+ * -- BASE STYLES --
+ * Most of these are inherited from Base, but I want to change a few.
+ */
+body {
+  color: #555;
+  font-family: 'Lato';
+}
+
+p {
+    line-height: 1.6em;
+}
+
+
+/*
+ * -- Layout Styles --
+ */
+.content {
+    margin: 0 auto;
+}
+
+.l-box {
+    padding: 0.5em 2em;
+}
+
+/*
+ * -- MENU STYLES --
+ * Make the menu have a very faint box-shadow.
+ */
+.pure-menu {
+    box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
+}
+
+
+/*
+ * -- BANNER --
+ * The top banner with the headings. By using a combination
+ * of `display: table;` and `display: table-cell;`, we can
+ * vertically center the text.
+ */
+
+
+.banner {
+  content:"";
+    background: transparent url('../img/hero.jpg') 0 0 no-repeat fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    margin-bottom: 3em;
+    display: table;
+  z-index:-1;
+}
+
+.banner-head {
+    display: table-cell;
+    vertical-align:top;
+    font-size: 2em;
+    color: white;
+}
+
+.title {
+  width:640px;
+  margin:18vh auto 0 auto;
+  padding: 12px;
+  background-color: #fff;
+  opacity: 0.9;
+  color:#444;
+}
+
+.title h1 {
+  font-family: 'Questrial', sans-serif;
+  font-weight: 300;
+  font-size: 1.3em;
+  margin:0;
+}
+
+.title h2 {
+  font-weight: 300;
+  font-size: 0.5em;
+  margin:0;
+}
+
+/*
+ * -- Navigation Under Bannder --
+ *
+ */
+
+.banner-footer {
+  position:absolute;
+  top:85vh;
+  height:15vh;
+  width:100%;
+  background-color: #fff;
+  opacity: 0.9;
+}
+
+.navtab a,
+.navtab span {
+  position: absolute;
+  text-decoration: none;
+  color: #555;
+  bottom: 15px;
+  font-size: 1.4em;
+}
+
+/*
+ * -- PRICING TABLE WRAPPER --
+ * This element wraps up all the pricing table elements
+ */
+ .information {
+    max-width: 980px;
+    margin: 0 auto;
+ }
+.information-head {
+    color: black;
+    font-weight: 500;
+}
+
+.footer {
+    background: #111;
+    color: #888;
+    text-align: center;
+}
+    .footer a {
+        color: #ddd;
+    }
+
+
+
+/*
+ * -- TABLET MEDIA QUERIES --
+ * On tablets, we want to slightly adjust the size of the banner
+ * text and add some vertical space between the various pricing tables
+ */
+@media(min-width: 767px) {
+
+    .banner-head {
+        font-size: 4em;
+    }
+    .pricing-table {
+        margin-bottom: 0;
+    }
+
+}
+
+/*
+ * -- PHONE MEDIA QUERIES --
+ * On phones, we want to reduce the height and font-size of the banner further
+ */
+@media (min-width: 480px) {
+    .banner {
+        height: 70vh;
+    }
+    .banner-head {
+        font-size: 3em;
+    }
+}
