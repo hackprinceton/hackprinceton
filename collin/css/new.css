@@ -59,7 +59,7 @@ p {
 }
 
 .title {
-  width:640px;
+  width:500px;
   margin:18vh auto 0 auto;
   padding: 12px;
   background-color: #fff;
@@ -107,10 +107,17 @@ p {
  * -- PRICING TABLE WRAPPER --
  * This element wraps up all the pricing table elements
  */
- .information {
+.content,
+.information {
     max-width: 980px;
     margin: 0 auto;
  }
+
+
+.content-title {
+  text-align: center;
+}
+
 .information-head {
     color: black;
     font-weight: 500;
