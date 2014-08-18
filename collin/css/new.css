@@ -41,17 +41,27 @@ p {
 
 
 .banner {
-  content:"";
     background: transparent url('../img/hero.jpg') 0 0 no-repeat fixed;
     background-size: cover;
     height: 100vh;
     width: 100%;
-    margin-bottom: 3em;
+    margin-bottom: 1.5em;
     display: table;
-  z-index:-1;
+    z-index:-1;
+
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
 }
 
+
 .banner-head {
+    position: absolute;
+    top:0;
+    width: 100%;
+    z-index:0;
     display: table-cell;
     vertical-align:top;
     font-size: 2em;
@@ -80,6 +90,17 @@ p {
   margin:0;
 }
 
+.emailbutton {
+  background-color: #fff;
+  opacity: 0.9;
+  width: 300px;
+  margin: 20px auto;
+  font-size: .5em;
+  color: #444;
+  text-align: center;
+  padding: 5px;
+}
+
 /*
  * -- Navigation Under Bannder --
  *
@@ -87,35 +108,49 @@ p {
 
 .banner-footer {
   position:absolute;
-  top:85vh;
-  height:15vh;
+  top:70vh;
+  height:12vh;
   width:100%;
   background-color: #fff;
   opacity: 0.9;
 }
 
 .navtab a,
-.navtab span {
+.navtab p {
   position: absolute;
   text-decoration: none;
   color: #555;
   bottom: 15px;
   font-size: 1.4em;
+  margin: 0;
+  line-height: 1em;
 }
 
 /*
- * -- PRICING TABLE WRAPPER --
- * This element wraps up all the pricing table elements
+ * -- Content --
+ *
  */
 .content,
 .information {
     max-width: 980px;
     margin: 0 auto;
+    opacity:0.9;
+    background-color: #fff;
  }
-
 
 .content-title {
   text-align: center;
+  line-height: 1.8em;
+  border-bottom: 1px solid #555;
+}
+
+.about {
+}
+
+.faq:before {
+  content:"";
+  background-image:url(../img/hero.jpg);
+
 }
 
 .information-head {
@@ -123,9 +158,21 @@ p {
     font-weight: 500;
 }
 
+.sponsor p {
+  text-align: center;
+}
+
+.tier {
+  text-align: center;
+}
+
+.sponsor-logo {
+  width: 100%;
+}
+
 .footer {
-    background: #111;
-    color: #888;
+    background: #444;
+    color: #aaa;
     text-align: center;
 }
     .footer a {
@@ -140,12 +187,8 @@ p {
  * text and add some vertical space between the various pricing tables
  */
 @media(min-width: 767px) {
-
     .banner-head {
         font-size: 4em;
-    }
-    .pricing-table {
-        margin-bottom: 0;
     }
 
 }
@@ -156,9 +199,13 @@ p {
  */
 @media (min-width: 480px) {
     .banner {
-        height: 70vh;
+        height: 81vh;
     }
     .banner-head {
         font-size: 3em;
+    }
+    .title {
+      width:440px;
+      font-size: smaller;
     }
 }
