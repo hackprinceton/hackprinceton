@@ -2,36 +2,32 @@
  * -- BASE STYLES --
  * Most of these are inherited from Base, but I want to change a few.
  */
+
 body {
   color: #555;
   font-family: 'Lato';
 }
-
 p {
-    line-height: 1.6em;
+  line-height: 1.6em;
 }
-
-
 /*
  * -- Layout Styles --
  */
+
 .content {
-    margin: 0 auto;
+  margin: 0 auto;
 }
-
 .l-box {
-    padding: 0.5em 2em;
+  padding: 0.5em 2em;
 }
-
 /*
  * -- MENU STYLES --
  * Make the menu have a very faint box-shadow.
  */
+
 .pure-menu {
-    box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.10);
 }
-
-
 /*
  * -- BANNER --
  * The top banner with the headings. By using a combination
@@ -39,59 +35,63 @@ p {
  * vertically center the text.
  */
 
-
 .banner {
-    background: transparent url('../img/hero.jpg') 0 0 no-repeat fixed;
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
-    margin-bottom: 1.5em;
-    display: table;
-    z-index:-1;
-
+  background: transparent url('../img/hero.jpg') 0 0 no-repeat fixed;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  margin-bottom: 1.5em;
+  display: table;
+  z-index: -1;
   -webkit-filter: blur(4px);
-  -moz-filter: blur(4px);
-  -o-filter: blur(4px);
-  -ms-filter: blur(4px);
   filter: blur(4px);
 }
-
 .banner-head {
-    position: absolute;
-    top:0;
-    width: 100%;
-    z-index:0;
-    display: table-cell;
-    vertical-align:top;
-    font-size: 2em;
-    color: white;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+  display: table-cell;
+  vertical-align: top;
+  font-size: 2em;
+  color: white;
+}
+
+.logo {
+  width: 140px;
+  height: auto;
+  margin: 8vh auto 0 auto;
+}
+
+.logo img {
+  width: 100%;
 }
 
 .title {
-  width:500px;
-  margin:18vh auto 0 auto;
+  width: 400px;
+/*  margin: 28vh auto 0 auto;*/
+  margin: auto;
   padding: 12px;
   background-color: #fff;
   opacity: 0.8;
-  color:#444;
+  color: #444;
 }
-
 .title h1 {
   font-family: 'Questrial', sans-serif;
   font-weight: 300;
   font-size: 1.3em;
-  margin:0;
+  margin: 0;
 }
-
 .title h2 {
   font-weight: 300;
   font-size: 0.5em;
-  margin:0;
+  margin: 0;
 }
 
 .emailbutton {
+  /*To be replaced with Mailchimp signup*/
   background-color: #fff;
-  opacity: 0.9;
+  opacity: 0.8;
   width: 300px;
   margin: 20px auto;
   font-size: .5em;
@@ -99,21 +99,19 @@ p {
   text-align: center;
   padding: 5px;
 }
-
 /*
  * -- Navigation Under Bannder --
  *
  */
 
 .banner-footer {
-  position:absolute;
-  top:70vh;
-  height:12vh;
-  width:100%;
+  position: absolute;
+  top: 70vh;
+  height: 12vh;
+  width: 100%;
   background-color: #fff;
   opacity: 0.8;
 }
-
 .navtab a,
 .navtab p {
   position: absolute;
@@ -124,114 +122,101 @@ p {
   margin: 0;
   line-height: 1em;
 }
-
 /*
  * -- Content --
  *
  */
+
 .content,
 .information {
-    max-width: 980px;
-    margin: 0 auto;
-    padding: 0.5em 2em;
-/*    background-color: #fff;*/
- }
-
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0.5em 2em;
+  margin-bottom: 1.5em;
+}
 .content-title {
   text-align: center;
   line-height: 1.8em;
   border-bottom: 1px solid #555;
 }
-
 .about {
-/*  margin-top: -10em;*/
+  /*  margin-top: -10em;*/
 }
-
 .about-img {
-  overflow:hidden;
+  overflow: hidden;
   height: 300px;
 }
-
 .l-box img {
   width: 100%;
 }
-
 .schedule {
   background-color: #eee;
 }
-
 .information-head {
-    color: black;
-    font-weight: 500;
+  color: black;
+  font-weight: 500;
 }
-
-.sponsor {
-  background-image: url(../img/crowd.jpg);
-
+.sponsor::before {
+  content: "";
+  position: absolute;
+  background-image: url(../img/couch.jpg);
+  background-size: 100% auto;
+  width: 100%;
+  height: 850px;
+  z-index: -1;
+  -webkit-filter: blur(10px);
 }
-
-.sponsor h1 {
+.sponsor {} .sponsor h1 {
   color: #eee;
   border-bottom: 1px solid #eee;
-
 }
-
 .sponsor p {
   text-align: center;
 }
-
 .tier {
   text-align: center;
 }
-
 .sponsor-logo {
   width: 100%;
-  -webkit-filter:grayscale(100%);
+  -webkit-filter: grayscale(100%);
 }
-
 .sponsor-logo:hover {
-  -webkit-filter:grayscale(0%);
-  background-color: #fff;
+  -webkit-filter: grayscale(0%);
   opacity: 0.8;
 }
-
 .footer {
-    background: #444;
-    color: #aaa;
-    text-align: center;
+  background: #444;
+  color: #aaa;
+  text-align: center;
 }
-
 .footer a {
-    color: #ddd;
+  color: #ddd;
 }
-
-
-
 /*
  * -- TABLET MEDIA QUERIES --
  * On tablets, we want to slightly adjust the size of the banner
  * text and add some vertical space between the various pricing tables
  */
+
 @media(min-width: 767px) {
-    .banner-head {
-        font-size: 4em;
-    }
-
+  .banner-head {
+    font-size: 4em;
+  }
 }
-
 /*
  * -- PHONE MEDIA QUERIES --
  * On phones, we want to reduce the height and font-size of the banner further
  */
+
 @media (min-width: 480px) {
-    .banner {
-        height: 81.25vh;
-    }
-    .banner-head {
-        font-size: 3em;
-    }
-    .title {
-      width:440px;
-      font-size: smaller;
-    }
+  .banner {
+    height: 81.4vh;
+  }
+  .banner-head {
+    font-size: 3em;
+  }
+  .title {
+    width: 380px;
+    font-size: smaller;
+  }
 }
