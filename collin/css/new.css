@@ -107,11 +107,11 @@ p {
 
 .banner-footer {
   position:absolute;
-  top:75vh;
+  top:70vh;
   height:12vh;
   width:100%;
   background-color: #fff;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .navtab a,
@@ -134,8 +134,7 @@ p {
     max-width: 980px;
     margin: 0 auto;
     padding: 0.5em 2em;
-    opacity:0.9;
-    background-color: #fff;
+/*    background-color: #fff;*/
  }
 
 .content-title {
@@ -145,7 +144,7 @@ p {
 }
 
 .about {
-  margin-top: -10em;
+/*  margin-top: -10em;*/
 }
 
 .about-img {
@@ -166,6 +165,17 @@ p {
     font-weight: 500;
 }
 
+.sponsor {
+  background-image: url(../img/crowd.jpg);
+
+}
+
+.sponsor h1 {
+  color: #eee;
+  border-bottom: 1px solid #eee;
+
+}
+
 .sponsor p {
   text-align: center;
 }
@@ -176,6 +186,13 @@ p {
 
 .sponsor-logo {
   width: 100%;
+  -webkit-filter:grayscale(100%);
+}
+
+.sponsor-logo:hover {
+  -webkit-filter:grayscale(0%);
+  background-color: #fff;
+  opacity: 0.8;
 }
 
 .footer {
@@ -183,9 +200,10 @@ p {
     color: #aaa;
     text-align: center;
 }
-    .footer a {
-        color: #ddd;
-    }
+
+.footer a {
+    color: #ddd;
+}
 
 
 
@@ -207,7 +225,7 @@ p {
  */
 @media (min-width: 480px) {
     .banner {
-        height: 80vh;
+        height: 81.25vh;
     }
     .banner-head {
         font-size: 3em;
