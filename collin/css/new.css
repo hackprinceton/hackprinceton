@@ -38,7 +38,7 @@ p {
 .banner {
   background: transparent url('../img/hero_blur.png') 0 0 no-repeat fixed;
   background-size: cover;
-  height: 100vh;
+  height: 80vh;
   width: 100%;
   margin-bottom: 1.5em;
   display: table;
@@ -102,19 +102,14 @@ p {
 
 .banner-footer {
   position: absolute;
-  top: 64vh;
+  top: 70vh;
   height: 10vh;
-  padding: left;
   width: 100%;
   background-color: #fff;
   opacity: 0.8;
+  text-align: center;
 }
 
-.banner-footer div {
-  width: 80%;
-  margin: auto;
-  height: 10vh;
-}
 .navtab a,
 .navtab p {
   position: absolute;
@@ -160,8 +155,9 @@ p {
 }
 
 .sponsor {
-  background-image: url(../img/couch_blur.png);
+  background-image: url(../img/stickers.jpg);
   background-size: cover;
+  color: #fff;
 }
 
 .sponsor h1 {
@@ -196,9 +192,6 @@ p {
  */
 
 @media (min-width: 319px) {
-  .banner {
-    height: 74vh;
-  }
   .banner-head {
     font-size: 2.4em;
   }
@@ -225,7 +218,7 @@ p {
     width: 400px;
   }
   banner-footer {
-    font-size: smaller;
+    font-size: 1.2em;
   }
 }
 
@@ -236,14 +229,11 @@ p {
  */
 
 @media(min-width: 767px) {
-  .banner-footer {
-    font-size: 1em;
-  }
   .title {
     width: 400px;
   }
-  banner-footer {
-    font-size: smaller;
+  .banner-footer {
+    font-size: 1.5em;
   }
   .content {
     padding: 0.5em 2em;
