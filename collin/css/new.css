@@ -36,15 +36,12 @@ p {
  */
 
 .banner {
-  background: transparent url('../img/hero.jpg') 0 0 no-repeat fixed;
+  background: transparent url('../img/hero_blur.png') 0 0 no-repeat fixed;
   background-size: cover;
   height: 100vh;
   width: 100%;
   margin-bottom: 1.5em;
   display: table;
-  z-index: -1;
-  -webkit-filter: blur(4px);
-  filter: blur(4px);
 }
 .banner-head {
   position: absolute;
@@ -69,7 +66,6 @@ p {
 
 .title {
   width: 400px;
-/*  margin: 28vh auto 0 auto;*/
   margin: auto;
   padding: 12px;
   background-color: #fff;
@@ -106,11 +102,18 @@ p {
 
 .banner-footer {
   position: absolute;
-  top: 70vh;
-  height: 12vh;
+  top: 64vh;
+  height: 10vh;
+  padding: left;
   width: 100%;
   background-color: #fff;
   opacity: 0.8;
+}
+
+.banner-footer div {
+  width: 80%;
+  margin: auto;
+  height: 10vh;
 }
 .navtab a,
 .navtab p {
@@ -127,11 +130,10 @@ p {
  *
  */
 
-.content,
-.information {
+.content {
   max-width: 980px;
   margin: 0 auto;
-  padding: 0.5em 2em;
+/*  padding: 0.5em 2em;*/
   margin-bottom: 1.5em;
 }
 .content-title {
@@ -140,7 +142,7 @@ p {
   border-bottom: 1px solid #555;
 }
 .about {
-  /*  margin-top: -10em;*/
+
 }
 .about-img {
   overflow: hidden;
@@ -156,17 +158,13 @@ p {
   color: black;
   font-weight: 500;
 }
-.sponsor::before {
-  content: "";
-  position: absolute;
-  background-image: url(../img/couch.jpg);
-  background-size: 100% auto;
-  width: 100%;
-  height: 850px;
-  z-index: -1;
-  -webkit-filter: blur(10px);
+
+.sponsor {
+  background-image: url(../img/couch_blur.png);
+  background-size: cover;
 }
-.sponsor {} .sponsor h1 {
+
+.sponsor h1 {
   color: #eee;
   border-bottom: 1px solid #eee;
 }
@@ -193,30 +191,61 @@ p {
   color: #ddd;
 }
 /*
+ * -- PHONE MEDIA QUERIES --
+ * On phones, we want to reduce the height and font-size of the banner further
+ */
+
+@media (min-width: 319px) {
+  .banner {
+    height: 74vh;
+  }
+  .banner-head {
+    font-size: 2.4em;
+  }
+  .title {
+    font-size: smaller;
+    width: 300px;
+  }
+  .banner-footer {
+    font-size: 0.7em;
+  }
+  .content {
+    padding: 0.5em 0.5em;
+  }
+  .l-box {
+    padding: 0.5em 0.5em;
+  }
+}
+
+@media(min-width: 480px) {
+  .banner-head {
+    font-size: 3em;
+  }
+  .title {
+    width: 400px;
+  }
+  banner-footer {
+    font-size: smaller;
+  }
+}
+
+/*
  * -- TABLET MEDIA QUERIES --
  * On tablets, we want to slightly adjust the size of the banner
  * text and add some vertical space between the various pricing tables
  */
 
 @media(min-width: 767px) {
-  .banner-head {
-    font-size: 4em;
-  }
-}
-/*
- * -- PHONE MEDIA QUERIES --
- * On phones, we want to reduce the height and font-size of the banner further
- */
-
-@media (min-width: 480px) {
-  .banner {
-    height: 81.4vh;
-  }
-  .banner-head {
-    font-size: 3em;
+  .banner-footer {
+    font-size: 1em;
   }
   .title {
-    width: 380px;
+    width: 400px;
+  }
+  banner-footer {
     font-size: smaller;
+  }
+  .content {
+    padding: 0.5em 2em;
   }
 }
