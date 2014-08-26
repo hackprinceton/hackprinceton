@@ -172,12 +172,8 @@ p {
 }
 .sponsor-logo {
   width: 100%;
-  -webkit-filter: grayscale(100%);
 }
-.sponsor-logo:hover {
-  -webkit-filter: grayscale(0%);
-  opacity: 0.8;
-}
+
 .footer {
   background: #444;
   color: #aaa;
