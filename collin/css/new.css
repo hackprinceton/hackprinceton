@@ -65,6 +65,7 @@ p {
 }
 
 .title {
+  border-radius: 3px;
   width: 400px;
   margin: auto;
   padding: 12px;
@@ -85,7 +86,7 @@ p {
 }
 
 .emailbutton {
-  /*To be replaced with Mailchimp signup*/
+  border-radius: 3px;
   background-color: #fff;
   opacity: 0.8;
   width: 300px;
@@ -128,12 +129,11 @@ p {
 .content {
   max-width: 980px;
   margin: 0 auto;
-/*  padding: 0.5em 2em;*/
   margin-bottom: 1.5em;
 }
 .content-title {
   text-align: center;
-  line-height: 1.8em;
+/*  line-height: 1.8em;*/
   border-bottom: 1px solid #555;
 }
 .about {
@@ -149,9 +149,13 @@ p {
 .schedule {
   background-color: #eee;
 }
+.faq {
+  font-size:1em;
+}
 .information-head {
   color: black;
   font-weight: 500;
+  font-size: 1.2em;
 }
 
 .sponsor {
@@ -204,6 +208,9 @@ p {
   .l-box {
     padding: 0.5em 0.5em;
   }
+  .content-title {
+    font-size: 1.6em;
+  }
 }
 
 @media(min-width: 480px) {
@@ -213,8 +220,11 @@ p {
   .title {
     width: 400px;
   }
-  banner-footer {
+  .banner-footer {
     font-size: 1.2em;
+  }
+  .content-title {
+    font-size: 1.8em;
   }
 }
 
@@ -233,5 +243,8 @@ p {
   }
   .content {
     padding: 0.5em 2em;
+  }
+  .content-title {
+    font-size: 2.0em;
   }
 }
