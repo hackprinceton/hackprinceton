@@ -211,6 +211,9 @@ p {
   .content-title {
     font-size: 1.6em;
   }
+  .sponsor p {
+    font-size: 0.8em;
+  }
 }
 
 @media(min-width: 480px) {
@@ -225,6 +228,9 @@ p {
   }
   .content-title {
     font-size: 1.8em;
+  }
+  .sponsor p {
+    font-size: 1em;
   }
 }
 
