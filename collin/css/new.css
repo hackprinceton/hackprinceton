@@ -89,7 +89,7 @@ p {
   border-radius: 3px;
   background-color: #fff;
   opacity: 0.8;
-  width: 320px;
+  width: 340px;
   margin: 20px auto;
   font-size: .5em;
   color: #444;
@@ -98,25 +98,34 @@ p {
 }
 
 #mc_embed_signup {
-  font-size: 0.8em;
   font: 'Lato', Helvetica, sans-serif;
   margin: 10px 5px;
 }
 
 #mc_embed_signup input {
+  font-size: 0.8em;
   border: none;
   color: #444;
   text-align: center;
 }
 
+#mc_embed_signup input:focus {
+  outline: none;
+}
+
 #mc_embed_signup input.email {
   width: 60%;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #888;
 }
 
 #mc_embed_signup input.button {
+  height: 40px;
   border-radius: 3px;
   background-color: #BBB;
+}
+
+#mc_embed_signup input.button:focus {
+  border: 1px solid #666;
 }
 
 /*
@@ -215,6 +224,9 @@ p {
  */
 
 @media (min-width: 319px) {
+  .banner {
+    background-image: url(../img/hero_blur_sm.png)
+  }
   .banner-head {
     font-size: 2.4em;
   }
@@ -246,6 +258,9 @@ p {
 }
 
 @media(min-width: 480px) {
+  .banner {
+    background-image: url(../img/hero_blur_md.png)
+  }
   .banner-head {
     font-size: 3em;
   }
@@ -253,7 +268,7 @@ p {
     width: 400px;
   }
   .emailbutton {
-    width: 320px;
+    width: 340px;
   }
   .banner-footer {
     font-size: 1.2em;
@@ -276,6 +291,9 @@ p {
  */
 
 @media(min-width: 767px) {
+  .banner {
+    background-image: url(../img/hero_blur.png)
+  }
   .title {
     width: 400px;
   }
