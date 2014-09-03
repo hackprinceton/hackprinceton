@@ -318,34 +318,3 @@ p {
     font-size: 2.0em;
   }
 }
-
-
-@media(min-height: 0px) {
-  .banner {
-    height: 500px;
-  }
-  .banner-footer {
-    height: 60px;
-    top: 440px;
-  }
-}
-
-@media(max-height: 625px) and (max-width: 480px){
-.banner {
-    height: 450px;
-  }
-  .banner-footer {
-    height: 50px;
-    top: 400px;
-  }
-}
-
-@media(min-height: 625px) {
-  .banner {
-    height: 80vh;
-  }
-  .banner-footer {
-    height: 10%;
-    top: 70%;
-  }
-}
