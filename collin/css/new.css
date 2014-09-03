@@ -4,6 +4,7 @@ body {
 }
 p {
   line-height: 1.6em;
+  margin:2px;
 }
 /*
  * -- Layout Styles --
@@ -178,7 +179,7 @@ p {
 .information-head {
   font-weight: 600;
   font-size: 1.2em;
-  margin-bottom: -5px;
+  margin-bottom: 5px;
 }
 .sponsor {
   background-image: url(../img/stickers_blur.png);
