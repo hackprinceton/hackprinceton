@@ -135,8 +135,8 @@ p {
 
 .banner-footer {
   position: absolute;
-  top: 70vh;
-  height: 10vh;
+  top: 70%;
+  height: 10%;
   width: 100%;
   background-color: #fff;
   opacity: 0.8;
@@ -259,7 +259,7 @@ p {
 
 @media(min-width: 480px) {
   .banner {
-    background-image: url(../img/hero_blur_md.png)
+    background-image: url(../img/hero_blur_md.png);
   }
   .banner-head {
     font-size: 3em;
@@ -281,6 +281,14 @@ p {
   }
   .sponsor {
     background-image: url(../img/stickers_blur_md.png);
+  }
+
+  .banner {
+    height: 500px;
+  }
+  .banner-footer {
+    height: 60px;
+    top: 440px;
   }
 }
 
@@ -308,5 +316,36 @@ p {
   }
   .content-title {
     font-size: 2.0em;
+  }
+}
+
+
+@media(min-height: 0px) {
+  .banner {
+    height: 500px;
+  }
+  .banner-footer {
+    height: 60px;
+    top: 440px;
+  }
+}
+
+@media(max-height: 625px) and (max-width: 480px){
+.banner {
+    height: 450px;
+  }
+  .banner-footer {
+    height: 50px;
+    top: 400px;
+  }
+}
+
+@media(min-height: 625px) {
+  .banner {
+    height: 80vh;
+  }
+  .banner-footer {
+    height: 10%;
+    top: 70%;
   }
 }
