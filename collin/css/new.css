@@ -126,8 +126,8 @@ p {
 
 .banner-footer {
   position: absolute;
-  top: 70%;
-  height: 10%;
+  top: 70vh;
+  height: 10vh;
   width: 100%;
   background-color: #fff;
   opacity: 0.8;
@@ -302,13 +302,13 @@ p {
   }
 }
 
-@media(max-height: 640px) {
+@media(max-height: 625px) {
   .banner {
     height: 100vh;
   }
   .banner-footer {
-    height: 10%;
-    top: 90%;
+    height: 10vh;
+    top: 90vh;
   }
 
 }
