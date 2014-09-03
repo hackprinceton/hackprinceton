@@ -1,8 +1,3 @@
-/*
- * -- BASE STYLES --
- * Most of these are inherited from Base, but I want to change a few.
- */
-
 body {
   color: #555;
   font-family: 'Lato';
@@ -30,9 +25,7 @@ p {
 }
 /*
  * -- BANNER --
- * The top banner with the headings. By using a combination
- * of `display: table;` and `display: table-cell;`, we can
- * vertically center the text.
+ * The top banner with the headings.
  */
 
 .banner {
@@ -41,14 +34,12 @@ p {
   height: 80vh;
   width: 100%;
   margin-bottom: 1.5em;
-  display: table;
 }
 .banner-head {
   position: absolute;
   top: 0;
   width: 100%;
   z-index: 0;
-  display: table-cell;
   vertical-align: top;
   font-size: 2em;
   color: white;
@@ -282,14 +273,6 @@ p {
   .sponsor {
     background-image: url(../img/stickers_blur_md.png);
   }
-
-  .banner {
-    height: 500px;
-  }
-  .banner-footer {
-    height: 60px;
-    top: 440px;
-  }
 }
 
 /*
@@ -317,4 +300,15 @@ p {
   .content-title {
     font-size: 2.0em;
   }
+}
+
+@media(max-height: 640px) {
+  .banner {
+    height: 100vh;
+  }
+  .banner-footer {
+    height: 10%;
+    top: 90%;
+  }
+
 }
