@@ -204,6 +204,7 @@ p {
 .footer {
   background: #444;
   color: #aaa;
+  font-size: 0.9em;
   text-align: center;
 }
 .footer a {
