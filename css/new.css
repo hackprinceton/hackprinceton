@@ -1,11 +1,16 @@
 body {
-  color: #555;
-  font-family: 'Lato';
+  color: #444;
+  font-family: 'Lato', sans-serif;
 }
 p {
   line-height: 1.6em;
   margin:2px;
 }
+
+a {
+  color: inherit;
+}
+
 /*
  * -- Layout Styles --
  */
@@ -14,42 +19,39 @@ p {
   margin: 0 auto;
 }
 .l-box {
-  padding: 0.5em 2em;
-}
-/*
- * -- MENU STYLES --
- * Make the menu have a very faint box-shadow.
- */
+    padding: 0.5em 0.5em;
+  }
 
-.pure-menu {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.10);
-}
 /*
  * -- BANNER --
  * The top banner with the headings.
  */
 
 .banner {
-  background: transparent url('../img/hero_blur.png') 0 0 no-repeat fixed;
+  background: transparent url('../img/hero_blur_sm.png') 0 0 no-repeat fixed;
   background-size: cover;
   height: 80vh;
-  width: 100%;
   margin-bottom: 1.5em;
 }
+
 .banner-head {
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 0;
   vertical-align: top;
   font-size: 2em;
-  color: white;
+}
+
+.banner-head>div {
+  border-radius: 3px;
+  opacity: 0.8;
+  margin: 15px auto;
 }
 
 .logo {
   width: 140px;
   height: auto;
-  margin: 8vh auto 0 auto;
+  margin-top: 8vh !important;
 }
 
 .logo img {
@@ -57,17 +59,13 @@ p {
 }
 
 .title {
-  border-radius: 3px;
   width: 400px;
-  margin: auto;
   padding: 12px;
   background-color: #fff;
-  opacity: 0.8;
-  color: #444;
 }
 .title h1 {
   font-family: 'Questrial', sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.3em;
   margin: 0;
 }
@@ -77,27 +75,25 @@ p {
   margin: 0;
 }
 
+/*
+ * Mailchimp Magickry
+ *
+ */
 .emailbutton {
-  border-radius: 3px;
   background-color: #fff;
-  opacity: 0.8;
   width: 340px;
-  margin: 20px auto;
-  font-size: .5em;
-  color: #444;
-  text-align: center;
+  font-size: 0.5em;
   padding: 5px;
 }
 
 #mc_embed_signup {
-  font: 'Lato', Helvetica, sans-serif;
   margin: 10px 5px;
 }
 
 #mc_embed_signup input {
   font-size: 0.8em;
   border: none;
-  color: #444;
+  color: inherit;
   text-align: center;
 }
 
@@ -107,7 +103,7 @@ p {
 
 #mc_embed_signup input.email {
   width: 60%;
-  border-bottom: 1px solid #888;
+  border-bottom: 1px solid #BBB;
 }
 
 #mc_embed_signup input.button {
@@ -117,7 +113,7 @@ p {
 }
 
 #mc_embed_signup input.button:focus {
-  border: 1px solid #666;
+  border: 1px solid #FFF;
 }
 
 /*
@@ -133,23 +129,13 @@ p {
   background-color: #fff;
   opacity: 0.8;
   text-align: center;
+  padding: 1em 0;
 }
 
-.navtab a,
-.navtab p {
-  position: absolute;
-  text-decoration: none;
-  color: #555;
-  bottom: 15px;
-  font-size: 1.4em;
-  margin: 0;
-  line-height: 1em;
-}
 /*
  * -- Content --
  *
  */
-
 .content {
   max-width: 980px;
   margin: 0 auto;
@@ -157,7 +143,6 @@ p {
 }
 .content-title {
   text-align: center;
-/*  line-height: 1.8em;*/
   border-bottom: 1px solid #555;
 }
 .about {
@@ -174,7 +159,7 @@ p {
   background-color: #eee;
 }
 .faq {
-  font-size:1em;
+  font-size:0.9em;
 }
 .information-head {
   font-weight: 600;
@@ -210,11 +195,12 @@ p {
 .footer a {
   color: #ddd;
 }
+
+
 /*
  * -- PHONE MEDIA QUERIES --
  * On phones, we want to reduce the height and font-size of the banner further
  */
-
 @media (min-width: 319px) {
   .banner {
     background-image: url(../img/hero_blur_sm.png)
@@ -233,9 +219,6 @@ p {
     font-size: 1em;
   }
   .content {
-    padding: 0.5em 0.5em;
-  }
-  .l-box {
     padding: 0.5em 0.5em;
   }
   .content-title {
@@ -263,7 +246,7 @@ p {
     width: 340px;
   }
   .banner-footer {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
   .content-title {
     font-size: 1.8em;
@@ -293,7 +276,7 @@ p {
     background-image: url(../img/stickers_blur.png);
   }
   .banner-footer {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
   .content {
     padding: 0.5em 2em;
