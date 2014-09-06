@@ -1,4 +1,5 @@
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,89 +11,98 @@
 </head>
 
 <body>
-<div class="logo">
-   <img src="img/logo_white.png" alt="A Tiger's Tear">
-</div>
+  <div class="logo">
+    <img src="img/logo_white.png" alt="A Tiger's Tear">
+  </div>
   <div class="container">
     <form class="pure-form pure-form-aligned">
-       <fieldset>
+      <fieldset>
         <legend>Tell Us About Yourself!</legend>
 
         <div class="pure-control-group ">
-            <label for="name">First</label>
-            <input id="name" type="text" placeholder="First">
+          <label for="name">First</label>
+          <input id="name" type="text" placeholder="First">
         </div>
 
         <div class="pure-control-group">
           <label for="name">Last</label>
-            <input id="name" type="text" placeholder="Last">
-        </div>
-
-       <div class="pure-control-group">
-            <label for="email">Email Address</label>
-            <input id="email" type="email" placeholder="Email Address">
+          <input id="name" type="text" placeholder="Last">
         </div>
 
         <div class="pure-control-group">
-        <label for="gender">Gender</label>
-          <label for="male" class="inline pure-radio"><input id="gender-male" type="radio" name="gender" value="male"> Male </label>
-          <label for="female" class="inline pure-radio"><input id="gender-female" type="radio" name="gender" value="female"> Female </label>
-          <label for="other" class="inline pure-radio"><input id="gender-other" type="radio" name="gender" value="other"> Other/DTS </label>
+          <label for="email">Email Address</label>
+          <input id="email" type="email" placeholder="Email Address">
         </div>
 
         <div class="pure-control-group">
-            <label for="school">School</label>
-            <input id="school" type="text" placeholder="Princeton University">
+          <label for="gender">Gender</label>
+          <label for="male" class="inline pure-radio">
+            <input id="gender-male" type="radio" name="gender" value="male">Male</label>
+          <label for="female" class="inline pure-radio">
+            <input id="gender-female" type="radio" name="gender" value="female">Female</label>
+          <label for="other" class="inline pure-radio">
+            <input id="gender-other" type="radio" name="gender" value="other">Other/DTS</label>
         </div>
 
         <div class="pure-control-group">
-            <label for="class">Class</label>
-            <select>
-              <option>2018</option>
-              <option>2017 </option>
-              <option>2016</option>
-              <option>2015</option>
-              <option>Other</option>
-            </select>
+          <label for="school">School</label>
+          <input id="school" type="text" placeholder="Princeton University">
         </div>
 
         <div class="pure-control-group">
-            <label for="major">Major</label>
-            <input id="major" type="text" placeholder="Biology">
+          <label for="class">Class</label>
+          <select>
+            <option>2018</option>
+            <option>2017</option>
+            <option>2016</option>
+            <option>2015</option>
+            <option>Other</option>
+          </select>
         </div>
 
-         <div class="pure-control-group">
-            <label for="type">Project Type</label>
-            <label for="software" class="inline pure-radio"><input id="hardware" type="radio" name="type" value="hardware"> Hardware</label>
-            <label for="hardware" class="inline pure-radio"><input id="gender-female" type="radio" name="type" value="software"> Software </label>
-            <label for="typeboth" class="inline pure-radio"><input id="typeboth" type="radio" name="type" value="typeboth"> Both </label>
-          </div>
+        <div class="pure-control-group">
+          <label for="major">Major</label>
+          <input id="major" type="text" placeholder="Biology">
+        </div>
 
-         <div class="pure-control-group">
-            <label for="first">First...</label>
-            <label for="firsthack" class="inline pure-checkbox"><input id="firsthack" type="checkbox" value="hack"> Hackathon </label>
-            <label for="firsthp" class="inline pure-checkbox"><input id="firsthp" type="checkbox" value="hp"> HackPrinceton </label>
-          </div>
+        <div class="pure-control-group">
+          <label for="type">Project Type</label>
+          <label for="software" class="inline pure-radio">
+            <input id="hardware" type="radio" name="type" value="hardware">Hardware</label>
+          <label for="hardware" class="inline pure-radio">
+            <input id="gender-female" type="radio" name="type" value="software">Software</label>
+          <label for="typeboth" class="inline pure-radio">
+            <input id="typeboth" type="radio" name="type" value="typeboth">Both</label>
+        </div>
 
-          <div class="pure-control-group">
-            <label for="past">Link to Past Project</label>
-            <input id="past" type="url" placeholder="github.com/joyent/node">
-          </div>
+        <div class="pure-control-group">
+          <label for="first">First...</label>
+          <label for="firsthack" class="inline pure-checkbox">
+            <input id="firsthack" type="checkbox" value="hack">Hackathon</label>
+          <label for="firsthp" class="inline pure-checkbox">
+            <input id="firsthp" type="checkbox" value="hp">HackPrinceton</label>
+        </div>
 
-          <div class="pure-control-group">
-            <label for="comments">Other comments</label>
-            <input id="comments" type="text" placeholder="Yea! This and this...">
+        <div class="pure-control-group">
+          <label for="past">Link to Past Project</label>
+          <input id="past" type="url" placeholder="github.com/joyent/node">
+        </div>
+
+        <div class="pure-control-group">
+          <label for="comments">Other comments</label>
+          <input id="comments" type="text" placeholder="Yea! This and this...">
         </div>
 
         <div class="pure-controls">
-            <label for="cb" class="pure-checkbox">
-                <input id="cb" type="checkbox"> I agree with the <a href="">Code of Conduct</a>
-            </label>
+          <label for="cb" class="pure-checkbox">
+            <input id="cb" type="checkbox">I agree with the <a href="codeofconduct.html">Code of Conduct</a>
+          </label>
 
-            <button type="submit" class="pure-button pure-button-primary">Submit</button>
+          <button type="submit" class="pure-button pure-button-primary">Submit</button>
         </div>
-        </fieldset>
+      </fieldset>
     </form>
   </div>
 </body>
+
 </html>
