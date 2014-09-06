@@ -1,33 +1,92 @@
+/*
+ * Page Setup
+ */
+
 body {
   background-color: purple;
+  font-weight: 300;
 }
 
 .logo {
-  margin: 15vh auto 2vh auto;
-  width: 150px;
+  margin: 4% auto 20px auto;
+  width: 175px;
 }
 
 img {
   width: 100%;
 }
 
+
+/*
+ * Form Setup
+ */
 .container {
-  width: 350px;
-  margin: auto;
+  width: 500px;
+  margin: 0 auto 5% auto;
   background-color: #fdfdfd;
   border-radius: 3px;
   padding: 15px;
+  opacity: 0.9;
 }
+
+
+/*
+ * Specific Form Styling
+ */
 .pure-form-stacked input[type=text],
 .pure-form-stacked input[type=password],
 .pure-form-stacked input[type=email],
 .pure-form-stacked .pure-checkbox,
 .pure-form-stacked .pure-button,
-.pure-form-stacked legend {
+.pure-form legend {
   margin: 5px auto;
   text-align: center;
 }
 
-.pure-form-stacked legend {
+.pure-form legend {
   margin-bottom: 15px;
+  font-size: 1.4em;
+}
+
+
+.pure-control-group label.inline {
+  margin: 0 10px 0 0;
+  text-align: left;
+  width: auto;
+  font-size: 0.9em;
+}
+
+input[type=checkbox] {
+  border: none;
+}
+
+input[type=checkbox]:checked {
+
+}
+
+input[type=radio] {
+
+}
+
+select {
+
+}
+
+
+
+/*
+ * Responsiveness
+ */
+@media(max-width:560px) {
+  .container {
+    width: 400px;
+    font-size: smaller;
+  }
+}
+
+@media(max-width:440px) {
+  .container {
+    width: 300px;
+    font-size: smaller;
+  }
 }
