@@ -5,6 +5,7 @@
 body {
   background-color: purple;
   font-weight: 300;
+  color: #444;
 }
 
 .logo {
@@ -27,6 +28,7 @@ img {
   border-radius: 3px;
   padding: 15px;
   opacity: 0.9;
+  text-align: center;
 }
 
 
@@ -48,6 +50,10 @@ img {
   font-size: 1.4em;
 }
 
+.pure-form-stacked .signin {
+/*  margin-left: 37.5%;*/
+}
+
 
 .pure-control-group label.inline {
   margin: 0 10px 0 0;
@@ -56,27 +62,18 @@ img {
   font-size: 0.9em;
 }
 
+.pure-form input {
+  margin: 4px inherit;
+}
+
 .pure-form input[type=checkbox],
 .pure-form input[type=radio] {
-  margin: 5px;
+  margin: 8px inherit;
 }
 
-input[type=checkbox] {
-  border: none;
+.switchforms {
+  font-size: 0.8em;
 }
-
-input[type=checkbox]:checked {
-
-}
-
-input[type=radio] {
-
-}
-
-select {
-
-}
-
 
 
 /*
