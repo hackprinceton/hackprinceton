@@ -56,6 +56,11 @@ img {
   font-size: 0.9em;
 }
 
+.pure-form input[type=checkbox],
+.pure-form input[type=radio] {
+  margin: 5px;
+}
+
 input[type=checkbox] {
   border: none;
 }
