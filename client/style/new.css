@@ -6,9 +6,12 @@ p {
   line-height: 1.6em;
   margin:2px;
 }
-
 a {
   color: inherit;
+}
+
+img {
+  width: 100%;
 }
 
 .pure-g * {
@@ -52,10 +55,6 @@ a {
   width: 140px;
   height: auto;
   margin-top: 8vh !important;
-}
-
-.logo img {
-  width: 100%;
 }
 
 .title {
