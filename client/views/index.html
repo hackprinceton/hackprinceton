@@ -1,30 +1,6 @@
-<!doctype html>
-<html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="HackPrinceton's Autumn 2014 Website.">
-  <title>HackPrinceton &ndash; Autumn 2014</title>
-  <meta property="og:image" content="img/logo.png" />
-  <link rel="stylesheet" href="css/pure-min.css">
 
-  <!--[if lte IE 8]>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css">
-<![endif]-->
-  <!--[if gt IE 8]><!-->
-
-  <link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
-  <script src="js/viewport-units-buggyfill.js"></script>
-  <link rel="stylesheet" href="css/new.css">
-  <script>window.viewportUnitsBuggyfill.init(true);</script>
-  <script src="js/script.js"></script>
-  <link rel="icon" type="image/png" href="/favicon.png">
-</head>
-
-<body>
+<template name="landing">
   <div class="banner">
   <div class="banner-head">
     <div class="logo">
@@ -54,12 +30,12 @@
 
   <div class="content about pure-g">
     <h1 class="content-title pure-u-1">Whiz pop bang! The sound of dreams coming to life!</h1>
-    <div class="about-img pure-u-1 pure-u-md-1-3">
+    <div class="about-img pure-u-sm-1 pure-u-md-1-3">
       <div class="l-box">
         <img src="img/android.jpg" alt="Hero">
       </div>
     </div>
-    <div class="pure-u-1 pure-u-md-2-3">
+    <div class="pure-u-sm-1 pure-u-md-2-3">
       <p class="l-box">
        Everyone has a dream. Whether it is to go to the moon, cure cancer, or open a simple bakery, we want to help you bring it into reality. We provide a time and place for anyone, with any background, to create a project and bring their dream to life. So it doesn't matter if you're just getting off the ground or are flying circles in the virtual cloud. HackPrinceton is your time to make something new, to explore that ambitious craving in your head, and to step outside your comfort zone.
        <br><br>
@@ -140,7 +116,7 @@
   <div class="faq">
     <div class="content pure-g">
       <h1 class="content-title pure-u-1">Questions? Fire Away.</h1>
-      <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3">
+      <div class="pure-u-xs-1 pure-u-sm-1-2 pure-u-md-1-3">
         <div class="l-box">
           <h3 class="information-head">Who can come?</h3>
           <p>
@@ -150,7 +126,7 @@
       </div>
 
 
-      <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3">
+      <div class="pure-u-xs-1 pure-u-sm-1-2 pure-u-md-1-3">
         <div class="l-box">
           <h3 class="information-head">How to I sign up?</h3>
           <p>
@@ -159,7 +135,7 @@
         </div>
       </div>
 
-      <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3">
+      <div class="pure-u-xs-1 pure-u-sm-1-2 pure-u-md-1-3">
         <div class="l-box">
           <h3 class="information-head">What if I have dietary restrictions?</h3>
           <p>
@@ -168,7 +144,7 @@
         </div>
       </div>
 
-       <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3">
+       <div class="pure-u-xs-1 pure-u-sm-1-2 pure-u-md-1-3">
         <div class="l-box">
           <h3 class="information-head">Do I need a ton of experience?</h3>
           <p>
@@ -177,7 +153,7 @@
         </div>
       </div>
 
-      <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3">
+      <div class="pure-u-xs-1 pure-u-sm-1-2 pure-u-md-1-3">
         <div class="l-box">
           <h3 class="information-head">How can I get to HackPrinceton?</h3>
           <p>
@@ -186,7 +162,7 @@
         </div>
       </div>
 
-     <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3">
+     <div class="pure-u-xs-1 pure-u-sm-1-2 pure-u-md-1-3">
         <div class="l-box">
           <h3 class="information-head">What should I bring?</h3>
           <p>
@@ -195,7 +171,7 @@
         </div>
       </div>
 
-      <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3">
+      <div class="pure-u-xs-1 pure-u-sm-1-2 pure-u-md-1-3">
         <div class="l-box">
           <h3 class="information-head">What big can my team be?</h3>
           <p>
@@ -204,7 +180,7 @@
         </div>
       </div>
 
-      <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3">
+      <div class="pure-u-xs-1 pure-u-sm-1-2 pure-u-md-1-3">
         <div class="l-box">
           <h3 class="information-head">What will the weekend look like?</h3>
           <p>
@@ -213,7 +189,7 @@
         </div>
       </div>
 
-     <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3">
+     <div class="pure-u-xs-1 pure-u-sm-1-2 pure-u-md-1-3">
         <div class="l-box">
           <h3 class="information-head">My question wasn't frequently asked. How do I get in touch?</h3>
           <p>
@@ -226,16 +202,11 @@
   </div>
 
   <div class="footer l-box">
-    <p>
-      Crafted with Care for HackPrinceton F2014.
-    </p>
+    <p> Crafted with Care for HackPrinceton F2014. </p>
     <div class="contact">
         <a href="http://facebook.com/hackprinceton">Facebook</a> —
         <a href="http://twitter.com/hackprinceton">Twitter</a>  —
         hackprinceton[@]princetoneclub.com
       </div>
   </div>
-
-</body>
-
-</html>
+</template>
