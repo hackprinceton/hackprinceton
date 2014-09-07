@@ -2,21 +2,19 @@
  * Page Setup
  */
 
-body {
-/*  background-color: purple;*/
-  font-weight: 300;
+.form-background {
+  position:absolute;
+  width:100%;
+  min-height: 100%;
   color: #444;
+  font-weight: 300;
+  background-color: purple;
 }
 
-.logo {
+.form-logo {
   margin: 4% auto 20px auto;
   width: 175px;
 }
-
-img {
-  width: 100%;
-}
-
 
 /*
  * Form Setup
@@ -28,7 +26,11 @@ img {
   border-radius: 3px;
   padding: 15px;
   opacity: 0.9;
-  text-align: center;
+}
+
+.container form {
+  width:90%;
+  margin:auto;
 }
 
 
@@ -36,8 +38,8 @@ img {
  * Specific Form Styling
  */
 .pure-form-stacked input[type=text],
-.pure-form-stacked input[type=password],
-.pure-form-stacked input[type=email],
+.pure-form-stacked input[type=password].signin,
+.pure-form-stacked input[type=email].signin,
 .pure-form-stacked .pure-checkbox,
 .pure-form-stacked .pure-button,
 .pure-form legend {
@@ -51,12 +53,12 @@ img {
 }
 
 .pure-form-stacked .signin {
-/*  margin-left: 37.5%;*/
+  margin-left: 37.5%;
 }
 
-
-.pure-control-group label.inline {
-  margin: 0 10px 0 0;
+.pure-form .pure-control-group label.inline,
+.pure-form .pure-controls label {
+  margin: 0 5px 0 0;
   text-align: left;
   width: auto;
   font-size: 0.9em;
@@ -73,6 +75,7 @@ img {
 
 .switchforms {
   font-size: 0.8em;
+  text-align: center;
 }
 
 
