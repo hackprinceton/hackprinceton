@@ -11,6 +11,10 @@ a {
   color: inherit;
 }
 
+.pure-g * {
+  letter-spacing: normal !important;
+}
+
 /*
  * -- Layout Styles --
  */
@@ -83,6 +87,7 @@ a {
 
 #mc_embed_signup {
   margin: 10px 5px;
+  text-align: center;
 }
 
 #mc_embed_signup input {
@@ -191,6 +196,9 @@ a {
   font-size: 0.9em;
   text-align: center;
 }
+.footer p {
+  margin:auto;
+}
 .footer a {
   color: #ddd;
 }
@@ -254,6 +262,9 @@ a {
   }
   .sponsor {
     background-image: url(../img/stickers_blur_sm.png);
+  }
+  .footer {
+    font-size: smaller;
   }
 }
 
