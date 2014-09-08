@@ -21,9 +21,8 @@ Template.signin.events({
       key:"code",
       value:code
     });
-    console.log(email);
-    console.log(code);
-    console.log(profile);
+
+    alert(email);
   },
 
   'click .switchforms': function(event) {
