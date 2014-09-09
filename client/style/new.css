@@ -80,39 +80,14 @@ img {
  */
 .emailbutton {
   background-color: #fff;
-  width: 340px;
-  padding: 5px;
-}
-
-#mc_embed_signup {
-  margin: 10px 5px;
-  text-align: center;
-}
-
-#mc_embed_signup input {
+  width: 300px;
+  padding: 8px;
   font-size: 0.5em;
-  border: none;
-  color: inherit;
   text-align: center;
 }
 
-#mc_embed_signup input:focus {
-  outline: none;
-}
-
-#mc_embed_signup input.email {
-  width: 60%;
-  border-bottom: 1px solid #BBB;
-}
-
-#mc_embed_signup input.button {
-  height: 40px;
-  border-radius: 3px;
-  background-color: #BBB;
-}
-
-#mc_embed_signup input.button:focus {
-  border: 1px solid #FFF;
+.signup-button {
+  width: 100%;
 }
 
 /*
@@ -219,7 +194,8 @@ img {
     width: 350px;
   }
   .emailbutton {
-    width: 340px;
+    width: 300px;
+    font-size: smaller;
   }
   .banner-footer {
     font-size: 1.1em;
@@ -245,7 +221,7 @@ img {
   }
   .emailbutton {
     font-size: smaller;
-    width: 300px;
+    width: 280px;
   }
   .banner-footer {
     font-size: 1em;
