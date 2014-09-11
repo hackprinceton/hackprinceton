@@ -18,6 +18,12 @@ img {
   width: 100%;
 }
 
+.hr {
+  width:100%;
+  border-bottom:1px solid #ddd;
+  margin: 15px auto;
+}
+
 /*
  * Form Setup
  */
@@ -77,6 +83,10 @@ img {
 
 .switchforms {
   font-size: 0.8em;
+  text-align: center;
+}
+
+.teaminfo {
   text-align: center;
 }
 
