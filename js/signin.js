@@ -6,6 +6,9 @@ $(document).ready(function(){
     Parse.User.logIn($('#email').val(), $('#password').val(), {
       success: function(user) {
         // Do stuff after successful login.
+
+        $('#form').hide()
+        $('#account').show()
       },
       error: function(user, error) {
         // The login failed. Check error to see why.

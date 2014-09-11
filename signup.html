@@ -17,14 +17,26 @@
 </head>
 
 <body>
-  <div class="form-background">
     <div class="form-logo">
       <img src="img/logo_white.png" alt="A Tiger's Tear">
     </div>
     <div class="container">
+     <div id="form">
       <form id="signup" class="pure-form pure-form-aligned">
         <fieldset>
           <legend>Tell Us About Yourself!</legend>
+
+          <div class="pure-control-group">
+            <label for="email">Email*</label>
+            <input id="email" type="email" placeholder="you@awesome.com" required>
+          </div>
+
+          <div class="pure-control-group">
+            <label for="password">Password*</label>
+            <input id="password" type="password" placeholder="(not password123)" required>
+          </div>
+
+          <div class="hr"></div>
 
           <div class="pure-control-group ">
             <label for="fname">First*</label>
@@ -34,11 +46,6 @@
           <div class="pure-control-group">
             <label for="lname">Last*</label>
             <input id="lname" type="text" placeholder="Last" required>
-          </div>
-
-          <div class="pure-control-group">
-            <label for="email">Email Address*</label>
-            <input id="email" type="email" placeholder="Email Address" required>
           </div>
 
           <div class="pure-control-group">
@@ -101,6 +108,17 @@
             <input id="comments" type="text" placeholder="Yea! This and this...">
           </div>
 
+
+          <div class="hr"></div>
+
+          <div class="teams">
+            <div class="pure-control-group">
+              <p class="teaminfo">Your team code is <span id="code"></span>. <br> Share with your friends or join their team below.<br></p>
+              <label for="comments">Join Team</label>
+              <input id="team" type="text" placeholder="">
+            </div>
+          </div>
+
           <div class="pure-controls">
             <label for="cb" class="pure-checkbox">
               <input id="cb" type="checkbox" required>I agree to follow the <a href="http://hackprinceton.com/codeofconduct.html" target="_blank">Code of Conduct</a>
@@ -112,6 +130,10 @@
       </form>
 
       <p class="switchforms">Already signed up? Sign in <a href="signin.html">here</a>!</p>
+    </div>
+
+    <div id="confirmation" style="display:none;">
+      <h1>Verify your email!</h1>
     </div>
   </div>
 </body>
