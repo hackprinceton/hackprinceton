@@ -1,39 +1,55 @@
-Template.signup.events = {
-  // Submit info
-  'click button[type=submit]': function(event) {
+$(document).ready(function(){
+  $("#signup").submit(function(event){
     event.preventDefault();
+
+    // Vaccuum
     var email = $('#email').val();
-    // password?
+    var password = "hackprinceton"  // CHANGE THIS
+    var first = $('#fname').val();
+    var last = $('#lname').val();
+    var school = $('#school').val();
+    var grade = $('#class option:selected').text();
+    var gender = $('input[name=gender]:checked').val();
+    var major  = $('#major').val();
+    var type = $('input[name=type]:checked').val();
+    var firsthack = $('#firsthack').prop('checked');
+    var firsthp = $('#firsthp').prop('checked');
+    var past = $('#past').val()
+    var comments = $('#comments').val();
+//    // teamname
 
-    // Personal Information
-    var profile = [];
 
-    profile.push({key:"first", value:$('#fname').val()});
-    profile.push({key:"last",value:$('#lname').val()});
-    profile.push({key:"school",value:$('#school').val()});
-    profile.push({key:"class",value:$('#class option:selected').text()});
-    profile.push({key:"gender",value:$('input[name=gender]:checked').val()});
-    profile.push({key:"major",value:$('#major').val()});
-    profile.push({key:"type",value:$('input[name=type]:checked').val()});
-    profile.push({key:"firsthack",value:$("#firsthack").checked});
-    profile.push({key:"firsthp",value:$("#firsthp").checked});
-    profile.push({key:"past",value:$('#past').val()});
-    profile.push({key:"comments",value:$('#comments').val()});
+    // Parse Initialization
+    Parse.initialize("VQpQwojL2wjTuNkUDzV0C2wAiQODWJw90cRKtP3Q", "yR5gVtaYrmMyjzTck1bLuvqRinqUrMnAoPqITysH");
+    var user = new Parse.User();
+    user.set("username", email);
+    user.set("email", email);
+    user.set("password", password);
+    user.set("first", first);
+    user.set("last", last);
+    user.set("school", school);
+    user.set("grade", grade);
+    user.set("gender", gender);
+    user.set("major", major);
+    user.set("type", type);
+    user.set("firsthack", firsthack);
+    user.set("firsthp", firsthp);
+    user.set("past", past);
+    user.set("comments", comments);
 
-    console.log(profile);
 
-    // check for nullity
+    user.signUp(null, {
+      success: function(user) {
+        // Hide form, ask to validate email
+      },
+      error: function(user, error) {
+        if (error.code === 202) {
+          alert("Email already used to sign up!")
+        } else {
+          alert("Error: " + error.code + " " + error.message);
+        }
+      }
+    })
+  });
+});
 
-    // Create account
-//    Accounts.createUser({
-//      email: email,
-//      password: password
-//    });
-  },
-
-  // Switch to signin form
-  'click .switchforms': function(event) {
-    Router.go('/signin')
-  }
-
-};
