@@ -1,0 +1,119 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HackPrinceton's Autumn 2014 Website.">
+  <title>HackPrinceton &ndash; Autumn 2014</title>
+  <meta property="og:image" content="/img/logo.png" />
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+  <link rel="icon" sizes="16x16 32x32" href="/img/favicon.png?v=2">
+  <link rel="stylesheet" href="css/form.css">
+  <link rel="stylesheet" href="css/pure-min.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.js"></script>
+  <script src="//www.parsecdn.com/js/parse-1.3.0.min.js"></script>
+  <script src="js/signup.js"></script>
+</head>
+
+<body>
+  <div class="form-background">
+    <div class="form-logo">
+      <img src="img/logo_white.png" alt="A Tiger's Tear">
+    </div>
+    <div class="container">
+      <form id="signup" class="pure-form pure-form-aligned">
+        <fieldset>
+          <legend>Tell Us About Yourself!</legend>
+
+          <div class="pure-control-group ">
+            <label for="fname">First*</label>
+            <input id="fname" type="text" placeholder="First" required>
+          </div>
+
+          <div class="pure-control-group">
+            <label for="lname">Last*</label>
+            <input id="lname" type="text" placeholder="Last" required>
+          </div>
+
+          <div class="pure-control-group">
+            <label for="email">Email Address*</label>
+            <input id="email" type="email" placeholder="Email Address" required>
+          </div>
+
+          <div class="pure-control-group">
+            <label for="gender">Gender*</label>
+            <label for="male" class="inline pure-radio">
+              <input id="gender-male" type="radio" name="gender" value="male" required>Male</label>
+            <label for="female" class="inline pure-radio">
+              <input id="gender-female" type="radio" name="gender" value="female">Female</label>
+            <label for="other" class="inline pure-radio">
+              <input id="gender-other" type="radio" name="gender" value="other">Other/DTS</label>
+          </div>
+
+          <div class="pure-control-group">
+            <label for="school">School*</label>
+            <input id="school" type="text" placeholder="Princeton University" required>
+          </div>
+
+          <div class="pure-control-group">
+            <label for="class">Class*</label>
+            <select id="class"  required>
+               <option selected="selected" disabled="disabled" value="">Select</option>
+              <option>2018</option>
+              <option>2017</option>
+              <option>2016</option>
+              <option>2015</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="pure-control-group">
+            <label for="major">Studying*</label>
+            <input id="major" type="text" placeholder="Bio/CS/Business Triple Major" required>
+          </div>
+
+          <div class="pure-control-group">
+            <label for="type">Project Type*</label>
+            <label for="software" class="inline pure-radio">
+              <input id="hardware" type="radio" name="type" value="hardware" required>Hardware</label>
+            <label for="hardware" class="inline pure-radio">
+              <input id="gender-female" type="radio" name="type" value="software">Software</label>
+            <label for="typeboth" class="inline pure-radio">
+              <input id="typeboth" type="radio" name="type" value="typeboth">Both</label>
+          </div>
+
+          <div class="pure-control-group">
+            <label for="first">First...</label>
+            <label for="firsthack" class="inline pure-checkbox">
+              <input id="firsthack" type="checkbox" value="hack">Hackathon</label>
+            <label for="firsthp" class="inline pure-checkbox">
+              <input id="firsthp" type="checkbox" value="hp">HackPrinceton</label>
+          </div>
+
+          <div class="pure-control-group">
+            <label for="past">Past Project</label>
+            <input id="past" type="url" placeholder="github.com/joyent/node">
+          </div>
+
+          <div class="pure-control-group">
+            <label for="comments">Comments/Suggestions</label>
+            <input id="comments" type="text" placeholder="Yea! This and this...">
+          </div>
+
+          <div class="pure-controls">
+            <label for="cb" class="pure-checkbox">
+              <input id="cb" type="checkbox" required>I agree to follow the <a href="http://hackprinceton.com/codeofconduct.html" target="_blank">Code of Conduct</a>
+            </label>
+
+            <button id="submit" type="submit" class="pure-button pure-button-primary">Submit</button>
+          </div>
+        </fieldset>
+      </form>
+
+      <p class="switchforms">Already signed up? Sign in <a href="signin.html">here</a>!</p>
+    </div>
+  </div>
+</body>
+
+</html>
