@@ -1,39 +1,47 @@
-function teamSetup() {
-  var teamnum = -1
-  var num = Math.floor((Math.random() * 10000000) + 1);
-  $('#code').text(num);
+function invalidTeam(message) {
+  team = null;
+  $("#team").css("border","red solid 1px");
+  $("#teammessage").text(message)
+}
+
+function validTeam() {
+  $("#team").css("border","green solid 1px");
+  $("#teammessage").text("Team Open!")
 }
 
 $(document).ready(function(){
 
+  // Parse Initialization
+  Parse.initialize("VQpQwojL2wjTuNkUDzV0C2wAiQODWJw90cRKtP3Q", "yR5gVtaYrmMyjzTck1bLuvqRinqUrMnAoPqITysH");
+  var TeamList = Parse.Object.extend("Teams");
+
   // Setup user's individual team number
-  var num = Math.floor((Math.random() * 10000000) + 1);
-  $('#code').text(num);
+  var team = null;
+  var code = Math.floor((Math.random() * 10000000) + 1);
+  $('#code').text(code);
 
-
-  // Check for valid team number
+  // Team number inputted
   $('#team').change(function(event) {
-    // check for team val
-    var possNum = $('#team').val();
+    var input = $('#team').val();
+    var query = new Parse.Query(TeamList);
+    query.equalTo("team", input);
 
-    var teams = Parse.Object.extend("Teams");
-    var query = new Parse.Query(teams);
-    query.equalTo("team", possNum);
-
-    query.find({
-      success: function(results) {
-        alert("Successfully retrieved " + results.length + " teams.");
-        // check team length
-        // sign user up
+    query.first({
+      success: function(object) {
+        if (object == null) {
+          invalidTeam("Team not found.");
+        } else if (object.get("team") > 5) {
+          invalidTeam("Team already full!");
+        } else {
+          team = object;
+          validTeam();
+        }
       },
       error: function(error) {
-        // code not found
-        teamnum = -1
-        alert("Error: " + error.code + " " + error.message);
+        invalidTeam("Error: " + error.code + " " + error.message);
       }
     });
   });
-
 
   // Form submission
   $("#signup").submit(function(event){
@@ -53,11 +61,7 @@ $(document).ready(function(){
     var firsthp = $('#firsthp').prop('checked');
     var past = $('#past').val()
     var comments = $('#comments').val();
-//    // teamname
 
-
-    // Parse Initialization
-    Parse.initialize("VQpQwojL2wjTuNkUDzV0C2wAiQODWJw90cRKtP3Q", "yR5gVtaYrmMyjzTck1bLuvqRinqUrMnAoPqITysH");
     var user = new Parse.User();
     user.set("username", email);
     user.set("email", email);
@@ -73,6 +77,14 @@ $(document).ready(function(){
     user.set("firsthp", firsthp);
     user.set("past", past);
     user.set("comments", comments);
+
+    if (team == null) {
+      // create new team, set count to 0
+      user.set("team", teamCode);
+    } else {
+      user.set("team", team.get("team"))
+      // create new Team Object and set count to 0
+    }
 
 
     user.signUp(null, {
