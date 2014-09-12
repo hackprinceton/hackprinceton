@@ -17,20 +17,21 @@ $(document).ready(function(){
 
   // Setup user's individual team number
   var team = null;
-  var code = Math.floor((Math.random() * 10000000) + 1);
+  var code = Math.floor((Math.random() * 10000000) + 1).toString();
   $('#code').text(code);
 
   // Team number inputted
   $('#team').change(function(event) {
     var input = $('#team').val();
     var query = new Parse.Query(TeamList);
-    query.equalTo("team", input);
+    query.equalTo("teamcode", input);
 
     query.first({
       success: function(object) {
+        team = object;
         if (object == null) {
           invalidTeam("Team not found.");
-        } else if (object.get("team") > 5) {
+        } else if (object.get("count") > 5) {
           invalidTeam("Team already full!");
         } else {
           team = object;
@@ -49,7 +50,7 @@ $(document).ready(function(){
 
     // Vaccuum
     var email = $('#email').val();
-    var password = $('#password').val();  // CHANGE THIS
+    var password = $('#password').val();
     var first = $('#fname').val();
     var last = $('#lname').val();
     var school = $('#school').val();
@@ -80,10 +81,16 @@ $(document).ready(function(){
 
     if (team == null) {
       // create new team, set count to 0
-      user.set("team", teamCode);
+      var newTeam = new TeamList();
+      newTeam.set("teamcode", code)
+      newTeam.set("count", 0)
+      newTeam.save();
+      user.set("team", code);
     } else {
-      user.set("team", team.get("team"))
-      // create new Team Object and set count to 0
+      // increment given team, save
+      user.set("team", team.get("teamcode"));
+      team.increment("count");
+      team.save();
     }
 
 
