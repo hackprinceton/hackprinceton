@@ -7,8 +7,10 @@ $(document).ready(function(){
       success: function(user) {
         // Do stuff after successful login.
 
-        $('#form').hide()
-        $('#account').show()
+        $('#form').hide();
+        $('#status').text(user.get('status'));
+        $('#code').text(user.get('team'));
+        $('#account').show();
       },
       error: function(user, error) {
         // The login failed. Check error to see why.
