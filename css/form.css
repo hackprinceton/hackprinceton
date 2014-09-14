@@ -24,6 +24,15 @@ img {
   margin: 15px auto;
 }
 
+.newpage {
+  text-align: center;
+  padding:10px;
+}
+
+.newpage h2 {
+  font-weight: 500;
+}
+
 /*
  * Form Setup
  */
