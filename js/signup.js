@@ -81,10 +81,10 @@ $(document).ready(function(){
     user.set("status", "Pending");
 
     if (team == null) {
-      // create new team, set count to 0
+      // create new team, set count to 1
       var newTeam = new TeamList();
       newTeam.set("teamcode", code)
-      newTeam.set("count", 0)
+      newTeam.set("count", 1)
       newTeam.save();
       user.set("team", code);
     } else {
