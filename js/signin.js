@@ -40,7 +40,15 @@ $(document).ready(function(){
   }),
 
   // Team number inputted
-  $('#team').change(function(event) {
+  $('#team').on("change keypress", function(event) {
+    if (event.type == "keypress") {
+      if (event.keyCode == 13) {
+        event.preventDefault();
+      } else {
+        return;
+      }
+    }
+
     var user = Parse.User.current();
     var input = $('#team').val();
 
