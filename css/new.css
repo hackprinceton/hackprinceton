@@ -6,18 +6,21 @@ p {
   line-height: 1.6em;
   margin:2px;
 }
-
 a {
   color: inherit;
+}
+
+img {
+  width: 100%;
+}
+
+.pure-g * {
+  letter-spacing: normal !important;
 }
 
 /*
  * -- Layout Styles --
  */
-
-.content {
-  margin: 0 auto;
-}
 .l-box {
     padding: 0.5em 0.5em;
   }
@@ -28,7 +31,7 @@ a {
  */
 
 .banner {
-  background: transparent url('../img/hero_blur_sm.png') 0 0 no-repeat fixed;
+  background: transparent url('../img/hero_blur.png') 0 0 no-repeat fixed;
   background-size: cover;
   height: 80vh;
   margin-bottom: 1.5em;
@@ -39,7 +42,7 @@ a {
   top: 0;
   width: 100%;
   vertical-align: top;
-  font-size: 2em;
+  font-size: 2.4em;
 }
 
 .banner-head>div {
@@ -52,10 +55,6 @@ a {
   width: 140px;
   height: auto;
   margin-top: 8vh !important;
-}
-
-.logo img {
-  width: 100%;
 }
 
 .title {
@@ -81,39 +80,14 @@ a {
  */
 .emailbutton {
   background-color: #fff;
-  width: 340px;
+  width: 300px;
+  padding: 8px;
   font-size: 0.5em;
-  padding: 5px;
-}
-
-#mc_embed_signup {
-  margin: 10px 5px;
-}
-
-#mc_embed_signup input {
-  font-size: 0.8em;
-  border: none;
-  color: inherit;
   text-align: center;
 }
 
-#mc_embed_signup input:focus {
-  outline: none;
-}
-
-#mc_embed_signup input.email {
-  width: 60%;
-  border-bottom: 1px solid #BBB;
-}
-
-#mc_embed_signup input.button {
-  height: 40px;
-  border-radius: 3px;
-  background-color: #BBB;
-}
-
-#mc_embed_signup input.button:focus {
-  border: 1px solid #FFF;
+.signup-button {
+  width: 100%;
 }
 
 /*
@@ -130,6 +104,7 @@ a {
   opacity: 0.8;
   text-align: center;
   padding: 1em 0;
+  font-size: 1.3em;
 }
 
 /*
@@ -138,12 +113,15 @@ a {
  */
 .content {
   max-width: 980px;
-  margin: 0 auto;
-  margin-bottom: 1.5em;
+  margin: 0 auto 1.5em auto;
+/*  margin-bottom: 1.5em;*/
+  padding: 0.5em 2em;
+
 }
 .content-title {
   text-align: center;
   border-bottom: 1px solid #555;
+  font-size: 2.0em;
 }
 .about {
 
@@ -192,6 +170,9 @@ a {
   font-size: 0.9em;
   text-align: center;
 }
+.footer p {
+  margin:auto;
+}
 .footer a {
   color: #ddd;
 }
@@ -201,19 +182,46 @@ a {
  * -- PHONE MEDIA QUERIES --
  * On phones, we want to reduce the height and font-size of the banner further
  */
-@media (min-width: 319px) {
+
+@media(max-width: 767px) {
   .banner {
-    background-image: url(../img/hero_blur_sm.png)
+    background-image: url(../img/hero_blur_md.png);
   }
   .banner-head {
-    font-size: 2.4em;
+    font-size: 2em;
+  }
+  .title {
+    width: 350px;
+  }
+  .emailbutton {
+    width: 300px;
+    font-size: smaller;
+  }
+  .banner-footer {
+    font-size: 1.1em;
+  }
+  .content-title {
+    font-size: 1.8em;
+  }
+  .sponsor p {
+    font-size: 1em;
+  }
+  .sponsor {
+    background-image: url(../img/stickers_blur_md.png);
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    background-image: url(../img/hero_blur_sm.png)
   }
   .title {
     font-size: smaller;
     width: 300px;
   }
   .emailbutton {
-    width: 300px;
+    font-size: smaller;
+    width: 280px;
   }
   .banner-footer {
     font-size: 1em;
@@ -230,67 +238,18 @@ a {
   .sponsor {
     background-image: url(../img/stickers_blur_sm.png);
   }
-}
-
-@media(min-width: 480px) {
-  .banner {
-    background-image: url(../img/hero_blur_md.png);
-  }
-  .banner-head {
-    font-size: 3em;
-  }
-  .title {
-    width: 400px;
-  }
-  .emailbutton {
-    width: 340px;
-  }
-  .banner-footer {
-    font-size: 1.1em;
-  }
-  .content-title {
-    font-size: 1.8em;
-  }
-  .sponsor p {
-    font-size: 1em;
-  }
-  .sponsor {
-    background-image: url(../img/stickers_blur_md.png);
+  .footer {
+    font-size: smaller;
   }
 }
 
-/*
- * -- TABLET MEDIA QUERIES --
- * On tablets, we want to slightly adjust the size of the banner
- * text and add some vertical space between the various pricing tables
- */
-
-@media(min-width: 767px) {
-  .banner {
-    background-image: url(../img/hero_blur.png)
-  }
-  .title {
-    width: 400px;
-  }
-  .sponsor {
-    background-image: url(../img/stickers_blur.png);
-  }
-  .banner-footer {
-    font-size: 1.3em;
-  }
-  .content {
-    padding: 0.5em 2em;
-  }
-  .content-title {
-    font-size: 2.0em;
-  }
-}
 
 @media(max-height: 625px) {
   .banner {
     height: 100vh;
   }
   .banner-footer {
+    height: 10vh;
     top: 90vh;
   }
 
