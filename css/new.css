@@ -47,7 +47,6 @@ img {
 
 .banner-head>div {
   border-radius: 3px;
-  opacity: 0.8;
   margin: 15px auto;
 }
 
@@ -60,6 +59,7 @@ img {
 .title {
   width: 400px;
   padding: 12px;
+  opacity: 0.8;
   background-color: #fff;
 }
 .title h1 {
@@ -86,8 +86,9 @@ img {
   text-align: center;
 }
 
-.signup-button {
+#signup-button {
   width: 100%;
+  background-color: #FF9900;
 }
 
 /*
