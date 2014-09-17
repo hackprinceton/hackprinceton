@@ -63,7 +63,7 @@ $(document).ready(function(){
       success: function(object) {
         if (object == null) {
           invalidTeam("Team not found.");
-        } else if (object.get("count") > 5) {
+        } else if (object.get("count") >= 5) {
           invalidTeam("Team already full!");
         } else {
 
