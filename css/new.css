@@ -84,11 +84,20 @@ img {
   padding: 8px;
   font-size: 0.5em;
   text-align: center;
+  opacity: 0.9;
+}
+
+.emailbutton button {
+  margin: 2px auto;
+  width: 100%;
 }
 
 #signup-button {
-  width: 100%;
   background-color: #FF9900;
+}
+
+.emailbutton p {
+  font-size: 0.8em;
 }
 
 /*
