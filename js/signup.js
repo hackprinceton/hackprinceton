@@ -38,7 +38,7 @@ $(document).ready(function(){
     query.first({
       success: function(object) {
         team = object;
-        if (object == null) {
+        if (object == null || object.get("open") == false) {
           invalidTeam("Team not found.");
         } else if (object.get("count") >= 5) {
           invalidTeam("Team already full!");
@@ -87,6 +87,7 @@ $(document).ready(function(){
     user.set("firsthp", firsthp);
     user.set("past", past);
     user.set("comments", comments);
+    user.set("open", true);
     user.set("status", "Pending");
 
     if (team == null) {

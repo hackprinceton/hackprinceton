@@ -61,7 +61,7 @@ $(document).ready(function(){
 
     query.first({
       success: function(object) {
-        if (object == null) {
+        if (object == null || object.get("open") == false) {
           invalidTeam("Team not found.");
         } else if (object.get("count") >= 5) {
           invalidTeam("Team already full!");
