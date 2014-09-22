@@ -16,6 +16,8 @@ $(document).ready(function(){
     Parse.User.requestPasswordReset($('#email').val(), {
       success: function() {
         // Password reset request was sent successfully
+        $('#form').hide();
+        $('#account').show();
       },
       error: function(error) {
         // Show the error message somewhere
