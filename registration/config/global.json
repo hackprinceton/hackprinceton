@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "HP": {
+            "applicationId": "VQpQwojL2wjTuNkUDzV0C2wAiQODWJw90cRKtP3Q", 
+            "masterKey": "jGlGtmNBidJ1teg7V8aZQiCV9bdh5N1eXOKKwlHs"
+        }, 
+        "_default": {
+            "link": "HP"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.3.0"
+    }
+}
