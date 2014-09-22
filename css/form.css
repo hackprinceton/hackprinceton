@@ -93,6 +93,7 @@ img {
 .switchforms {
   font-size: 0.9em;
   text-align: center;
+  margin: 4px auto;
 }
 
 .teaminfo {
