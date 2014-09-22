@@ -87,13 +87,13 @@ $(document).ready(function(){
     user.set("firsthp", firsthp);
     user.set("past", past);
     user.set("comments", comments);
-    user.set("open", true);
     user.set("status", "Pending");
 
     if (team == null) {
       // create new team, set count to 1
       var newTeam = new TeamList();
       newTeam.set("teamcode", code)
+      newTeam.set("open", true)
       newTeam.set("count", 1)
       newTeam.save();
       user.set("team", code);
