@@ -35,6 +35,11 @@ $(document).ready(function(){
       },
       error: function(user, error) {
         // The login failed. Check error to see why.
+        if(error.message == "invalid login parameters") {
+          $('.error').text("Incorrect Email or Password");
+        } else {
+          $('.error').text(error.message);
+        }
       }
     });
   }),

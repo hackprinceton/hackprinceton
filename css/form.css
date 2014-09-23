@@ -24,6 +24,10 @@ img {
   margin: 15px auto;
 }
 
+.error {
+  text-align: center;
+}
+
 .newpage {
   text-align: center;
   padding:10px;
