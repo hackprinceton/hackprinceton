@@ -22,13 +22,20 @@
     </div>
     <div class="container">
      <div id="form">
+         
+      <div class="form_error" id="princeton_error" style="display:none">
+          We're sorry, signups are now open only to Princeton students. Please check back in the Spring!
+      </div>
+      <div class="form_error" style="background-color:inherit; color:black">
+          Signups are now only open to Princeton students.
+      </div>
       <form id="signup" class="pure-form pure-form-aligned">
         <fieldset>
           <legend>Tell Us About Yourself!</legend>
 
           <div class="pure-control-group">
             <label for="email">Email*</label>
-            <input id="email" type="email" placeholder="you@awesome.com" required>
+            <input id="email" type="email" placeholder="netid@princeton.edu" required>
           </div>
 
           <div class="pure-control-group">
