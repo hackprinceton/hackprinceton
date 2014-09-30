@@ -6,7 +6,8 @@ body {
   font-family:'Lato', sans-serif;
   color: #444;
   font-weight: 300;
-  background-color: purple;
+  /*background-color: purple; */
+    background-color:#F58025;
 }
 
 .form-logo {
@@ -120,4 +121,14 @@ img {
     width: 300px;
     font-size: smaller;
   }
+}
+
+/* Error - Princeton students */
+.form_error {
+    background-color:red;
+    width:93%;
+    color:white;
+    text-align:center;
+    height:40px;
+    padding:5px;
 }
