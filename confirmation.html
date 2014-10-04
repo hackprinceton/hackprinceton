@@ -27,14 +27,80 @@
         <fieldset>
           <legend>Confirmation Page</legend>
 
+         <div class="pure-control-group">
+             <div style="display:inline-block; vertical-align:top">
+                <label for="person">What kind of person are you?</label><br/>
+             </div>
+             <div style="display:inline-block">
+                  <input id="person_ideas" type="checkbox" value="ideas">Ideas/Business</label><br/>
+                  <input id="person_design" type="checkbox" value="design">Design</label><br/>
+                  <input id="person_hacker" type="checkbox" value="hacker">Hacker</label><br/>
+                  <input id="person_all" type="checkbox" value="all">Little bit of everything</label><br/>
+             </div>
+          </div>
+          <div class="pure-control-group">
+             <div style="display:inline-block; vertical-align:top">
+                <label for="goingin">Did you already have a specific idea or concept going into HackPrinceton?</label><br/>
+             </div>
+             <div style="display:inline-block">
+                 <label for="goingin_yes" class="inline pure-radio">
+                  <input id="goingin_yes" type="radio" name="goingin" value="Yes">Yes</label><br/>
+                 <label for="goingin_no" class="inline pure-radio">
+                  <input id="goingin_no" type="radio" name = "goingin" value="No">No</label><br/>
+                 <label for="goingin_maybe" class="inline pure-radio">
+                  <input id="goingin_maybe" type="radio" name="goingin" value="Maybe">Maybe</label><br/>
+             </div>
+          </div>
+          <div class="pure-control-group">
+             <div style="display:inline-block; vertical-align:top">
+                <label for="goingin">What is your level of coding experience? </label><br/>
+             </div>
+             <div style="display:inline-block">
+                 <label for="coding_none" class="inline pure-radio">
+                  <input id="coding_none" type="radio" name="coding" value="none">Absolutely none</label><br/>
+                 <label for="coding_two" class="inline pure-radio">
+                  <input id="coding_two" type="radio" name = "coding" value="two">0-2 years</label><br/>
+                 <label for="coding_twoplus" class="inline pure-radio">
+                  <input id="coding_twoplus" type="radio" name="coding" value="twoplus">2+ years
+</label><br/>
+             </div>
+          </div>
+          <div class="pure-control-group">
+            <label for="phone">Phone Number*</label>
+            <input id="phone" type="text" placeholder="(609)-123-4567" required>
+          </div>
           <div class="pure-control-group">
             <label for="diet">Dietary Restrictions*</label>
             <input id="diet" type="text" placeholder="Vegan, gluten-free, etc." required>
           </div>
+    
+          <div class="pure-control-group">
+             <div style="display:inline-block; vertical-align:top">
+                <label for="resume">Resume: </label><br/>
+             </div>
+             <div style="display:inline-block; width:20px">
+                 <input type="file" name="fileselect" id="fileselect" required></input>
+             </div>
+          </div>
+    
+          <div class="pure-control-group">
+             <div style="display:inline-block; vertical-align:top">
+                <label for="person">How did you hear about HackPrinceton?</label><br/>
+             </div>
+             <div style="display:inline-block">
+                  <label for="coding_none" class="inline pure-radio">
+                  <input id="coding_none" type="radio" name="coding" value="none">Facebook</label><br/>
+                 <label for="coding_two" class="inline pure-radio">
+                  <input id="coding_two" type="radio" name = "coding" value="two">MLH</label><br/>
+                 <label for="coding_twoplus" class="inline pure-radio">
+                  <input id="coding_twoplus" type="radio" name="coding" value="twoplus">Friend
+</label><br/>
+                 <label for="coding_two" class="inline pure-radio">
+                  <input id="coding_two" type="radio" name = "coding" value="two">Past attendee</label><br/>
+             </div>
+          </div>
 
-          <label for="fileselect">Resume:</label>
-            <input type="file" name="fileselect" id="fileselect" required></input>
-
+<!--
           <div class="pure-control-group">
             <p>Your team code is: <span id="code"></span>.</p>
             <div id="form">
@@ -51,6 +117,7 @@
             <p> You can modify your teams after you have confirmed your spot as well. </p>
             <p>Join the official HackPrinceton <a href="https://www.facebook.com/events/864649396879446/" target="_blank">Facebook event</a> for updates!</p>
           </div>
+-->
 
           <p style="font-size:12px; text-align:center">By clicking submit, I confirm my spot for HackPrinceton</p>
           <div class="pure-controls">
