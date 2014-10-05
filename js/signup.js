@@ -19,6 +19,7 @@ function validTeam() {
 }
 
 $(document).ready(function(){
+
   // Parse Initialization
   Parse.initialize("VQpQwojL2wjTuNkUDzV0C2wAiQODWJw90cRKtP3Q", "yR5gVtaYrmMyjzTck1bLuvqRinqUrMnAoPqITysH");
   var TeamList = Parse.Object.extend("Teams");
@@ -58,6 +59,13 @@ $(document).ready(function(){
 
     // Vaccuum
     var email = $('#email').val();
+    
+    if (email.indexOf("@princeton.edu") < 0) {
+        $('#form').hide();
+        $('#notPrinceton').show();
+        return;
+    }
+      
     var password = $('#password').val();
     var first = $('#fname').val();
     var last = $('#lname').val();
@@ -70,8 +78,6 @@ $(document).ready(function(){
     var firsthp = $('#firsthp').prop('checked');
     var past = $('#past').val()
     var comments = $('#comments').val();
-    
-    var d = email.indexOf("@princeton.edu"); if (d > -1) {} else {$('#princeton_error').show();return;}
 
     var user = new Parse.User();
     user.set("username", email);
