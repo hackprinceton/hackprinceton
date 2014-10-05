@@ -13,7 +13,6 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.js"></script>
   <script src="http://www.parsecdn.com/js/parse-1.3.0.min.js"></script>
-  <script src="js/signin.js"></script>
   <script src="js/confirmation.js"></script>
 </head>
 
@@ -22,7 +21,25 @@
       <a href="/"><img src="img/logo_white.png" alt="A Tiger's Tear"></a>
     </div>
     <div class="container">
-     <div id="form">
+    <!-- login -->
+    <div id="form">
+      <form id="signin" class="pure-form pure-form-stacked">
+        <legend>My Account</legend>
+        <div class="error"></div>
+        <input id="email" type="email" placeholder="Email" class="signin" required>
+        <input id="password" type="password" placeholder="Password" class="signin" required>
+        <button type="submit" class="pure-button pure-button-primary pure-u-1-4 signin">Sign in</button>
+      </form>
+      <p class="switchforms">Sleep deprivation stole my password! <a href="reset.html">Reset it</a>.</p>
+    </div>
+    
+    <!-- account status -->
+    <div id="account" style="display:none;">
+      <h2 style="text-align: center">Status: <span id="status"></span></h2>
+    </div>
+    
+    <!-- confirmation form for accepted applicants -->
+    <div id="confirm">
       <form id="confirm" class="pure-form pure-form-aligned">
         <fieldset>
           <legend>Confirmation Page</legend>
@@ -32,10 +49,10 @@
                 <label for="person">What kind of person are you?</label><br/>
              </div>
              <div style="display:inline-block">
-                  <input id="person_ideas" type="checkbox" value="ideas">Ideas/Business</label><br/>
-                  <input id="person_design" type="checkbox" value="design">Design</label><br/>
-                  <input id="person_hacker" type="checkbox" value="hacker">Hacker</label><br/>
-                  <input id="person_all" type="checkbox" value="all">Little bit of everything</label><br/>
+                  <input id="person_ideas" type="checkbox" value="ideas"> Ideas/Business</label><br/>
+                  <input id="person_design" type="checkbox" value="design"> Design</label><br/>
+                  <input id="person_hacker" type="checkbox" value="hacker"> Hacker</label><br/>
+                  <input id="person_all" type="checkbox" value="all"> Little bit of everything</label><br/>
              </div>
           </div>
           <div class="pure-control-group">
@@ -119,7 +136,7 @@
           </div>
 -->
 
-          <p style="font-size:12px; text-align:center">By clicking submit, I confirm my spot for HackPrinceton</p>
+          <p style="font-size:12px; text-align:center">By clicking submit, I confirm my spot for HackPrinceton<br>By uploading my resume, I give HackPrinceton permission to release my resume to any general or technical recruiter that HackPrinceton sees fit.</p>
           <div class="pure-controls">
             <button id="submit" type="submit" class="pure-button pure-button-primary">Submit</button>
           </div>
