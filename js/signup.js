@@ -59,6 +59,13 @@ $(document).ready(function(){
 
     // Vaccuum
     var email = $('#email').val();
+    
+    if (email.indexOf("@princeton.edu") < 0) {
+        $('#form').hide();
+        $('#notPrinceton').show();
+        return;
+    }
+      
     var password = $('#password').val();
     var first = $('#fname').val();
     var last = $('#lname').val();
