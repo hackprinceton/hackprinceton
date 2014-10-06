@@ -28,8 +28,8 @@ $(document).ready(function(){
       success: function(user) {
         // Do stuff after successful login.
         $('#form').hide();
-          if (user.get('status') == "Pending") {
-              $('#status').text("Your status is still pending. Hold on tight while we get decisions out to you!");
+          if (user.get('status') == "Waitlist") {
+              $('#status').text("Status: Waitlisted - We've received an incredible amount of applications this year (over 2500). We'll be letting people off the waitlist in the coming weeks as we get our final attendance number from the people admitted. Hold on tight!");
           } else if (user.get('status') == "Accepted" || user.get('status') == "Early Bird. You got the worm!") {
               if (!user.get('confirmSubmit')) {
               $('#status').text("Congrats! You've been selected to attend HackPrinceton! Please fill out and *submit* the confirmation form below by Thursday, October 9th.");
@@ -38,7 +38,7 @@ $(document).ready(function(){
               $('#status').text("We've already received your response. If you need to make changes, email hackprinceton@princetoneclub.com ASAP!");
               }
           } else {
-              $('#status').text("Status: Waitlisted - We've received an incredible amount of applications this year (over 2500). We'll be letting people off the waitlist in the coming weeks as we get our final attendance number from the people admitted. Hold on tight!");
+              $('#status').text("Your status is still pending. Hold on tight while we get decisions out to you!");
           }
               
         $('#code').text(user.get('team'));
