@@ -81,7 +81,7 @@ $(document).ready(function(){
                       $('#confirm').show();
                       $('#status').text("");
                   } else {
-                      $('#status').text("Thanks for your response! We're sorry that you could make it to HackPrinceton!");
+                      $('#status').text("Thanks for your response! We're sorry that you couldn't make it to HackPrinceton!");
                   }
               },
               error: function(user, error) {
