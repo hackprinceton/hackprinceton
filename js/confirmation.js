@@ -31,8 +31,14 @@ $(document).ready(function(){
           if (user.get('status') == "Pending") {
               $('#status').text("Your status is still pending. Hold on tight while we get decisions out to you!");
           } else if (user.get('status') == "Accepted" || user.get('status') == "Early Bird. You got the worm!") {
+              if (!user.get('confirmSubmit')) {
               $('#status').text("Congrats! You've been selected to attend HackPrinceton! Please fill out and *submit* the confirmation form below by Thursday, October 9th.");
-              $('#confirm').show();
+              $('#attend').show();
+              } else {
+              $('#status').text("We've already received your response. If you need to make changes, email hackprinceton@princetoneclub.com ASAP!");
+              }
+          } else {
+              $('#status').text("Status: Waitlisted - We've received an incredible amount of applications this year (over 2500). We'll be letting people off the waitlist in the coming weeks as we get our final attendance number from the people admitted. Hold on tight!");
           }
               
         $('#code').text(user.get('team'));
@@ -47,6 +53,41 @@ $(document).ready(function(){
         }
       }
     });
+  }),
+      
+  $("#attend").submit(function(event){
+    event.preventDefault();
+
+      var attendance = $('input[name=attendance]:checked').val();
+      
+      var user = Parse.User.current();
+      
+      // update the Parse.User object
+      var attend = false;
+      
+      if (attendance == "yes") {
+        attend = true;
+      } else {
+          user.set("confirmSubmit", true);
+      }
+      
+      user.set("attending", attend);
+      
+      
+      user.save(null, {
+              success: function(temp) {
+                  $('#attend').hide();
+                  if (attend) {
+                      $('#confirm').show();
+                      $('#status').text("");
+                  } else {
+                      $('#status').text("Thanks for your response! We're sorry that you could make it to HackPrinceton!");
+                  }
+              },
+              error: function(user, error) {
+                   alert("An error occured. Please email hackprinceton@princetoneclub.com");
+              }
+            })
   }),
 
   $("#confirm").submit(function(event){
@@ -65,15 +106,14 @@ $(document).ready(function(){
           
         user.save(null, {
               success: function(temp) {
-                  alert('resume saved');
+                  
               },
               error: function(user, error) {
-                  alert("Error: " + error.code + " " + error.message);
-                //TODO
+                 alert("An error occured. Please email hackprinceton@princetoneclub.com");
               }
             })
       }, function(error) {
-        alert('fail');
+          //TODO
       });
       }
       
@@ -105,104 +145,14 @@ $(document).ready(function(){
       
       user.save(null, {
               success: function(temp) {
-                  alert('success');
+                  $('#confirm').hide();
+                  $('#status').text("Thanks for your response! We're excited to see you here!");
               },
               error: function(user, error) {
-                  alert("Error: " + error.code + " " + error.message);
+                   alert("An error occured. Please email hackprinceton@princetoneclub.com");
+                  //alert("Error: " + error.code + " " + error.message);
                 //TODO
               }
             })
-      
-      
-   /* var input = $('#team').val();
-
-    if (input === user.get("team")) {
-      invalidTeam("Already on team!");
-    }
-
-    var query = new Parse.Query(TeamList);
-    query.equalTo("teamcode", input);
-
-    query.first({
-      success: function(object) {
-        if (object == null || object.get("open") == false) {
-          invalidTeam("Team not found.");
-        } else if (object.get("count") >= 5) {
-          invalidTeam("Team already full!");
-        } else {
-
-          var teamQuery = new Parse.Query(TeamList);
-          teamQuery.equalTo("teamcode", user.get("team"));
-          teamQuery.first({
-              success: function(team) {
-                team.increment("count", -1);
-                team.save();
-              },
-              error: function(error) {
-                invalidTeam("Error: " + error.code + " " + error.message);
-              }
-            });
-
-            user.set("team", object.get("teamcode"));
-            user.save(null, {
-              success: function(temp) {
-                  validTeam();
-                  object.increment("count");
-                  object.save();
-              },
-              error: function(user, error) {
-                invalidTeam("Error: " + error.code + " " + error.message);
-              }
-            })
-        }
-      },
-      error: function(error) {
-        invalidTeam("Error: " + error.code + " " + error.message);
-      }
-    });*/
   });
 })
-
-
-/*$(document).ready(function(){
-// Form submission
-    Parse.initialize("VQpQwojL2wjTuNkUDzV0C2wAiQODWJw90cRKtP3Q", "yR5gVtaYrmMyjzTck1bLuvqRinqUrMnAoPqITysH");
-
-  $("#confirm").submit(function(event){
-    event.preventDefault();
-
-    var diet = $('#diet').val();
-    alert(diet);
-    var user = new Parse.User.current();
-    alert(user);
-    // user.set("diet", "normal");
-    // user.set("status", "Pending");
-
-    // if (team == null) {
-    //   // create new team, set count to 1
-    //   var newTeam = new TeamList();
-    //   newTeam.set("teamcode", code)
-    //   newTeam.set("open", true)
-    //   newTeam.set("count", 1)
-    //   newTeam.save();
-    //   user.set("team", code);
-    // } else {
-    //   // increment given team, save
-    //   user.set("team", team.get("teamcode"));
-    //   team.increment("count");
-    //   team.save();
-    // }
-
-
-    user.save(null, {
-      success: function(user) {
-        // Hide form, ask to validate email
-        $("#confirm").hide();
-        $("#confirm_done").show();
-      },
-      error: function(user, error) {
-        alert("An error occured.");
-      }
-    })
-  });
-});*/

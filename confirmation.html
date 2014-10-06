@@ -35,21 +35,46 @@
     
     <!-- account status -->
     <div id="account" style="display:none;">
-      <h2 style="text-align: center">Status: <span id="status"></span></h2>
+      <h2 style="text-align: center"><span id="status"></span></h2>
+    </div>
+    
+    <!-- attendance -->
+    <div id="attend" style="display:none;">
+      <form id="attend" class="pure-form pure-form-aligned">
+        <fieldset>
+          <legend>Confirmation Page</legend>
+          
+          <div class="pure-control-group">
+             <div style="display:inline-block; vertical-align:top">
+                <label for="goingin">Will you be attending HackPrinceton from November 14th-16th?*</label><br/>
+             </div>
+             <div style="display:inline-block">
+                 <label for="attending" class="inline pure-radio">
+                  <input id="attending" type="radio" name="attendance" value="yes">Yes</label><br/>
+                 <label for="not_attending" class="inline pure-radio">
+                  <input id="not_attending" type="radio" name = "attendance" value="no">No</label><br/>
+             </div>
+          </div>
+          
+          <div class="pure-controls">
+            <button id="submit" type="submit" class="pure-button pure-button-primary">Submit</button>
+          </div>
+        </fieldset>
+      </form>
     </div>
     
     <!-- confirmation form for accepted applicants -->
-    <div id="confirm">
+    <div id="confirm" style="display:none;">
       <form id="confirm" class="pure-form pure-form-aligned">
         <fieldset>
-          <legend>Confirmation Page</legend>
+          <legend>Confirmation Page - Part 2</legend>
 
          <div class="pure-control-group">
              <div style="display:inline-block; vertical-align:top">
                 <label for="person">What kind of person are you?*</label><br/>
              </div>
              <div style="display:inline-block">
-                  <input id="person_ideas" type="checkbox" value="ideas"> Ideas/Business</label><br/>
+                  <input id="person_ideas" type="checkbox" value="ideas" required> Ideas/Business</label><br/>
                   <input id="person_design" type="checkbox" value="design"> Design</label><br/>
                   <input id="person_hacker" type="checkbox" value="hacker"> Hacker</label><br/>
                   <input id="person_all" type="checkbox" value="all"> Little bit of everything</label><br/>
@@ -61,7 +86,7 @@
              </div>
              <div style="display:inline-block">
                  <label for="goingin_yes" class="inline pure-radio">
-                  <input id="goingin_yes" type="radio" name="goingin" value="yes">Yes</label><br/>
+                  <input id="goingin_yes" type="radio" name="goingin" value="yes" required>Yes</label><br/>
                  <label for="goingin_no" class="inline pure-radio">
                   <input id="goingin_no" type="radio" name = "goingin" value="no">No</label><br/>
                  <label for="goingin_maybe" class="inline pure-radio">
@@ -74,7 +99,7 @@
              </div>
              <div style="display:inline-block">
                  <label for="coding_none" class="inline pure-radio">
-                  <input id="coding_none" type="radio" name="coding" value="none">Absolutely none</label><br/>
+                  <input id="coding_none" type="radio" name="coding" value="none" required>Absolutely none</label><br/>
                  <label for="coding_two" class="inline pure-radio">
                   <input id="coding_two" type="radio" name = "coding" value="zeroTwo">0-2 years</label><br/>
                  <label for="coding_twoplus" class="inline pure-radio">
@@ -102,18 +127,18 @@
     
           <div class="pure-control-group">
              <div style="display:inline-block; vertical-align:top">
-                <label for="person">How did you hear about HackPrinceton?</label><br/>
+                <label for="person">How did you hear about HackPrinceton?* </label><br/>
              </div>
              <div style="display:inline-block">
-                  <label for="coding_none" class="inline pure-radio">
-                  <input id="coding_none" type="radio" name="referral" value="none">Facebook</label><br/>
-                 <label for="coding_two" class="inline pure-radio">
-                  <input id="coding_two" type="radio" name = "referral" value="two">MLH</label><br/>
-                 <label for="coding_twoplus" class="inline pure-radio">
-                  <input id="coding_twoplus" type="radio" name="referral" value="twoplus">Friend
+                  <label for="referral_facebook" class="inline pure-radio">
+                  <input id="referral_facebook" type="radio" name="referral" value="facebook" required>Facebook</label><br/>
+                 <label for="referral_mlh" class="inline pure-radio">
+                  <input id="referral_mlh" type="radio" name = "referral" value="mlh">MLH</label><br/>
+                 <label for="referral_friend" class="inline pure-radio">
+                  <input id="referral_friend" type="radio" name="referral" value="friend">Friend
 </label><br/>
-                 <label for="coding_two" class="inline pure-radio">
-                  <input id="coding_two" type="radio" name = "referral" value="two">Past attendee</label><br/>
+                 <label for="referral_past" class="inline pure-radio">
+                  <input id="referral_past" type="radio" name = "referral" value="pastAttendee">Past attendee</label><br/>
              </div>
           </div>
 
