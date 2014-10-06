@@ -135,6 +135,10 @@ $(document).ready(function(){
           diet = $('#dietOther').val();
       }
       
+      if (referral == "rother") {
+          referral = $('#rOther').val();
+      }
+      
       // update the Parse.User object
       user.set("person_ideas", person_ideas);
       user.set("person_design", person_design);
