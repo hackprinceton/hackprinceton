@@ -28,14 +28,14 @@ $(document).ready(function(){
       success: function(user) {
         // Do stuff after successful login.
         $('#form').hide();
-          if (user.get('status') == "Waitlist") {
-              $('#status').text("Status: Waitlisted - We've received an incredible amount of applications this year (over 2500). We'll be letting people off the waitlist in the coming weeks as we get our final attendance number from the people admitted. Hold on tight!");
+          if (user.get('status') == "Pending") {
+              $('#status').text("Status: Waitlisted - We've received an incredible amount of applications this year (over 2500). We'll be letting people off the waitlist in the coming weeks, so hold on tight!");
           } else if (user.get('status') == "Accepted" || user.get('status') == "Early Bird. You got the worm!") {
               if (!user.get('confirmSubmit')) {
-              $('#status').text("Congrats! You've been selected to attend HackPrinceton! Please fill out and *submit* the confirmation form below by Friday, October 17th.");
+              $('#status').text("Congratulations! We'd like to invite you to attend HackPrinceton! Please fill out and *submit* the confirmation form below by Friday, October 17th.");
               $('#attend').show();
               } else {
-              $('#status').text("We've already received your response. If you need to make changes, email hackprinceton@princetoneclub.com ASAP!");
+              $('#status').text("We've already received your response. If you need to make changes, please email hackprinceton@princetoneclub.com!");
               }
           } else {
               $('#status').text("Your status is still pending. Hold on tight while we get decisions out to you!");
@@ -81,7 +81,7 @@ $(document).ready(function(){
                       $('#confirm').show();
                       $('#status').text("");
                   } else {
-                      $('#status').text("Thanks for your response! We're sorry that you couldn't make it to HackPrinceton!");
+                      $('#status').text("Thanks for your response! We hope to see you at HackPrinceton next Spring!");
                   }
               },
               error: function(user, error) {

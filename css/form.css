@@ -105,6 +105,10 @@ img {
   text-align: center;
 }
 
+h2 #status {
+  font-size: 0.8em; 
+}
+
 
 /*
  * Responsiveness

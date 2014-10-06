@@ -33,3 +33,33 @@ Parse.Cloud.define("earlyBird", function (request, response) {
   });
 
 });
+
+Parse.Cloud.define("accept", function (request, response) {
+
+  Parse.Cloud.useMasterKey();
+
+  var query = new Parse.Query(Parse.User);
+  query.equalTo("username", request.params.username);
+
+  // Get the first user which matches the above constraints.
+  query.first({
+    success: function(anotherUser) {
+      anotherUser.set("status", "Accepted");
+
+      // Save the user.
+      anotherUser.save(null, {
+        success: function(anotherUser) {
+          // The user was saved successfully.
+          response.success("Successfully updated " + anotherUser.get("username") + ".");
+        },
+        error: function(another, error) {
+          response.error("Could not save changes to user.");
+        }
+      });
+    },
+    error: function(error) {
+      response.error("Could not find user.");
+    }
+  });
+
+});
