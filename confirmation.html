@@ -74,7 +74,7 @@
                 <label for="person">What kind of person are you?*</label><br/>
              </div>
              <div style="display:inline-block">
-                  <input id="person_ideas" type="checkbox" value="ideas" required> Ideas/Business</label><br/>
+                  <input id="person_ideas" type="checkbox" value="ideas"> Ideas/Business</label><br/>
                   <input id="person_design" type="checkbox" value="design"> Design</label><br/>
                   <input id="person_hacker" type="checkbox" value="hacker"> Hacker</label><br/>
                   <input id="person_all" type="checkbox" value="all"> Little bit of everything</label><br/>
@@ -112,8 +112,21 @@
             <input id="phone" type="text" placeholder="(609)-123-4567" required>
           </div>
           <div class="pure-control-group">
-            <label for="diet">Dietary Restrictions</label>
-            <input id="diet" type="text" placeholder="Vegan, gluten-free, etc.">
+           <div style="display:inline-block; vertical-align:top">
+                <label for="diet">Dietary Restrictions</label><br/>
+             </div>
+            <div style="display:inline-block">
+            <label for="vegetarian" class="inline pure-radio">
+            <input id="vegetarian" type="radio" name="diet" value="vegetarian">Vegetarian </label><br/>
+            <label for="vegan" class="inline pure-radio">
+            <input id="vegan" type="radio" name = "diet" value="vegan">Vegan</label><br/>
+            <label for="kosher" class="inline pure-radio">
+            <input id="kosher" type="radio" name = "diet" value="kosher">Kosher</label><br/>
+            <label for="gluten_free" class="inline pure-radio">
+            <input id="gluten_free" type="radio" name = "diet" value="gluten_free">Gluten-Free</label><br/>
+            <label for="other" class="inline pure-radio">
+            <input id="other" type="radio" name="diet" value="other"><input id="dietOther" type="text" placeholder="Other (please specify)" onclick="$('#other').attr('checked', true);">
+                </div>
           </div>
     
           <div class="pure-control-group">

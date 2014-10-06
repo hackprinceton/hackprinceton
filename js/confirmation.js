@@ -125,10 +125,15 @@ $(document).ready(function(){
       var ideaGoingIn = $('input[name=goingin]:checked').val();
       var codingExperience = $('input[name=coding]:checked').val();
       var phone = $('#phone').val();
-      var diet = $('#diet').val();
+      var diet = $('input[name=diet]:checked').val();
       var referral = $('input[name=referral]:checked').val();
       
       var user = Parse.User.current();
+      
+      // read other field of diet
+      if (diet == "other") {
+          diet = $('#dietOther').val();
+      }
       
       // update the Parse.User object
       user.set("person_ideas", person_ideas);
