@@ -7,6 +7,16 @@
     ga('create', 'UA-44449737-1', 'auto');
     ga('send', 'pageview');
 
+var file;
+$(function() {
+    // Set an event listener on the Choose File field.
+    $('#fileselect').bind("change", function(e) {
+      var files = e.target.files || e.dataTransfer.files;
+      // Our file var now holds the selected file
+      file = files[0];
+    });
+});
+
 $(document).ready(function(){
   var TeamList = Parse.Object.extend("Teams");
 
@@ -25,7 +35,6 @@ $(document).ready(function(){
               $('#confirm').show();
           }
               
-        
         $('#code').text(user.get('team'));
         $('#account').show();
       },
@@ -40,18 +49,72 @@ $(document).ready(function(){
     });
   }),
 
-  // Team number inputted
-  $('#team').on("change keypress", function(event) {
-    if (event.type == "keypress") {
-      if (event.keyCode == 13) {
-        event.preventDefault();
-      } else {
-        return;
+  $("#confirm").submit(function(event){
+      event.preventDefault();
+      
+      // handle resume data
+      if(typeof variable_here !== 'undefined') {
+      var parseFile = new Parse.File("resumeF14.pdf", file);
+        
+      parseFile.save().then(function() {
+        var user = Parse.User.current();
+          
+        // update resume URL
+        user.set("resumeURL", parseFile.url());
+        user.set("resumeFile", parseFile);
+          
+        user.save(null, {
+              success: function(temp) {
+                  alert('resume saved');
+              },
+              error: function(user, error) {
+                  alert("Error: " + error.code + " " + error.message);
+                //TODO
+              }
+            })
+      }, function(error) {
+        alert('fail');
+      });
       }
-    }
-
-    var user = Parse.User.current();
-    var input = $('#team').val();
+      
+      // read in form inputs
+      var person_ideas = $('#person_ideas').prop('checked');
+      var person_design = $('#person_design').prop('checked');
+      var person_hacker = $('#person_hacker').prop('checked');
+      var person_all = $('#person_all').prop('checked');
+      var ideaGoingIn = $('input[name=goingin]:checked').val();
+      var codingExperience = $('input[name=coding]:checked').val();
+      var phone = $('#phone').val();
+      var diet = $('#diet').val();
+      var referral = $('input[name=referral]:checked').val();
+      
+      var user = Parse.User.current();
+      
+      // update the Parse.User object
+      user.set("person_ideas", person_ideas);
+      user.set("person_design", person_design);
+      user.set("person_hacker", person_hacker);
+      user.set("person_all", person_all);
+      user.set("ideaGoingIn", ideaGoingIn);
+      user.set("codingExperience", codingExperience);
+      user.set("phone", phone);
+      user.set("diet", diet);
+      user.set("referral", referral);   
+      
+      user.set("confirmSubmit", true);
+      
+      user.save(null, {
+              success: function(temp) {
+                  alert('success');
+              },
+              error: function(user, error) {
+                  alert("Error: " + error.code + " " + error.message);
+                //TODO
+              }
+            })
+      
+      
+   /* var input = $('#team').val();
 
     if (input === user.get("team")) {
       invalidTeam("Already on team!");
@@ -96,7 +159,7 @@ $(document).ready(function(){
       error: function(error) {
         invalidTeam("Error: " + error.code + " " + error.message);
       }
-    });
+    });*/
   });
 })
 
