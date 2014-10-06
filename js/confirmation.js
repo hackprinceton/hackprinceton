@@ -32,7 +32,7 @@ $(document).ready(function(){
               $('#status').text("Status: Waitlisted - We've received an incredible amount of applications this year (over 2500). We'll be letting people off the waitlist in the coming weeks as we get our final attendance number from the people admitted. Hold on tight!");
           } else if (user.get('status') == "Accepted" || user.get('status') == "Early Bird. You got the worm!") {
               if (!user.get('confirmSubmit')) {
-              $('#status').text("Congrats! You've been selected to attend HackPrinceton! Please fill out and *submit* the confirmation form below by Thursday, October 9th.");
+              $('#status').text("Congrats! You've been selected to attend HackPrinceton! Please fill out and *submit* the confirmation form below by Friday, October 17th.");
               $('#attend').show();
               } else {
               $('#status').text("We've already received your response. If you need to make changes, email hackprinceton@princetoneclub.com ASAP!");
