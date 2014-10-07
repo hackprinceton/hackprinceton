@@ -154,8 +154,11 @@ $(document).ready(function(){
       
       user.save(null, {
               success: function(temp) {
-                  $('#confirm').hide();
-                  $('#status').text("Thanks for your response! We're excited to see you here!");
+                  setTimeout(function() {
+                      $('#confirm').hide();
+                      $('#status').text("Thanks for your response! We're excited to see you here!");
+                  },2000);
+                  
               },
               error: function(user, error) {
                    alert("An error occured. Please email hackprinceton@princetoneclub.com");
