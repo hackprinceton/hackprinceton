@@ -113,7 +113,7 @@ $(document).ready(function(){
               }
             })
       }, function(error) {
-          //TODO
+          alert("An error occured. Please email hackprinceton@princetoneclub.com");
       });
       }
       
@@ -155,6 +155,11 @@ $(document).ready(function(){
       user.save(null, {
               success: function(temp) {
                 $('#confirm').hide();
+                
+                  if(typeof file !== 'undefined') {
+                      setTimeout(function() { alert('Thanks for submitting your resume! Please wait 10 SECONDS before closing this tab to let your resume upload to our server.'); }, 1);
+                  }
+                  
                 $('#status').text("Thanks for your response! We're excited to see you here!");
                   
               },
