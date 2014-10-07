@@ -88,6 +88,7 @@ $(document).ready(function(){
                       $('#status').text("");
                   } else {
                       $('#status').text("Thanks for your response! We hope to see you at HackPrinceton next Spring!");
+                      btnclick = true;
                   }
               },
               error: function(user, error) {
