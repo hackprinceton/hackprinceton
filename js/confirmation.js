@@ -93,29 +93,7 @@ $(document).ready(function(){
   $("#confirm").submit(function(event){
       event.preventDefault();
       
-      // handle resume data
-      if(typeof file !== 'undefined') {
-      var parseFile = new Parse.File("resumeF14.pdf", file);
-        
-      parseFile.save().then(function() {
-        var user = Parse.User.current();
-          
-        // update resume URL
-        user.set("resumeURL", parseFile.url());
-        user.set("resumeFile", parseFile);
-          
-        user.save(null, {
-              success: function(temp) {
-                  
-              },
-              error: function(user, error) {
-                 alert("An error occured. Please email hackprinceton@princetoneclub.com");
-              }
-            })
-      }, function(error) {
-          alert("An error occured. Please email hackprinceton@princetoneclub.com");
-      });
-      }
+      
       
       // read in form inputs
       var person_ideas = $('#person_ideas').prop('checked');
@@ -154,13 +132,11 @@ $(document).ready(function(){
       
       user.save(null, {
               success: function(temp) {
-                $('#confirm').hide();
-                
-                  if(typeof file !== 'undefined') {
-                      setTimeout(function() { alert('Thanks for submitting your resume! Please wait 10 SECONDS before closing this tab to let your resume upload to our server.'); }, 1);
+                  if(typeof file === 'undefined') {
+                      $('#confirm').hide();
+                    $('#status').text("Thanks for your response! We're excited to see you here!");
                   }
                   
-                $('#status').text("Thanks for your response! We're excited to see you here!");
                   
               },
               error: function(user, error) {
@@ -169,5 +145,34 @@ $(document).ready(function(){
                 //TODO
               }
             })
+      
+      // handle resume data
+      if(typeof file !== 'undefined') {
+          $('#confirm').hide();
+          $('#loader').show();
+          $('#status').text("***PLEASE WAIT*** Resume Uploading");
+          
+      var parseFile = new Parse.File("resumeF14.pdf", file);
+    
+      parseFile.save().then(function() {
+        //var user = Parse.User.current();
+          
+        // update resume URL
+        user.set("resumeURL", parseFile.url());
+        user.set("resumeFile", parseFile);
+          
+        user.save(null, {
+              success: function(temp) {
+                  $('#loader').hide();
+                  $('#status').text("Thanks for your response! We're excited to see you here!");
+              },
+              error: function(user, error) {
+                 alert("An error occured. Please email hackprinceton@princetoneclub.com");
+              }
+            })
+      }, function(error) {
+          alert("An error occured. Please email hackprinceton@princetoneclub.com");
+      });
+      }
   });
 })
