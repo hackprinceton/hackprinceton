@@ -154,10 +154,8 @@ $(document).ready(function(){
       
       user.save(null, {
               success: function(temp) {
-                  setTimeout(function() {
-                      $('#confirm').hide();
-                      $('#status').text("Thanks for your response! We're excited to see you here!");
-                  },2000);
+                $('#confirm').hide();
+                $('#status').text("Thanks for your response! We're excited to see you here!");
                   
               },
               error: function(user, error) {
