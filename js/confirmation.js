@@ -27,19 +27,24 @@ $(document).ready(function(){
     Parse.initialize("VQpQwojL2wjTuNkUDzV0C2wAiQODWJw90cRKtP3Q", "yR5gVtaYrmMyjzTck1bLuvqRinqUrMnAoPqITysH");
     Parse.User.logIn($('#email').val(), $('#password').val(), {
       success: function(user) {
+          btnclick = false;
+          
         // Do stuff after successful login.
         $('#form').hide();
           if (user.get('status') == "Pending") {
               $('#status').text("Status: Waitlisted - We've received an incredible amount of applications this year (over 2500). We'll be letting people off the waitlist in the coming weeks, so hold on tight!");
+              btnclick = true;
           } else if (user.get('status') == "Accepted" || user.get('status') == "Early Bird. You got the worm!") {
               if (!user.get('confirmSubmit')) {
               $('#status').text("Congratulations! We'd like to invite you to attend HackPrinceton! Please fill out and *submit* the confirmation form below by Friday, October 17th.");
               $('#attend').show();
               } else {
               $('#status').text("We've already received your response. If you need to make changes, please email hackprinceton@princetoneclub.com!");
+              btnclick = true;
               }
           } else {
               $('#status').text("Your status is still pending. Hold on tight while we get decisions out to you!");
+              btnclick = true;
           }
               
         $('#code').text(user.get('team'));
@@ -134,6 +139,7 @@ $(document).ready(function(){
       user.save(null, {
               success: function(temp) {
                   if(typeof file === 'undefined') {
+                      btnclick = true;
                       $('#confirm').hide();
                     $('#status').text("Thanks for your response! We're excited to see you here!");
                   }
@@ -164,6 +170,7 @@ $(document).ready(function(){
           
         user.save(null, {
               success: function(temp) {
+                  btnclick = true;
                   $('#loader').hide();
                   $('#status').text("Thanks for your response! We're excited to see you here!");
               },
