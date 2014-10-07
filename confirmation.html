@@ -64,13 +64,13 @@ window.onbeforeunload = function(){
              </div>
              <div style="display:inline-block">
                  <label for="attending" class="inline pure-radio">
-                  <input id="attending" type="radio" name="attendance" value="yes">Yes</label><br/>
+                  <input id="attending" type="radio" name="attendance" value="yes" onclick="$('#button_confirm').hide();$('#confirm').show();">Yes</label><br/>
                  <label for="not_attending" class="inline pure-radio">
-                  <input id="not_attending" type="radio" name = "attendance" value="no">No</label><br/>
+                  <input id="not_attending" type="radio" name = "attendance" value="no" onclick="$('#button_confirm').show();$('#confirm').hide();">No</label><br/>
              </div>
           </div>
           
-          <div class="pure-controls">
+          <div id = "button_confirm" class="pure-controls" style="display:none">
             <button id="submit" type="submit" class="pure-button pure-button-primary">Submit</button>
           </div>
         </fieldset>
@@ -88,10 +88,10 @@ window.onbeforeunload = function(){
                 <label for="person">What is your specialty?*</label><br/>
              </div>
              <div style="display:inline-block">
-                  <input id="person_ideas" type="checkbox" value="ideas"> Ideas/Business</label><br/>
-                  <input id="person_design" type="checkbox" value="design"> Design</label><br/>
-                  <input id="person_hacker" type="checkbox" value="hacker"> Hacking</label><br/>
-                  <input id="person_all" type="checkbox" value="all"> Little bit of everything</label><br/>
+                  <input id="person_ideas" type="checkbox" value="ideas"> Ideas/Business<br/>
+                  <input id="person_design" type="checkbox" value="design"> Design<br/>
+                  <input id="person_hacker" type="checkbox" value="hacker"> Hacking<br/>
+                  <input id="person_all" type="checkbox" value="all"> Little bit of everything<br/>
              </div>
           </div>
           <div class="pure-control-group">

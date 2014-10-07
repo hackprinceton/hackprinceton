@@ -38,6 +38,7 @@ $(document).ready(function(){
               if (!user.get('confirmSubmit')) {
               $('#status').text("Congratulations! We'd like to invite you to attend HackPrinceton! Please fill out and *submit* the confirmation form below by Friday, October 17th.");
               $('#attend').show();
+              $('#confirm').show();
               } else {
               $('#status').text("We've already received your response. If you need to make changes, please email hackprinceton@princetoneclub.com!");
               btnclick = true;
@@ -100,7 +101,7 @@ $(document).ready(function(){
   $("#confirm").submit(function(event){
       event.preventDefault();
       
-      
+      $('#attend').hide();
       
       // read in form inputs
       var person_ideas = $('#person_ideas').prop('checked');
@@ -136,6 +137,7 @@ $(document).ready(function(){
       user.set("referral", referral);   
       
       user.set("confirmSubmit", true);
+      user.set("attending", true);
       
       user.save(null, {
               success: function(temp) {
