@@ -149,10 +149,10 @@ window.onbeforeunload = function(){
     
           <div class="pure-control-group">
              <div style="display:inline-block; vertical-align:top">
-                <label for="resume">Resume (PDF OR DOCX only): </label><br/>
+                <label for="resume">Resume (PDF ONLY): </label><br/>
              </div>
              <div style="display:inline-block; width:20px">
-                 <input type="file" name="fileselect" id="fileselect"></input>
+                 <input type="file" name="fileselect" id="fileselect" onchange="if ($('#fileselect').val().indexOf('docx') >= 0 || $('#fileselect').val().indexOf('doc') >= 0) { alert('NOTICE: Please upload a PDF FILE. Our system does not accept Word documents.');}"></input>
              </div>
           </div>
     
