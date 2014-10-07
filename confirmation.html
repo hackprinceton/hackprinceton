@@ -14,6 +14,19 @@
   <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.js"></script>
   <script src="http://www.parsecdn.com/js/parse-1.3.0.min.js"></script>
   <script src="js/confirmation.js"></script>
+  <script type="application/javascript">
+    var btnclick = false;
+window.onload = function() {
+    document.getElementById('confirm_submit').onclick=function(){
+btnclick = true;
+    }
+}
+window.onbeforeunload = function(){
+    if(!btnclick){
+        return 'You must fill out and submit part 2 of this form. Otherwise, your registration is not complete.';
+    }
+};
+    </script>
 </head>
 
 <body>
@@ -165,7 +178,7 @@
 
           <p style="font-size:12px; text-align:center">By clicking submit, I am confirming my spot for HackPrinceton and grant permission <br> for HackPrinceton to share my resume with technical recruiters.</p>
           <div class="pure-controls">
-            <button id="submit" type="submit" class="pure-button pure-button-primary">Submit</button>
+            <button id="confirm_submit" type="submit" class="pure-button pure-button-primary">Submit</button>
           </div>
         </fieldset>
       </form>
