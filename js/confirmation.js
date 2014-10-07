@@ -8,15 +8,15 @@
     ga('send', 'pageview');
 
 
-var file;
-$(function() {
-    // Set an event listener on the Choose File field.
-    $('#fileselect').bind("change", function(e) {
-      var files = e.target.files || e.dataTransfer.files;
-      // Our file var now holds the selected file
-      file = files[0];
-    });
-});
+//var file;
+//$(function() {
+//    // Set an event listener on the Choose File field.
+//    $('#fileselect').bind("change", function(e) {
+//      var files = e.target.files || e.dataTransfer.files;
+//      // Our file var now holds the selected file
+//      file = files[0];
+//    });
+//});
 
 $(document).ready(function(){
   var TeamList = Parse.Object.extend("Teams");
@@ -154,21 +154,21 @@ $(document).ready(function(){
             })
       
       // handle resume data
-      if(typeof file !== 'undefined') {
+      var fileUploadControl = $("#fileselect")[0];
+        if (fileUploadControl.files.length > 0) {
           $('#confirm').hide();
           $('#loader').show();
           $('#status').text("***PLEASE WAIT*** Resume Uploading");
+            
+          var file = fileUploadControl.files[0];
+          var name = "resumeF14.pdf";
+          var parseFile = new Parse.File(name, file);
+          parseFile.save().then(function() {
+            // update resume URL
+              user.set("resumeURL", parseFile.url());
+              user.set("resumeFile", parseFile);
           
-      var parseFile = new Parse.File("resumeF14.pdf", file);
-    
-      parseFile.save().then(function() {
-        //var user = Parse.User.current();
-          
-        // update resume URL
-        user.set("resumeURL", parseFile.url());
-        user.set("resumeFile", parseFile);
-          
-        user.save(null, {
+              user.save(null, {
               success: function(temp) {
                   btnclick = true;
                   $('#loader').hide();
@@ -178,9 +178,38 @@ $(document).ready(function(){
                  alert("An error occured. Please email hackprinceton@princetoneclub.com");
               }
             })
-      }, function(error) {
-          alert("An error occured. Please email hackprinceton@princetoneclub.com");
-      });
-      }
+          }, function(error) {
+            alert("An error occured. Please email hackprinceton@princetoneclub.com");
+          });
+        }
+      
+//      if(typeof file !== 'undefined') {
+//          $('#confirm').hide();
+//          $('#loader').show();
+//          $('#status').text("***PLEASE WAIT*** Resume Uploading");
+//          
+//      var parseFile = new Parse.File("resumeF14.pdf", file);
+//    
+//      parseFile.save().then(function() {
+//        //var user = Parse.User.current();
+//          
+//        // update resume URL
+//        user.set("resumeURL", parseFile.url());
+//        user.set("resumeFile", parseFile);
+//          
+//        user.save(null, {
+//              success: function(temp) {
+//                  btnclick = true;
+//                  $('#loader').hide();
+//                  $('#status').text("Thanks for your response! We're excited to see you here!");
+//              },
+//              error: function(user, error) {
+//                 alert("An error occured. Please email hackprinceton@princetoneclub.com");
+//              }
+//            })
+//      }, function(error) {
+//          alert("An error occured. Please email hackprinceton@princetoneclub.com");
+//      });
+//      }
   });
 })
