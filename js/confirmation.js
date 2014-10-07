@@ -164,7 +164,11 @@ $(document).ready(function(){
           $('#status').text("***PLEASE WAIT*** Resume Uploading");
             
           var file = fileUploadControl.files[0];
+            
           var name = "resumeF14.pdf";
+            if ($('#fileselect').val().indexOf("docx") >= 0) {
+                name = "resumeF14.docx";
+            }
           var parseFile = new Parse.File(name, file);
           parseFile.save().then(function() {
             // update resume URL
