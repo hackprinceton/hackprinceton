@@ -1,7 +1,7 @@
 HackPrinceton F14
 ==================
 
-Hack Princeton's website for Autumn 2014.
+HackPrinceton's website for Fall 2014.
 
 It is a thing of beauty.
 
