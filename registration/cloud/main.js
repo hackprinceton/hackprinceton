@@ -63,3 +63,12 @@ Parse.Cloud.define("accept", function (request, response) {
   });
 
 });
+
+Parse.Cloud.beforeSave(Parse.User, function(request, response) {
+  var user = request.object;
+  if(user.dirty("status")){
+    response.error("User status cannot be modified.");
+  } else {
+    response.success();
+  }
+});
