@@ -34,13 +34,13 @@ $(document).ready(function(){
           if (user.get('status') == "Pending") {
               $('#status').text("Status: Waitlisted - We've received an incredible amount of applications this year (over 2500). We'll be letting people off the waitlist in the coming weeks, so hold on tight!");
               btnclick = true;
-          } else if (user.get('status') == "Accepted" || user.get('status') == "Early Bird. You got the worm!") {
+          } else if (user.get('status') == "Accepted" || user.get('status') == "Early Bird. You got the worm!" || user.get('school') == "Princeton University") {
               if (!user.get('confirmSubmit')) {
               $('#status').text("Congratulations! We'd like to invite you to attend HackPrinceton! Please fill out and *submit* the confirmation form below by Friday, October 17th.");
               $('#attend').show();
               $('#confirm').show();
               } else {
-              $('#status').text("We've already received your response. If you need to make changes, please email hackprinceton@princetoneclub.com!");
+              $('#status').text("Status: Waitlisted - We've received an incredible amount of applications this year (over 2500). We'll be letting people off the waitlist in the coming weeks, so hold on tight!");
               btnclick = true;
               }
           } else {
