@@ -1,10 +1,10 @@
 // close teams - done
 // update user status
 
-$(document).ready(function(){
+$(document).ready(function () {
     Parse.initialize("VQpQwojL2wjTuNkUDzV0C2wAiQODWJw90cRKtP3Q", "yR5gVtaYrmMyjzTck1bLuvqRinqUrMnAoPqITysH");
 
-  var TeamList = Parse.Object.extend("Teams");
+    var TeamList = Parse.Object.extend("Teams");
 
     var userquery = new Parse.Query(Parse.User);
     var teamquery = new Parse.Query(TeamList);
@@ -24,7 +24,7 @@ $(document).ready(function(){
                     7045111, 1134813, 6043603, 5016122,
                     3217739, 5705313, 5495084, 1084202,
                     2803587, 5960751, 9749311, 7475437,
-                    25086, 6625455, 9579142, 70843,
+                     25086, 6625455, 9579142, 70843,
                     3173285, 4403159, 2594892, 5090521,
                     7385350, 8551963, 5837153, 2174386,
                     3264700, 8587865, 5669494, 4763226,
@@ -35,31 +35,32 @@ $(document).ready(function(){
                     5288733, 1975399, 6719975, 3760682];
 
     for (var i = 0; i < validteams.length; i++) { // only doing first atm
-      var input = validteams[i].toString();
+        var input = validteams[i].toString();
 
-      // Update team status
-      teamquery.equalTo("teamcode", input);
-      teamquery.first({
-        success: function (team) {
-          team.set("open", false);
-          team.save();
-        }
-      })
+        // Update team status
+        teamquery.equalTo("teamcode", input);
+        teamquery.first({
+            success: function (team) {
+                team.set("open", false);
+                team.save();
+            }
+        })
 
-      // Update team members
-      userquery.equalTo("team", input);
-      userquery.find({
-        success: function (members) {
-          for (var j = 0; j < members.length; j++) {
-             Parse.Cloud.run('earlyBird', {username: members[j].get("username")}, {
-                success: function(result) {
-                  console.log(result);
-                },
-                error: function(error) {
+        // Update team members
+        userquery.equalTo("team", input);
+        userquery.find({
+            success: function (members) {
+                for (var j = 0; j < members.length; j++) {
+                    Parse.Cloud.run('earlyBird', {
+                        username: members[j].get("username")
+                    }, {
+                        success: function (result) {
+                            console.log(result);
+                        },
+                        error: function (error) {}
+                    });
                 }
-            });
-          }
-        }
-      });
+            }
+        });
     }
 });
