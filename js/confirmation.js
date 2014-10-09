@@ -36,7 +36,7 @@ $(document).ready(function () {
                         $('#attend').show();
                         $('#confirm').show();
                     } else {
-                        $('#status').text("Status: Waitlisted - We've received an incredible amount of applications this year (over 2500). We'll be letting people off the waitlist in the coming weeks, so hold on tight!");
+                        $('#status').text("We've already received your response. If you need to make changes, please email hackprinceton@princetoneclub.com!");
                         btnclick = true;
                     }
                 } else {
