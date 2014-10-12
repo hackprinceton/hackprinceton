@@ -43,7 +43,7 @@ img {
  */
 .container {
   width: 500px;
-  margin: 0 auto 5% auto;
+  margin: 0 auto 30px auto;
   background-color: #fdfdfd;
   border-radius: 3px;
   padding: 15px;

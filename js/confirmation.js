@@ -42,10 +42,13 @@ $(document).ready(function () {
 
                 // Do stuff after successful login.
                 $('#form').hide();
+                $('#status_box').show();
                 if (user.get('status') == "Pending") {
                     $('#status').text(statuses.waitlisted);
+                    $('#status_short').text('Waitlist');
                     btnclick = true;
                 } else if (user.get('status') == "Accepted" || user.get('status') == "Early Bird. You got the worm!" || user.get('email').indexOf("@princeton.edu") != -1) {
+                    $('#status_short').text('Accepted!');
                     if (!user.get('confirmSubmit')) {
                         $('#status').text(statuses.accepted);
                         $('#attend').show();
@@ -55,9 +58,19 @@ $(document).ready(function () {
                         btnclick = true;
                     }
                 } else {
+                    $('#status_short').text('Pending');
                     $('#status').text(statuses.pending);
                     btnclick = true;
                 }
+
+                Parse.Cloud.run("getTeamMembers", null, function(members) {
+                    $('#team_members_container').html('<ul></ul>');
+                    $.each(members, function(i) {
+                        var $elem = $('<li></li>');
+                        $elem.text(members[i]);
+                        $elem.appendTo('#team_members_container ul');
+                    })
+                });
 
                 $('#code').text(user.get('team'));
                 $('#account').show();
