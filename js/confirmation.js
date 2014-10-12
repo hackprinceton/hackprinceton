@@ -1,3 +1,18 @@
+var statuses = {
+    accepted: "Congratulations! We'd like to invite you to attend HackPrinceton! Please fill out and *submit* the confirmation form below by Friday, October 17th.",
+    waitlisted: "Status: Waitlisted - We've received an incredible amount of applications this year (over 2500). We'll be letting people off the waitlist in the coming weeks, so hold on tight!",
+    pending: "Your status is still pending. Hold on tight while we get decisions out to you!",
+    confirmedGoing: "Thanks for your response! We're excited to see you here!",
+    confirmedNotGoing: "Thanks for your response! We hope to see you at HackPrinceton next Spring!",
+    confirmedAlready: "We've already received your response. If you need to make changes, please email hackprinceton@princetoneclub.com!",
+    resumeUploading: "***PLEASE WAIT*** Resume Uploading"
+};
+
+var errors = {
+    general: "An error occurred. Please email hackprinceton@princetoneclub.com",
+    invalidLogin: "Incorrect Email or Password"
+};
+
 // Google Analytics
 (function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
@@ -28,19 +43,19 @@ $(document).ready(function () {
                 // Do stuff after successful login.
                 $('#form').hide();
                 if (user.get('status') == "Pending") {
-                    $('#status').text("Status: Waitlisted - We've received an incredible amount of applications this year (over 2500). We'll be letting people off the waitlist in the coming weeks, so hold on tight!");
+                    $('#status').text(statuses.waitlisted);
                     btnclick = true;
                 } else if (user.get('status') == "Accepted" || user.get('status') == "Early Bird. You got the worm!" || user.get('school') == "Princeton University") {
                     if (!user.get('confirmSubmit')) {
-                        $('#status').text("Congratulations! We'd like to invite you to attend HackPrinceton! Please fill out and *submit* the confirmation form below by Friday, October 17th.");
+                        $('#status').text(statuses.accepted);
                         $('#attend').show();
                         $('#confirm').show();
                     } else {
-                        $('#status').text("We've already received your response. If you need to make changes, please email hackprinceton@princetoneclub.com!");
+                        $('#status').text(statuses.confirmedAlready);
                         btnclick = true;
                     }
                 } else {
-                    $('#status').text("Your status is still pending. Hold on tight while we get decisions out to you!");
+                    $('#status').text(statuses.pending);
                     btnclick = true;
                 }
 
@@ -50,7 +65,7 @@ $(document).ready(function () {
             error: function (user, error) {
                 // The login failed. Check error to see why.
                 if (error.message == "invalid login parameters") {
-                    $('.error').text("Incorrect Email or Password");
+                    $('.error').text(errors.invalidLogin);
                 } else {
                     $('.error').text(error.message);
                 }
@@ -84,12 +99,12 @@ $(document).ready(function () {
                     $('#confirm').show();
                     $('#status').text("");
                 } else {
-                    $('#status').text("Thanks for your response! We hope to see you at HackPrinceton next Spring!");
+                    $('#status').text(statuses.confirmedNotGoing);
                     btnclick = true;
                 }
             },
             error: function (user, error) {
-                alert("An error occured. Please email hackprinceton@princetoneclub.com");
+                alert(errors.general);
             }
         })
     }),
@@ -140,13 +155,13 @@ $(document).ready(function () {
                 if (typeof file === 'undefined') {
                     btnclick = true;
                     $('#confirm').hide();
-                    $('#status').text("Thanks for your response! We're excited to see you here!");
+                    $('#status').text(statuses.confirmedGoing);
                 }
 
 
             },
             error: function (user, error) {
-                alert("An error occured. Please email hackprinceton@princetoneclub.com");
+                alert(errors.general);
             }
         })
 
@@ -155,7 +170,7 @@ $(document).ready(function () {
         if (fileUploadControl.files.length > 0) {
             $('#confirm').hide();
             $('#loader').show();
-            $('#status').text("***PLEASE WAIT*** Resume Uploading");
+            $('#status').text(statuses.resumeUploading);
 
             var file = fileUploadControl.files[0];
 
@@ -173,14 +188,14 @@ $(document).ready(function () {
                     success: function (temp) {
                         btnclick = true;
                         $('#loader').hide();
-                        $('#status').text("Thanks for your response! We're excited to see you here!");
+                        $('#status').text(statuses.confirmedGoing);
                     },
                     error: function (user, error) {
-                        alert("An error occured. Please email hackprinceton@princetoneclub.com");
+                        alert(errors.general);
                     }
                 })
             }, function (error) {
-                alert("An error occured. Please email hackprinceton@princetoneclub.com");
+                alert(errors.general);
             });
         }
     });
