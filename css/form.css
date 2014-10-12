@@ -141,3 +141,8 @@ button[disabled] {
     background: url("../img/ajax-loader-button.gif") #0078e7 no-repeat center !important;
     text-indent: -9999px;
 }
+
+.center-button {
+    display: block !important;
+    margin: 0 auto;
+}
