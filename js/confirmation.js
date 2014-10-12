@@ -45,7 +45,7 @@ $(document).ready(function () {
                 if (user.get('status') == "Pending") {
                     $('#status').text(statuses.waitlisted);
                     btnclick = true;
-                } else if (user.get('status') == "Accepted" || user.get('status') == "Early Bird. You got the worm!" || user.get('school') == "Princeton University") {
+                } else if (user.get('status') == "Accepted" || user.get('status') == "Early Bird. You got the worm!" || user.get('email').indexOf("@princeton.edu") != -1) {
                     if (!user.get('confirmSubmit')) {
                         $('#status').text(statuses.accepted);
                         $('#attend').show();
