@@ -136,3 +136,8 @@ h2 #status {
     height:40px;
     padding:5px;
 }
+
+button[disabled] {
+    background: url("../img/ajax-loader-button.gif") #0078e7 no-repeat center !important;
+    text-indent: -9999px;
+}

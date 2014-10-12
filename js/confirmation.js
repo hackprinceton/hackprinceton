@@ -32,6 +32,10 @@ ga('send', 'pageview');
 $(document).ready(function () {
     var TeamList = Parse.Object.extend("Teams");
 
+    $("form").submit(function(event) {
+        $(this).find('button').attr('disabled', 'disabled');
+    });
+
     $("#signin").submit(function (event) {
         event.preventDefault();
 
