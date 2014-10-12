@@ -48,7 +48,16 @@ $(document).ready(function () {
                     $('#status_short').text('Waitlist');
                     btnclick = true;
                 } else if (user.get('status') == "Accepted" || user.get('status') == "Early Bird. You got the worm!" || user.get('email').indexOf("@princeton.edu") != -1) {
-                    $('#status_short').text('Accepted!');
+                    if (user.get('confirmSubmit')) {
+                        if (user.get('attending')) {
+                            $('#status_short').text('Accepted, Attending');
+                        } else {
+                            $('#status_short').text('Accepted, Not Attending');
+                        }
+                    } else {
+                        $('#status_short').text('Accepted!');
+                    }
+
                     if (!user.get('confirmSubmit')) {
                         $('#status').text(statuses.accepted);
                         $('#attend').show();
