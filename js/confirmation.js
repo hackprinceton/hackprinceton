@@ -95,6 +95,7 @@ $(document).ready(function () {
                 } else {
                     $('.error').text(error.message);
                 }
+                $("#signin button").removeAttr('disabled');
             }
         });
     }),
