@@ -159,6 +159,7 @@ img {
   /*background-image: url(../img/stickers_blur.png);*/
   /*background-size: cover;*/
   /*color: #fff;*/
+    text-align: center;
 }
 
 .sponsor h1 {
@@ -168,17 +169,30 @@ img {
 .sponsor p {
   text-align: center;
 }
-.sponsor table {
+.sponsor .sponsor-logos {
+    max-width: 980px;
     margin: 0 auto;
-    width: 980px;
-    table-layout: fixed;
+    box-sizing: border-box;
 }
-.sponsor table td {
+.sponsor a {
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
     padding: 10px;
 }
-.sponsor table img {
+.sponsor .sponsor-series-a a {
+    width: 32%;
+}
+.sponsor .sponsor-angel a {
+    width: 24%;
+}
+.sponsor .sponsor-seed a {
+    width: 19%;
+}
+.sponsor a img {
+    display: block;
     width: 100%;
-    box-sizing: border-box;
+    border: 0;
 }
 
 .tier {
@@ -206,12 +220,6 @@ img {
  * -- PHONE MEDIA QUERIES --
  * On phones, we want to reduce the height and font-size of the banner further
  */
-
-@media(max-width: 980px) {
-    .sponsor table {
-        width: 100%;
-    }
-}
 
 @media(max-width: 767px) {
   .banner {
@@ -259,9 +267,14 @@ img {
   .content-title {
     font-size: 1.6em;
   }
-  .sponsor table {
-      width: 70%;
-      text-align: center;
+  .sponsor .sponsor-series-a a {
+      width: 80%;
+  }
+  .sponsor .sponsor-angel a {
+      width: 49%;
+  }
+  .sponsor .sponsor-seed a {
+      width: 32%;
   }
   .sponsor table td {
       display: block;
