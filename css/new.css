@@ -174,7 +174,7 @@ img {
     margin: 0 auto;
     box-sizing: border-box;
 }
-.sponsor a {
+.sponsor .sponsor-logos a {
     display: inline-block;
     vertical-align: middle;
     box-sizing: border-box;
@@ -189,7 +189,7 @@ img {
 .sponsor .sponsor-seed a {
     width: 19%;
 }
-.sponsor a img {
+.sponsor .sponsor-logos a img {
     display: block;
     width: 100%;
     border: 0;
