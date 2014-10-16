@@ -178,7 +178,7 @@ img {
 }
 .sponsor table img {
     width: 100%;
-    padding: 10px;
+    box-sizing: border-box;
 }
 
 .tier {
@@ -207,6 +207,12 @@ img {
  * On phones, we want to reduce the height and font-size of the banner further
  */
 
+@media(max-width: 980px) {
+    .sponsor table {
+        width: 100%;
+    }
+}
+
 @media(max-width: 767px) {
   .banner {
     background-image: url(../img/hero_blur_md.png);
@@ -229,9 +235,6 @@ img {
   }
   .sponsor p {
     font-size: 1em;
-  }
-  .sponsor {
-    background-image: url(../img/stickers_blur_md.png);
   }
 }
 
@@ -256,11 +259,15 @@ img {
   .content-title {
     font-size: 1.6em;
   }
+  .sponsor table {
+      width: 70%;
+      text-align: center;
+  }
+  .sponsor table td {
+      display: block;
+  }
   .sponsor p {
     font-size: 0.8em;
-  }
-  .sponsor {
-    background-image: url(../img/stickers_blur_sm.png);
   }
   .footer {
     font-size: smaller;
