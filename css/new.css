@@ -180,6 +180,10 @@ img {
     box-sizing: border-box;
     padding: 10px;
 }
+.sponsor-series-a {
+  margin-top: -6em;
+  margin-bottom: -3em;
+}
 .sponsor .sponsor-series-a a {
     width: 32%;
 }
