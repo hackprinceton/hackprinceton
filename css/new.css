@@ -129,9 +129,7 @@ img {
 .l-box img {
     width: 100%;
 }
-.schedule {
-    background-color: #eee;
-}
+
 .faq {
     font-size: 0.9em;
 }
@@ -150,6 +148,21 @@ img {
 
 .sectiondivide img {
   width: 100%;
+}
+
+.schedule {
+    background-image: url(../img/stickers_blur.png);
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+}
+
+.schedule .content-title {
+  border-bottom: 1px solid #eee;
+}
+
+.schedule p {
+  width:100%;
 }
 
 .sponsor {
