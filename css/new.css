@@ -1,173 +1,157 @@
 body {
-  color: #444;
-  font-family: 'Lato', sans-serif;
+    color: #444;
+    font-family: 'Lato', sans-serif;
 }
 p {
-  line-height: 1.6em;
-  margin:2px;
+    line-height: 1.6em;
+    margin: 2px;
 }
 a {
-  color: inherit;
+    color: inherit;
 }
-
 img {
-  width: 100%;
+    width: 100%;
 }
-
 .pure-g * {
-  letter-spacing: normal !important;
+    letter-spacing: normal !important;
 }
-
 /*
  * -- Layout Styles --
  */
+
 .l-box {
     padding: 0.5em 0.5em;
-  }
-
+}
 /*
  * -- BANNER --
  * The top banner with the headings.
  */
 
 .banner {
-  background: transparent url('../img/hero_blur.png') 0 0 no-repeat fixed;
-  background-size: cover;
-  height: 80vh;
-  margin-bottom: 1.5em;
+    background: transparent url('../img/hero_blur.png') 0 0 no-repeat fixed;
+    background-size: cover;
+    height: 80vh;
+    margin-bottom: 1.5em;
 }
-
 .banner-head {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  vertical-align: top;
-  font-size: 2.4em;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    vertical-align: top;
+    font-size: 2.4em;
 }
-
 .banner-head>div {
-  border-radius: 3px;
-  margin: 15px auto;
+    border-radius: 3px;
+    margin: 15px auto;
 }
-
 .logo {
-  width: 140px;
-  height: auto;
-  margin-top: 8vh !important;
+    width: 140px;
+    height: auto;
+    margin-top: 8vh !important;
 }
-
 .title {
-  width: 400px;
-  padding: 12px;
-  opacity: 0.8;
-  background-color: #fff;
+    width: 400px;
+    padding: 12px;
+    opacity: 0.8;
+    background-color: #fff;
 }
 .title h1 {
-  font-family: 'Questrial', sans-serif;
-  font-weight: 400;
-  font-size: 1.3em;
-  margin: 0;
+    font-family: 'Questrial', sans-serif;
+    font-weight: 400;
+    font-size: 1.3em;
+    margin: 0;
 }
 .title h2 {
-  font-weight: 300;
-  font-size: 0.5em;
-  margin: 0;
+    font-weight: 300;
+    font-size: 0.5em;
+    margin: 0;
 }
-
 /*
  * Mailchimp Magickry
  *
  */
+
 .emailbutton {
-  background-color: #fff;
-  width: 300px;
-  padding: 8px;
-  font-size: 0.5em;
-  text-align: center;
-  opacity: 0.9;
+    background-color: #fff;
+    width: 300px;
+    padding: 8px;
+    font-size: 0.5em;
+    text-align: center;
+    opacity: 0.9;
 }
-
 .emailbutton button {
-  margin: 2px auto;
-  width: 100%;
+    margin: 2px auto;
+    width: 100%;
 }
-
 #signup-button {
-  background-color: #FF9900;
+    background-color: #FF9900;
 }
-
 .emailbutton p {
-  font-size: 0.75em;
-  line-height: 1.2em;
+    font-size: 0.75em;
+    line-height: 1.2em;
 }
-
 /*
  * -- Navigation Under Bannder --
  *
  */
 
 .banner-footer {
-  position: absolute;
-  top: 70vh;
-  height: 10vh;
-  width: 100%;
-  background-color: #fff;
-  opacity: 0.8;
-  text-align: center;
-  padding: 1em 0;
-  font-size: 1.3em;
+    position: absolute;
+    top: 70vh;
+    height: 10vh;
+    width: 100%;
+    background-color: #fff;
+    opacity: 0.8;
+    text-align: center;
+    padding: 1em 0;
+    font-size: 1.3em;
 }
-
 /*
  * -- Content --
  *
  */
-.content {
-  max-width: 980px;
-  margin: 0 auto 1.5em auto;
-/*  margin-bottom: 1.5em;*/
-  padding: 0.5em 2em;
 
+.content {
+    max-width: 980px;
+    margin: 0 auto 1.5em auto;
+    /*  margin-bottom: 1.5em;*/
+    padding: 0.5em 2em;
 }
 .content-title {
-  text-align: center;
-  border-bottom: 1px solid #555;
-  font-size: 2.0em;
+    text-align: center;
+    border-bottom: 1px solid #555;
+    font-size: 2.0em;
 }
-.about {
-
-}
-.about-img {
-  overflow: hidden;
-  height: 300px;
+.about {} .about-img {
+    overflow: hidden;
+    height: 300px;
 }
 .l-box img {
-  width: 100%;
+    width: 100%;
 }
 .schedule {
-  background-color: #eee;
+    background-color: #eee;
 }
 .faq {
-  font-size:0.9em;
+    font-size: 0.9em;
 }
 .information-head {
-  font-weight: 600;
-  font-size: 1.2em;
-  margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 1.2em;
+    margin-bottom: 5px;
 }
 .sponsor {
-  /*background-image: url(../img/stickers_blur.png);*/
-  /*background-size: cover;*/
-  /*color: #fff;*/
+    /*background-image: url(../img/stickers_blur.png);*/
+    /*background-size: cover;*/
+    /*color: #fff;*/
     text-align: center;
 }
-
 .sponsor h1 {
-  /*color: #eee;*/
-  /*border-bottom: 1px solid #eee;*/
+    /*color: #eee;*/
+    /*border-bottom: 1px solid #eee;*/
 }
 .sponsor p {
-  text-align: center;
+    text-align: center;
 }
 .sponsor .sponsor-logos {
     max-width: 980px;
@@ -181,124 +165,117 @@ img {
     padding: 10px;
 }
 .sponsor-series-a {
-  margin-top: -6em;
-  margin-bottom: -3em;
+    margin-top: -6em;
+    margin-bottom: -3em;
 }
 .sponsor .sponsor-series-a a {
     width: 32%;
 }
 .sponsor .sponsor-angel a {
-    width: 24%;
+    width: 32%;
 }
 .sponsor .sponsor-seed a {
-    width: 19%;
+    width: 24%;
+    /* 19% */
 }
 .sponsor .sponsor-logos a img {
     display: block;
     width: 100%;
     border: 0;
 }
-
 .tier {
-  text-align: center;
+    text-align: center;
 }
 .sponsor-logo {
-  width: 100%;
+    width: 100%;
 }
-
 .footer {
-  background: #444;
-  color: #aaa;
-  font-size: 0.9em;
-  text-align: center;
+    background: #444;
+    color: #aaa;
+    font-size: 0.9em;
+    text-align: center;
 }
 .footer p {
-  margin:auto;
+    margin: auto;
 }
 .footer a {
-  color: #ddd;
+    color: #ddd;
 }
-
-
 /*
  * -- PHONE MEDIA QUERIES --
  * On phones, we want to reduce the height and font-size of the banner further
  */
 
 @media(max-width: 767px) {
-  .banner {
-    background-image: url(../img/hero_blur_md.png);
-  }
-  .banner-head {
-    font-size: 2em;
-  }
-  .title {
-    width: 350px;
-  }
-  .emailbutton {
-    width: 300px;
-    font-size: smaller;
-  }
-  .banner-footer {
-    font-size: 1.1em;
-  }
-  .content-title {
-    font-size: 1.8em;
-  }
-  .sponsor p {
-    font-size: 1em;
-  }
+    .banner {
+        background-image: url(../img/hero_blur_md.png);
+    }
+    .banner-head {
+        font-size: 2em;
+    }
+    .title {
+        width: 350px;
+    }
+    .emailbutton {
+        width: 300px;
+        font-size: smaller;
+    }
+    .banner-footer {
+        font-size: 1.1em;
+    }
+    .content-title {
+        font-size: 1.8em;
+    }
+    .sponsor p {
+        font-size: 1em;
+    }
 }
-
 @media (max-width: 480px) {
-  .banner {
-    background-image: url(../img/hero_blur_sm.png)
-  }
-  .title {
-    font-size: smaller;
-    width: 300px;
-  }
-  .emailbutton {
-    font-size: smaller;
-    width: 280px;
-  }
-  .banner-footer {
-    font-size: 1em;
-  }
-  .content {
-    padding: 0.5em 0.5em;
-  }
-  .content-title {
-    font-size: 1.6em;
-  }
-  .sponsor .sponsor-series-a a {
-      width: 80%;
-  }
-  .sponsor .sponsor-angel a {
-      width: 49%;
-  }
-  .sponsor .sponsor-seed a {
-      width: 32%;
-  }
-  .sponsor table td {
-      display: block;
-  }
-  .sponsor p {
-    font-size: 0.8em;
-  }
-  .footer {
-    font-size: smaller;
-  }
+    .banner {
+        background-image: url(../img/hero_blur_sm.png)
+    }
+    .title {
+        font-size: smaller;
+        width: 300px;
+    }
+    .emailbutton {
+        font-size: smaller;
+        width: 280px;
+    }
+    .banner-footer {
+        font-size: 1em;
+    }
+    .content {
+        padding: 0.5em 0.5em;
+    }
+    .content-title {
+        font-size: 1.6em;
+    }
+    .sponsor .sponsor-series-a a {
+        width: 80%;
+    }
+    .sponsor .sponsor-angel a {
+        width: 49%;
+    }
+    .sponsor .sponsor-seed a {
+        width: 32%;
+    }
+    .sponsor table td {
+        display: block;
+    }
+    .sponsor p {
+        font-size: 0.8em;
+    }
+    .footer {
+        font-size: smaller;
+    }
 }
-
-
 @media(max-height: 625px) {
-  .banner {
-    height: 100vh;
-  }
-  .banner-footer {
-    height: 10vh;
-    top: 90vh;
-  }
-
+    .banner {
+        height: 100vh;
+    }
+    .banner-footer {
+        height: 10vh;
+        top: 90vh;
+    }
 }
