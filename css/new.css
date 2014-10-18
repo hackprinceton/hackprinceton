@@ -140,6 +140,18 @@ img {
     font-size: 1.2em;
     margin-bottom: 5px;
 }
+
+
+.sectiondivide {
+  margin: 50px auto;
+  height:180px;
+  overflow:hidden;
+}
+
+.sectiondivide img {
+  width: 100%;
+}
+
 .sponsor {
     /*background-image: url(../img/stickers_blur.png);*/
     /*background-size: cover;*/
@@ -189,6 +201,11 @@ img {
 .sponsor-logo {
     width: 100%;
 }
+
+.sponsordivide {
+  width:50%;
+}
+
 .footer {
     background: #444;
     color: #aaa;
