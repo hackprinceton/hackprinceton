@@ -32,7 +32,7 @@ $(document).ready(function () {
         event.preventDefault();
 
         Parse.initialize("VQpQwojL2wjTuNkUDzV0C2wAiQODWJw90cRKtP3Q", "yR5gVtaYrmMyjzTck1bLuvqRinqUrMnAoPqITysH");
-        Parse.User.logIn($('#email').val(), $('#password').val(), {
+        Parse.User.logIn($('#email').val().toLowerCase(), $('#password').val(), {
             success: function (user) {
                 // Do stuff after successful login.
                 $('#form').hide();
