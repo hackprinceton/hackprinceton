@@ -1,7 +1,7 @@
 var statuses = {
     accepted: "Congratulations! We'd like to invite you to attend HackPrinceton! Please fill out and *submit* the confirmation form below by Friday, October 17th.",
     waitlisted: "Status: Waitlisted - We've received an incredible amount of applications this year (over 2500). We'll be letting people off the waitlist in the coming weeks, so hold on tight!",
-    acceptedWaitlist: "Congratulations! We'd like to invite you to attend HackPrinceton! Please fill out and *submit* the confirmation form below by Sunday, October 26th.",
+    acceptedWaitlist: "Congratulations! We'd like to invite you to attend HackPrinceton! Please fill out and *submit* the confirmation form below by Friday, October 31st.",
     pending: "Your status is still pending. Hold on tight while we get decisions out to you!",
     confirmedGoing: "Thanks for your response! We're excited to see you here!",
     confirmedNotGoing: "Thanks for your response! We hope to see you at HackPrinceton next Spring!",
