@@ -65,7 +65,7 @@ $(document).ready(function () {
         event.preventDefault();
 
         // Vaccuum
-        var email = $('#email').val();
+        var email = $('#email').val().toLowerCase();
 
         if (email.indexOf("@princeton.edu") < 0) {
             $('#form').hide();
