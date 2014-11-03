@@ -2,6 +2,9 @@ body {
     color: #444;
     font-family: 'Lato', sans-serif;
 }
+.pure-g, .pure-g [class *="pure-u"] {
+    font-family: inherit;
+}
 p {
     line-height: 1.6em;
     margin: 2px;

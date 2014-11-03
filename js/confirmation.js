@@ -1,6 +1,7 @@
 var statuses = {
     accepted: "Congratulations! We'd like to invite you to attend HackPrinceton! Please fill out and *submit* the confirmation form below by Friday, October 17th.",
     waitlisted: "Status: Waitlisted - We've received an incredible amount of applications this year (over 2500). We'll be letting people off the waitlist in the coming weeks, so hold on tight!",
+    acceptedWaitlist: "Congratulations! We'd like to invite you to attend HackPrinceton! Please fill out and *submit* the confirmation form below by Friday, October 31st.",
     pending: "Your status is still pending. Hold on tight while we get decisions out to you!",
     confirmedGoing: "Thanks for your response! We're excited to see you here!",
     confirmedNotGoing: "Thanks for your response! We hope to see you at HackPrinceton next Spring!",
@@ -51,7 +52,7 @@ $(document).ready(function () {
                     $('#status').text(statuses.waitlisted);
                     $('#status_short').text('Waitlist');
                     btnclick = true;
-                } else if (user.get('status') == "Accepted" || user.get('status') == "Early Bird. You got the worm!" || user.get('email').indexOf("@princeton.edu") != -1) {
+                } else if (user.get('status') == "Accepted" || user.get('status') == "Early Bird. You got the worm!" || user.get('status') == "AcceptedW" || user.get('email').indexOf("@princeton.edu") != -1) {
                     if (user.get('confirmSubmit')) {
                         if (user.get('attending')) {
                             $('#status_short').text('Accepted, Attending');
@@ -63,7 +64,11 @@ $(document).ready(function () {
                     }
 
                     if (!user.get('confirmSubmit')) {
-                        $('#status').text(statuses.accepted);
+                        if (user.get('status') == "AcceptedW") {
+                            $('#status').text(statuses.acceptedWaitlist);
+                        } else {
+                            $('#status').text(statuses.accepted);
+                        }
                         $('#attend').show();
                         $('#confirm').show();
                     } else {
