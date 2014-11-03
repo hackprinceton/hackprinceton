@@ -81,15 +81,6 @@ $(document).ready(function () {
                     btnclick = true;
                 }
 
-                Parse.Cloud.run("getTeamMembers", null, function(members) {
-                    $('#team_members_container').html('<ul></ul>');
-                    $.each(members, function(i) {
-                        var $elem = $('<li></li>');
-                        $elem.text(members[i]);
-                        $elem.appendTo('#team_members_container ul');
-                    })
-                });
-
                 $('#code').text(user.get('team'));
                 $('#account').show();
             },
