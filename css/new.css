@@ -2,7 +2,8 @@ body {
     color: #444;
     font-family: 'Lato', sans-serif;
 }
-.pure-g, .pure-g [class *="pure-u"] {
+.pure-g,
+.pure-g[class *="pure-u"] {
     font-family: inherit;
 }
 p {
@@ -132,7 +133,6 @@ img {
 .l-box img {
     width: 100%;
 }
-
 .faq {
     font-size: 0.9em;
 }
@@ -141,33 +141,26 @@ img {
     font-size: 1.2em;
     margin-bottom: 5px;
 }
-
-
 .sectiondivide {
-  margin: 50px auto;
-  height:180px;
-  overflow:hidden;
+    margin: 50px auto;
+    height: 180px;
+    overflow: hidden;
 }
-
 .sectiondivide img {
-  width: 100%;
+    width: 100%;
 }
-
 .schedule {
     background-image: url(../img/stickers_blur.png);
     background-size: cover;
     color: #fff;
     text-align: center;
 }
-
 .schedule .content-title {
-  border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #eee;
 }
-
 .schedule p {
-  width:100%;
+    width: 100%;
 }
-
 .sponsor {
     /*background-image: url(../img/stickers_blur.png);*/
     /*background-size: cover;*/
@@ -192,15 +185,15 @@ img {
     box-sizing: border-box;
     padding: 10px;
 }
-
 .sponsor-series-a {
     margin-top: -6em;
 }
-
 .sponsor .sponsor-series-a .apple {
     margin-bottom: -3em;
 }
-
+.sponsor .sponsor-title a {
+    width: 70%;
+}
 .sponsor .sponsor-series-a a {
     width: 35%;
 }
@@ -222,11 +215,9 @@ img {
 .sponsor-logo {
     width: 100%;
 }
-
 .sponsordivide {
-  width:50%;
+    width: 50%;
 }
-
 .footer {
     background: #444;
     color: #aaa;
