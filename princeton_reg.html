@@ -113,33 +113,146 @@
                         <input id="comments" type="text" placeholder="Yep! This and this...">
                     </div>
 
-
                     <div class="hr"></div>
 
-                    <div class="teams">
-                        <div class="pure-control-group">
-                            <p class="teaminfo">Your team code is <span id="code">NOT WORKING</span>.
-                                <br>Share with your friends or join their team below.
-                                <br>
-                            </p>
-                            <p id="teammessage" class="teaminfo"></p>
-                            <label for="comments">Join Team</label>
-                            <input id="team" type="text" placeholder="">
+                    <div class="pure-control-group">
+                        <div style="display:inline-block; vertical-align:top">
+                            <label>What is your specialty?*</label>
+                            <br/>
+                        </div>
+                        <div style="display:inline-block">
+                            <label class="inline pure-radio">
+                                <input id="person_ideas" type="checkbox" value="ideas">Ideas/Business</label>
+                            <br/>
+                            <label class="inline pure-radio">
+                                <input id="person_design" type="checkbox" value="design">Design</label>
+                            <br/>
+                            <label class="inline pure-radio">
+                                <input id="person_hacker" type="checkbox" value="hacker">Hacking</label>
+                            <br/>
+                            <label class="inline pure-radio">
+                                <input id="person_all" type="checkbox" value="all">Little bit of everything</label>
+                            <br/>
+                        </div>
+                    </div>
+                    <div class="pure-control-group">
+                        <div style="display:inline-block; vertical-align:top">
+                            <label>Do you already have a project idea?*</label>
+                            <br/>
+                        </div>
+                        <div style="display:inline-block">
+                            <label for="goingin_yes" class="inline pure-radio">
+                                <input id="goingin_yes" type="radio" name="goingin" value="yes" required>Yes</label>
+                            <br/>
+                            <label for="goingin_no" class="inline pure-radio">
+                                <input id="goingin_no" type="radio" name="goingin" value="no">No</label>
+                            <br/>
+                            <label for="goingin_maybe" class="inline pure-radio">
+                                <input id="goingin_maybe" type="radio" name="goingin" value="maybe">Maybe</label>
+                            <br/>
+                        </div>
+                    </div>
+                    <div class="pure-control-group">
+                        <div style="display:inline-block; vertical-align:top">
+                            <label>What is your level of coding experience?*</label>
+                            <br/>
+                        </div>
+                        <div style="display:inline-block">
+                            <label for="coding_none" class="inline pure-radio">
+                                <input id="coding_none" type="radio" name="coding" value="none" required>Absolutely none</label>
+                            <br/>
+                            <label for="coding_one" class="inline pure-radio">
+                                <input id="coding_one" type="radio" name="coding" value="one">1 year</label>
+                            <br/>
+                            <label for="coding_two" class="inline pure-radio">
+                                <input id="coding_two" type="radio" name="coding" value="two">2 years</label>
+                            <br/>
+                            <label for="coding_twoplus" class="inline pure-radio">
+                                <input id="coding_twoplus" type="radio" name="coding" value="twoPlus">2+ years
+                            </label>
+                            <br/>
+                        </div>
+                    </div>
+                    <div class="pure-control-group">
+                        <label for="phone">Phone Number*</label>
+                        <input id="phone" type="text" placeholder="(609)-123-4567" required>
+                    </div>
+                    <div class="pure-control-group">
+                        <div style="display:inline-block; vertical-align:top">
+                            <label>Dietary Restrictions</label>
+                            <br/>
+                        </div>
+                        <div style="display:inline-block">
+                            <label for="vegetarian" class="inline pure-radio">
+                                <input id="vegetarian" type="radio" name="diet" value="vegetarian">Vegetarian</label>
+                            <br/>
+                            <label for="vegan" class="inline pure-radio">
+                                <input id="vegan" type="radio" name="diet" value="vegan">Vegan</label>
+                            <br/>
+                            <label for="kosher" class="inline pure-radio">
+                                <input id="kosher" type="radio" name="diet" value="kosher">Kosher</label>
+                            <br/>
+                            <label for="gluten_free" class="inline pure-radio">
+                                <input id="gluten_free" type="radio" name="diet" value="gluten_free">Gluten-Free</label>
+                            <br/>
+                            <label for="none" class="inline pure-radio">
+                                <input id="none" type="radio" name="diet" value="none">None</label>
+                            <br/>
+                            <label for="other" class="inline pure-radio">
+                                <input id="other" type="radio" name="diet" value="other">
+                                <input id="dietOther" type="text" placeholder="Other (inc. Allergies)" onclick="$('#other').attr('checked', true);"></label>
+                        </div>
+                    </div>
+
+                    <div class="pure-control-group">
+                        <div style="display:inline-block; vertical-align:top">
+                            <label>Resume (.pdf only):</label>
+                            <br/>
+                        </div>
+                        <div style="display:inline-block; width:20px">
+                            <input type="file" name="fileselect" id="fileselect" onchange="if ($('#fileselect').val().indexOf('docx') >= 0 || $('#fileselect').val().indexOf('doc') >= 0) { alert('NOTICE: Please upload a PDF FILE. Our system does not accept Word documents.');}"></input>
+                        </div>
+                    </div>
+
+                    <div class="pure-control-group">
+                        <div style="display:inline-block; vertical-align:top">
+                            <label>How did you hear about us?*</label>
+                            <br/>
+                        </div>
+                        <div style="display:inline-block">
+                            <label for="referral_facebook" class="inline pure-radio">
+                                <input id="referral_facebook" type="radio" name="referral" value="facebook" required>Facebook</label>
+                            <br/>
+                            <label for="referral_mlh" class="inline pure-radio">
+                                <input id="referral_mlh" type="radio" name="referral" value="mlh">MLH</label>
+                            <br/>
+                            <label for="referral_friend" class="inline pure-radio">
+                                <input id="referral_friend" type="radio" name="referral" value="friend">Friend
+                            </label>
+                            <br/>
+                            <label for="referral_past" class="inline pure-radio">
+                                <input id="referral_past" type="radio" name="referral" value="pastAttendee">Past attendee</label>
+                            <br/>
+                            <label for="r_other" class="inline pure-radio">
+                                <input id="r_other" type="radio" name="referral" value="rother">
+                                <input id="rOther" type="text" placeholder="Other (please specify)" onclick="$('#r_other').attr('checked', true);">
                         </div>
                     </div>
 
                     <div class="pure-controls">
                         <label for="cb" class="pure-checkbox">
-                            <input id="cb" type="checkbox" required>I agree to follow the <a href="http://confcodeofconduct.com/" target="_blank">Code of Conduct</a>
+                            <input id="cb" type="checkbox" required>* I agree to follow the <a href="http://confcodeofconduct.com/" target="_blank">Code of Conduct</a>
                         </label>
 
                         <input type="hidden" id="school" value="Princeton University">
-                        <button id="submit" type="submit" class="pure-button pure-button-primary">Submit</button>
                     </div>
+
+                    <p style="font-size:12px; text-align:center">By clicking submit, I am confirming my spot for HackPrinceton and grant permission
+                        <br>for HackPrinceton to share my resume with technical recruiters.</p>
+
+                    <button id="confirm_submit" type="submit" class="pure-button pure-button-primary center-button">Submit</button>
                 </fieldset>
             </form>
-
-            <p class="switchforms">Already signed up? Sign in <a href="confirmation.html">here</a>!</p>
         </div>
 
         <div id="notPrinceton" class="newpage" style="display:none;">
@@ -151,7 +264,6 @@
 
         <div id="confirmation" class="newpage" style="display:none;">
             <h2>Thank you for signing up! We're looking forward to seeing you here!</h2>
-            Sign in <a href="/signin.html">here</a> to check the status of your application.
             <br>
             <br>In the meantime, join the <a href="https://www.facebook.com/events/864649396879446/" target="_blank">event</a> on Facebook for updates on the awesome things that'll be at HackPrinceton!
         </div>
