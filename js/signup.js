@@ -143,6 +143,21 @@ $(document).ready(function () {
             }, function (error) {
                 alert(errors.general);
             });
+        } else {
+            user.signUp(null, {
+                success: function (user) {
+                    // Hide form, ask to validate email
+                    $('#form').hide();
+                    $('#confirmation').show();
+                },
+                error: function (user, error) {
+                    if (error.code === 202) {
+                        alert("Email already used to sign up!")
+                    } else {
+                        alert("Error: " + error.code + " " + error.message);
+                    }
+                }
+            })
         }
     });
 });
