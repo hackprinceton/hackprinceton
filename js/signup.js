@@ -29,36 +29,6 @@ $(document).ready(function () {
 
     // Parse Initialization
     Parse.initialize("VQpQwojL2wjTuNkUDzV0C2wAiQODWJw90cRKtP3Q", "yR5gVtaYrmMyjzTck1bLuvqRinqUrMnAoPqITysH");
-    var TeamList = Parse.Object.extend("Teams");
-
-    // Setup user's individual team number
-    var team = null;
-    var code = Math.floor((Math.random() * 10000000) + 1).toString();
-    $('#code').text(code);
-
-    // Team number inputted
-    $('#team').change(function (event) {
-        var input = $('#team').val();
-        var query = new Parse.Query(TeamList);
-        query.equalTo("teamcode", input);
-
-        query.first({
-            success: function (object) {
-                team = object;
-                if (object == null || object.get("open") == false) {
-                    invalidTeam("Team not found.");
-                } else if (object.get("count") >= 5) {
-                    invalidTeam("Team already full!");
-                } else {
-                    team = object;
-                    validTeam();
-                }
-            },
-            error: function (error) {
-                invalidTeam("Error: " + error.code + " " + error.message);
-            }
-        });
-    });
 
     // Form submission
     $("#signup").submit(function (event) {
@@ -73,6 +43,11 @@ $(document).ready(function () {
             return;
         }
 
+
+        var user = new Parse.User();
+
+
+        // Registration form data
         var password = $('#password').val();
         var first = $('#fname').val();
         var last = $('#lname').val();
@@ -85,8 +60,6 @@ $(document).ready(function () {
         var firsthp = $('#firsthp').prop('checked');
         var past = $('#past').val()
         var comments = $('#comments').val();
-
-        var user = new Parse.User();
         user.set("username", email);
         user.set("email", email);
         user.set("password", password);
@@ -101,37 +74,75 @@ $(document).ready(function () {
         user.set("firsthp", firsthp);
         user.set("past", past);
         user.set("comments", comments);
-        //    user.set("status", "Accepted");
 
-        if (team == null) {
-            // create new team, set count to 1
-            var newTeam = new TeamList();
-            newTeam.set("teamcode", code)
-            newTeam.set("open", true)
-            newTeam.set("count", 1)
-            newTeam.save();
-            user.set("team", code);
-        } else {
-            // increment given team, save
-            user.set("team", team.get("teamcode"));
-            team.increment("count");
-            team.save();
+
+        // Confirmation form data
+        var person_ideas = $('#person_ideas').prop('checked');
+        var person_design = $('#person_design').prop('checked');
+        var person_hacker = $('#person_hacker').prop('checked');
+        var person_all = $('#person_all').prop('checked');
+        var ideaGoingIn = $('input[name=goingin]:checked').val();
+        var codingExperience = $('input[name=coding]:checked').val();
+        var phone = $('#phone').val();
+        var diet = $('input[name=diet]:checked').val();
+        var referral = $('input[name=referral]:checked').val();
+        // read other field of diet
+        if (diet == "other") {
+            diet = $('#dietOther').val();
         }
 
+        if (referral == "rother") {
+            referral = $('#rOther').val();
+        }
+        user.set("person_ideas", person_ideas);
+        user.set("person_design", person_design);
+        user.set("person_hacker", person_hacker);
+        user.set("person_all", person_all);
+        user.set("ideaGoingIn", ideaGoingIn);
+        user.set("codingExperience", codingExperience);
+        user.set("phone", phone);
+        user.set("diet", diet);
+        user.set("referral", referral);
+        user.set("confirmSubmit", true);
+        user.set("attending", true);
 
-        user.signUp(null, {
-            success: function (user) {
-                // Hide form, ask to validate email
-                $('#form').hide();
-                $('#confirmation').show();
-            },
-            error: function (user, error) {
-                if (error.code === 202) {
-                    alert("Email already used to sign up!")
-                } else {
-                    alert("Error: " + error.code + " " + error.message);
-                }
+
+        // handle resume data
+        var fileUploadControl = $("#fileselect")[0];
+        if (fileUploadControl.files.length > 0) {
+            $('#confirm').hide();
+            $('#loader').show();
+            $('#status').text(statuses.resumeUploading);
+
+            var file = fileUploadControl.files[0];
+
+            var name = "resumeF14.pdf";
+            if ($('#fileselect').val().indexOf("docx") >= 0) {
+                name = "resumeF14.docx";
             }
-        })
+            var parseFile = new Parse.File(name, file);
+            parseFile.save().then(function () {
+                // update resume URL
+                user.set("resumeURL", parseFile.url());
+                user.set("resumeFile", parseFile);
+
+                user.signUp(null, {
+                    success: function (user) {
+                        // Hide form, ask to validate email
+                        $('#form').hide();
+                        $('#confirmation').show();
+                    },
+                    error: function (user, error) {
+                        if (error.code === 202) {
+                            alert("Email already used to sign up!")
+                        } else {
+                            alert("Error: " + error.code + " " + error.message);
+                        }
+                    }
+                })
+            }, function (error) {
+                alert(errors.general);
+            });
+        }
     });
 });
