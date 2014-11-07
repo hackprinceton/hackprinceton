@@ -200,7 +200,7 @@
                             <br/>
                             <label for="other" class="inline pure-radio">
                                 <input id="other" type="radio" name="diet" value="other">
-                                <input id="dietOther" type="text" placeholder="Other (inc. Allergies)" onclick="$('#other').attr('checked', true);"></label>
+                                <input id="dietOther" type="text" placeholder="Other (inc. Allergies)" onclick="$('#other').click();"></label>
                         </div>
                     </div>
 
@@ -235,7 +235,7 @@
                             <br/>
                             <label for="r_other" class="inline pure-radio">
                                 <input id="r_other" type="radio" name="referral" value="rother">
-                                <input id="rOther" type="text" placeholder="Other (please specify)" onclick="$('#r_other').attr('checked', true);"></label>
+                                <input id="rOther" type="text" placeholder="Other (please specify)" onclick="$('#r_other').click();"></label>
                         </div>
                     </div>
 
@@ -253,6 +253,11 @@
                     <button id="confirm_submit" type="submit" class="pure-button pure-button-primary center-button">Submit</button>
                 </fieldset>
             </form>
+        </div>
+
+        <div id="loader" style="display:none; text-align: center">
+            <img src="img/ajax-loader.gif" style="width:40px !important; height: 40px">
+            <h2 style="text-align: center"><span id="status"></span></h2>
         </div>
 
         <div id="notPrinceton" class="newpage" style="display:none;">
