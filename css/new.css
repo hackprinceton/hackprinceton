@@ -70,6 +70,7 @@ img {
     font-size: 0.5em;
     margin: 0;
 }
+
 /*
  * Mailchimp Magickry
  *
@@ -186,7 +187,7 @@ img {
     padding: 10px;
 }
 .sponsor .sponsor-title a {
-    width: 70%;
+    width: 60%;
 }
 .sponsor .sponsor-series-a a {
     width: 35%;
@@ -293,7 +294,7 @@ img {
         font-size: smaller;
     }
 }
-@media(max-height: 625px) {
+@media(max-height: 725px) {
     .banner {
         height: 100vh;
     }
