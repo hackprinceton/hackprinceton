@@ -191,6 +191,7 @@ img {
 }
 .sponsor .sponsor-series-a a {
     width: 35%;
+    margin: 20px auto;
 }
 .sponsor .sponsor-angel a {
     width: 32%;
